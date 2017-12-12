@@ -1,0 +1,3 @@
+"let g:airline_powerline_fonts = 1
+let g:spf13_no_neosnippet_expand = 1
+let g:rustfmt_autosave = 1
