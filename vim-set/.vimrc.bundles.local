@@ -1,5 +1,4 @@
 Plugin 'hzchirs/vim-material'
-Plugin 'fatih/vim-go'
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
 Plugin 'google/vim-maktaba'
@@ -26,6 +25,9 @@ Plugin 'baabelfish/nvim-nim'
 
 " Support of elz
 Plugin 'elz-lang/elz-vim'
+
+" Support of Erlang
+Plugin 'vim-erlang/vim-erlang-runtime'
 
 call vundle#end()
 " the glaive#Install() should go after the "call vundle#end()"
