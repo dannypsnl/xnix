@@ -3,7 +3,7 @@ This repo put my setting of vim.
 It based on spf13
 ## Usage
 ```bash
-$ git clone https://github.com/dannypsnl/vim-set.git
+$ git clone https://github.com/dannypsnl/my-xnix-env.git
 $ mv vim-set/.vimrc.* ~/
 $ mv vim-set/syntax/* ~/.vim/syntax/
 $ . spf13-vim.sh

@@ -2,8 +2,8 @@
 ## Initalize
 * Use following command  
 ```bash
-$ git clone https://github.com/dannypsnl/git-alias-setting.git
-$ sh git-alias-setting.sh
+$ git clone https://github.com/dannypsnl/my-xnix-env.git
+$ sh git-alias-setting/git-alias-setting.sh
 ```
 ## API
 ### Checkout
