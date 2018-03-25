@@ -12,6 +12,9 @@ export ZSH=/Users/routedan/.oh-my-zsh
 # MY ZSH SETTING
 ZSH_THEME="powerlevel9k/powerlevel9k"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+TERM=xterm-256color
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
