@@ -7,9 +7,7 @@ It based on spf13
 
 ```bash
 $ git clone https://github.com/dannypsnl/my-xnix-env.git
-$ mv vim-set/.vimrc.* ~/
-$ mv vim-set/syntax/* ~/.vim/syntax/
-$ . spf13-vim.sh
+$ ./install.sh
 ```
 
 ## Support
