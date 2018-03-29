@@ -33,6 +33,9 @@ Plugin 'elz-lang/elz-vim'
 " Support of scala
 Plugin 'derekwyatt/vim-scala'
 
+" Support of Elixir
+Plugin 'elixir-editors/vim-elixir'
+
 call vundle#end()
 " the glaive#Install() should go after the "call vundle#end()"
 call glaive#Install()
