@@ -21,6 +21,7 @@ $ . spf13-vim.sh
 - elm
 - swift
 - go-lang
+- elixir
 - antlr's grammar
 
 ### tools
