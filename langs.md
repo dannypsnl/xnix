@@ -5,8 +5,8 @@
 - C/C++
 - Nim
 - Erlang
-- Node.js(JavaScript)
 - Elixir
+- Python
 - Scala
 - Idris
 - Haskell
@@ -14,5 +14,6 @@
 - Clojure
 - Julia
 - Elm
+- Node.js(JavaScript)
 - Java
 - C#
