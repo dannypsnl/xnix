@@ -46,8 +46,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export GOPATH=~/go/
-export GOPRO="$HOME/go/src/github.com/dannypsnl"
-export ELZSRC="$HOME/go/src/github.com/elz-lang/elz"
+export GO_PRO="$GOPATH/src/github.com/dannypsnl"
+export ELZ_SRC="$GOPATH/src/github.com/elz-lang/elz"
 
 export PATH="$HOME/workspace/tools/ninja:$PATH"
 
