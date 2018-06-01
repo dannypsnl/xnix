@@ -1,3 +1,3 @@
-mv vim-set/.vimrc.* ~/
-mv vim-set/syntax/* ~/.vim/syntax/
-mv spf13-vim.sh ~/ && . ~/spf13-vim.sh
+cp vim-set/.vimrc.* ~/
+cp vim-set/syntax/* ~/.vim/syntax/
+cp vim-set/spf13-vim.sh ~/ && . ~/spf13-vim.sh
