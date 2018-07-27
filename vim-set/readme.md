@@ -25,7 +25,13 @@ $ ./install.sh
 ### tools
 
 - google/codefmt
-- prettier for JavaScript, React, css and html
+- prettier: JavaScript, React, css and html
+- clang-format: C/C++
+- dartfmt: Dart
+- gofmt(golang compiler internal tool): Go
+- google-java-format: Java
+- yapf: python
+- antlr4
 
 ### themes
 
