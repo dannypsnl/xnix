@@ -7,6 +7,10 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Theme solarized 
 Plug 'altercation/vim-colors-solarized', { 'as': 'vim-colors-solarized' }
 
+" Status Bar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " Auto Pair
 Plug 'jiangmiao/auto-pairs'
 
