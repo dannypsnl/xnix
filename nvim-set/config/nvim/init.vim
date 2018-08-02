@@ -10,9 +10,10 @@ Plug 'altercation/vim-colors-solarized', { 'as': 'vim-colors-solarized' }
 " Status Bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 " tagbar
 Plug 'majutsushi/tagbar'
+" ctrlp
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Auto Pair
 Plug 'jiangmiao/auto-pairs'
