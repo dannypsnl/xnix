@@ -22,5 +22,9 @@ let g:deoplete#sources#go#sort_class = [ 'package', 'func', 'type', 'var', 'cons
 let g:deoplete#sources#go#pointer = 1 
 let g:deoplete#sources#go#cgo = 1 
 
+" extra setting
+set tabstop=4
+set shiftwidth=4
+
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
