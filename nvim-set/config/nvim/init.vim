@@ -11,6 +11,9 @@ Plug 'altercation/vim-colors-solarized', { 'as': 'vim-colors-solarized' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" tagbar
+Plug 'majutsushi/tagbar'
+
 " Auto Pair
 Plug 'jiangmiao/auto-pairs'
 
@@ -36,6 +39,9 @@ set tabstop=4
 set shiftwidth=4
 
 set number
+" Only work on MacOS that install ctags by brew
+" command `brew install ctags-exuberant`
+let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 
 " Theme
 syntax on 
@@ -45,3 +51,4 @@ colorscheme solarized
 
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
+map <F8> :TagbarToggle<CR>
