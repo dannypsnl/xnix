@@ -26,5 +26,7 @@ let g:deoplete#sources#go#cgo = 1
 set tabstop=4
 set shiftwidth=4
 
+set number
+
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
