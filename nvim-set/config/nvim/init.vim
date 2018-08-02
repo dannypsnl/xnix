@@ -4,6 +4,9 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
+" Theme dracula
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 " Auto Pair
 Plug 'jiangmiao/auto-pairs'
 
@@ -29,6 +32,10 @@ set tabstop=4
 set shiftwidth=4
 
 set number
+
+" Theme
+syntax on
+color dracula
 
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
