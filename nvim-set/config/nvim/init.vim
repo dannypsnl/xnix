@@ -4,6 +4,9 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
+" Auto Pair
+Plug 'jiangmiao/auto-pairs'
+
 " Type-Complete Plugin
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " deoplete: go
@@ -20,7 +23,6 @@ let g:deoplete#enable_at_startup = 1
 " deoplete: go
 let g:deoplete#sources#go#sort_class = [ 'package', 'func', 'type', 'var', 'const' ]
 let g:deoplete#sources#go#pointer = 1 
-let g:deoplete#sources#go#cgo = 1 
 
 " extra setting
 set tabstop=4
