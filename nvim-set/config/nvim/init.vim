@@ -4,8 +4,8 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-" Theme dracula
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Theme solarized 
+Plug 'altercation/vim-colors-solarized', { 'as': 'vim-colors-solarized' }
 
 " Auto Pair
 Plug 'jiangmiao/auto-pairs'
@@ -34,8 +34,10 @@ set shiftwidth=4
 set number
 
 " Theme
-syntax on
-color dracula
+syntax on 
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
