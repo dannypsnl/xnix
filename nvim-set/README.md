@@ -16,3 +16,7 @@ Trying to using neovim instead of vim at future so start record plugin stack.
     ```
     go get -u github.com/nsf/gocode
     ```
+- [ag](https://github.com/ggreer/the_silver_searcher)
+    ```
+    brew install the_silver_searcher
+    ```
