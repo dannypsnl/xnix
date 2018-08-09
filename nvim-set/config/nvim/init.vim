@@ -65,3 +65,10 @@ colorscheme solarized
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
 map <F8> :TagbarToggle<CR>
+
+" Ignore cap
+cab W w
+cab Wq wq
+cab wQ wq
+cab WQ wq
+cab Q q
