@@ -17,7 +17,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 " search file via content
 Plug 'mileszs/ack.vim', { 'as': 'ack.vim' }
 
-" Auto Pair
+" Auto
+" > Pair
 Plug 'jiangmiao/auto-pairs'
 
 " Type-Complete Plugin
@@ -25,8 +26,11 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " deoplete: go
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+" Language
+" > Go
 Plug 'fatih/vim-go', { 'tag': '*' }
+" > Rust 
+Plug 'rust-lang/rust.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -42,6 +46,10 @@ set tabstop=4
 set shiftwidth=4
 
 set number
+
+" auto commands
+let g:rustfmt_autosave = 1
+
 " Only work on MacOS that install ctags by brew
 " command `brew install ctags-exuberant`
 let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
