@@ -20,3 +20,21 @@ Trying to using neovim instead of vim at future so start record plugin stack.
     ```
     brew install the_silver_searcher
     ```
+
+## Supports
+
+- Nerdtree: <C-n>
+- Theme: solarized
+- Status Bar: airline
+- ctrlp: <C-p>
+- :Ack `text you want to search in project`
+- auto pair
+- auto format
+    - c/c++
+    - protobuffer
+    - go
+    - rust
+- Type Completion
+    - Go
+- Ctags: <F8>
+- Ignore cap for `:wq`
