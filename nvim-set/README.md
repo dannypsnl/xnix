@@ -2,8 +2,6 @@
 
 Trying to using neovim instead of vim at future so start record plugin stack.
 
-![snapshot](https://imgur.com/0ANlqLX)
-
 ## Install Neovim
 
 - MacOS
