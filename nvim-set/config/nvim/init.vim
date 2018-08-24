@@ -20,6 +20,10 @@ Plug 'mileszs/ack.vim', { 'as': 'ack.vim' }
 " Auto
 " > Pair
 Plug 'jiangmiao/auto-pairs'
+" > Format
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 
 " Type-Complete Plugin
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -49,6 +53,10 @@ set number
 
 " auto commands
 let g:rustfmt_autosave = 1
+call glaive#Install()
+augroup autoformat_settings
+  autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
+augroup END
 
 " Only work on MacOS that install ctags by brew
 " command `brew install ctags-exuberant`
