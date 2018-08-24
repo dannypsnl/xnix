@@ -2,7 +2,7 @@
 
 Trying to using neovim instead of vim at future so start record plugin stack.
 
-[!](https://imgur.com/a/0ANlqLX)
+![](https://imgur.com/a/0ANlqLX)
 
 ## Install Neovim
 
