@@ -2,7 +2,7 @@
 
 Trying to using neovim instead of vim at future so start record plugin stack.
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/0ANlqLX"><a href="//imgur.com/0ANlqLX">my-neovim-snapshot</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+[!](https://imgur.com/a/0ANlqLX)
 
 ## Install Neovim
 
