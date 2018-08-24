@@ -23,10 +23,10 @@ Trying to using neovim instead of vim at future so start record plugin stack.
 
 ## Supports
 
-- Nerdtree: <C-n>
+- Nerdtree: `<C-n>`
 - Theme: solarized
 - Status Bar: airline
-- ctrlp: <C-p>
+- ctrlp: `<C-p>`
 - :Ack `text you want to search in project`
 - auto pair
 - auto format
@@ -36,5 +36,5 @@ Trying to using neovim instead of vim at future so start record plugin stack.
     - rust
 - Type Completion
     - Go
-- Ctags: <F8>
+- Ctags: `<F8>`
 - Ignore cap for `:wq`
