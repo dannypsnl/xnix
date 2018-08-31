@@ -45,7 +45,7 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 " deoplete: go
 let g:deoplete#sources#go#sort_class = [ 'package', 'func', 'type', 'var', 'const' ]
-let g:deoplete#sources#go#pointer = 1 
+let g:deoplete#sources#go#pointer = 1
 " deoplete: rust
 let g:deoplete#sources#rust#racer_binary='/Users/dannypsnl/.cargo/bin/racer'
 let g:deoplete#sources#rust#rust_source_path='/Users/dannypsnl/workspace/rust/src'
@@ -53,8 +53,12 @@ let g:deoplete#sources#rust#rust_source_path='/Users/dannypsnl/workspace/rust/sr
 " extra setting
 set tabstop=4
 set shiftwidth=4
-
+" > show line number
 set number
+" > highlight <tab>, trail char
+set nolist
+set listchars=tab:→\ ,trail:•
+set list
 
 " auto commands
 let g:rustfmt_autosave = 1
