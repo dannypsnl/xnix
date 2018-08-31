@@ -53,6 +53,8 @@ let g:deoplete#sources#rust#rust_source_path='/Users/dannypsnl/workspace/rust/sr
 " extra setting
 set tabstop=4
 set shiftwidth=4
+" > hightlight cursor's current line
+set cursorline
 " > show line number
 set number
 " > highlight <tab>, trail char
