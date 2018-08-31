@@ -61,6 +61,10 @@ set number
 set nolist
 set listchars=tab:→\ ,trail:•
 set list
+" > Open from last quit position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 " auto commands
 let g:rustfmt_autosave = 1
