@@ -23,6 +23,7 @@ Trying to using neovim instead of vim at future so start record plugin stack.
 
 ## Supports
 
+- Load from last quit position
 - Nerdtree: `<C-n>`
 - Theme: solarized
 - Status Bar: airline
