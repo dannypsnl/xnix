@@ -35,7 +35,7 @@ Plug 'sebastianmarkow/deoplete-rust'
 " Language
 " > Go
 Plug 'fatih/vim-go', { 'tag': '*' }
-" > Rust 
+" > Rust
 Plug 'rust-lang/rust.vim'
 
 " Initialize plugin system
@@ -65,6 +65,8 @@ set list
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+" > allow mouse
+set mouse=a
 
 " auto commands
 let g:rustfmt_autosave = 1
@@ -80,7 +82,7 @@ let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 let g:ackprg = 'ag --vimgrep'
 
 " Theme
-syntax on 
+syntax on
 let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
