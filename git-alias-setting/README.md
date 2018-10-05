@@ -25,3 +25,5 @@ $ sh ./git-alias-setting.sh
 `$ git df <commit-log>`
 ### Status
 `$ git st`
+### Rebase
+`$ git rb`
