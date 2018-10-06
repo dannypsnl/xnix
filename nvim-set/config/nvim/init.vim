@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-" Theme solarized 
+" Theme solarized
 Plug 'altercation/vim-colors-solarized', { 'as': 'vim-colors-solarized' }
 
 " Status Bar
@@ -37,6 +37,8 @@ Plug 'sebastianmarkow/deoplete-rust'
 Plug 'fatih/vim-go', { 'tag': '*' }
 " > Rust
 Plug 'rust-lang/rust.vim'
+" > Peg
+Plug 'pest-parser/pest.vim'
 
 " Initialize plugin system
 call plug#end()
