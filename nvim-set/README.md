@@ -37,6 +37,8 @@ Trying to using neovim instead of vim at future so start record plugin stack.
     - rust
 - Type Completion
     - Go
-	- Rust
+    - Rust
+- Hightlight only
+    - Peg(grammar syntax)
 - Ctags: `<F8>`
 - Ignore cap for `:wq`
