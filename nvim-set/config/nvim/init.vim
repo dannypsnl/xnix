@@ -17,6 +17,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " search file via content
 Plug 'mileszs/ack.vim', { 'as': 'ack.vim' }
 
+" Comment
+Plug 'tpope/vim-commentary'
+
 " Auto
 " > Pair
 Plug 'jiangmiao/auto-pairs'
