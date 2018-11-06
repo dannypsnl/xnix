@@ -41,4 +41,5 @@ Trying to using neovim instead of vim at future so start record plugin stack.
 - Hightlight only
     - Peg(grammar syntax)
 - Ctags: `<F8>`
+- Comment: Commentary type command `10,17Commentary`, [Doc](https://vimawesome.com/plugin/commentary-vim)
 - Ignore cap for `:wq`
