@@ -17,6 +17,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 " search file via content
 Plug 'mileszs/ack.vim', { 'as': 'ack.vim' }
 
+" Git
+Plug 'tpope/vim-fugitive'
 " Comment
 Plug 'tpope/vim-commentary'
 

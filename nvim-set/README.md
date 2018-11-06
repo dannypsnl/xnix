@@ -29,6 +29,7 @@ Trying to using neovim instead of vim at future so start record plugin stack.
 - Status Bar: airline
 - ctrlp: `<C-p>`
 - :Ack `text you want to search in project`
+- Git: [fugitive](https://vimawesome.com/plugin/fugitive-vim)
 - auto pair
 - auto format
     - c/c++
