@@ -85,6 +85,7 @@ augroup END
 " Only work on MacOS that install ctags by brew
 " command `brew install ctags-exuberant`
 let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
+autocmd BufEnter * nested :call tagbar#autoopen(0)
 " let ack.vim using ag rather than ack
 let g:ackprg = 'ag --vimgrep'
 
@@ -96,7 +97,6 @@ colorscheme solarized
 
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
-map <F8> :TagbarToggle<CR>
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
