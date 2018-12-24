@@ -30,6 +30,13 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
+" Language Server
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+" Multi-entry selection UI
+Plug 'junegunn/fzf'
 " Type-Complete Plugin
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " deoplete: go
@@ -47,6 +54,17 @@ Plug 'pest-parser/pest.vim'
 
 " Initialize plugin system
 call plug#end()
+
+" For Language Server
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'go': ['$GOPATH/bin/go-langserver'],
+    \ }
+map <C-b> :call LanguageClient#textDocument_definition()<CR>
+map <C-d> :call LanguageClient#textDocument_hover()<CR>
+map <C-r> :call LanguageClient#textDocument_rename()<CR>
+map <C-a> :call LanguageClient#textDocument_references()<CR>
 
 " for deoplete
 let g:deoplete#enable_at_startup = 1
