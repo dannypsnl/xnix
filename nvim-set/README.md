@@ -35,7 +35,8 @@ Trying to using neovim instead of vim at future so start record plugin stack.
 - Language Server
     - `<C-b>`: go to defination
     - `<C-d>`: see defination
-    - `<C-r>`: list references
+    - `<C-r>`: rename
+    - `<C-a>`: list references
 - auto pair
 - auto format
     - c/c++
