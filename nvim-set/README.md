@@ -29,7 +29,13 @@ Trying to using neovim instead of vim at future so start record plugin stack.
 - Status Bar: airline
 - ctrlp: `<C-p>`
 - :Ack `text you want to search in project`
-- Git: [fugitive](https://vimawesome.com/plugin/fugitive-vim)
+- Git:
+    - [fugitive](https://vimawesome.com/plugin/fugitive-vim)
+    - [vim-gitgutter](https://vimawesome.com/plugin/vim-gitgutter): view git diff in real time
+- Language Server
+    - `<C-b>`: go to defination
+    - `<C-d>`: see defination
+    - `<C-r>`: list references
 - auto pair
 - auto format
     - c/c++
