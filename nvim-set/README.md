@@ -37,10 +37,11 @@ Trying to using neovim instead of vim at future so start record plugin stack.
     - `<C-d>`: see defination
     - `<C-r>`: rename
     - `<C-a>`: list references
+
     Supports:
-        - C/C++
-        - Rust
-        - Go
+    - C/C++
+    - Rust
+    - Go
 - auto pair
 - auto format
     - c/c++
