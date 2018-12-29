@@ -64,6 +64,7 @@ set hidden
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'go': ['$GOPATH/bin/go-langserver'],
+    \ 'cpp': ['ccls'],
     \ }
 map <C-b> :call LanguageClient#textDocument_definition()<CR>
 map <C-d> :call LanguageClient#textDocument_hover()<CR>
