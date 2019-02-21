@@ -2,6 +2,12 @@
 
 Trying to using neovim instead of vim at future so start record plugin stack.
 
+## Install
+
+```bash
+$ make install
+```
+
 ## Install Neovim
 
 - MacOS
