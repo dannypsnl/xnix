@@ -6,6 +6,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Theme solarized
 Plug 'altercation/vim-colors-solarized', { 'as': 'vim-colors-solarized' }
+Plug 'KKPMW/oldbook-vim'
 
 " Status Bar
 Plug 'vim-airline/vim-airline'
@@ -119,7 +120,9 @@ let g:ackprg = 'ag --vimgrep'
 syntax on
 let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
+" Optional Theme
+" colorscheme solarized
+colorscheme oldbook
 
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>

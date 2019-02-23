@@ -31,7 +31,9 @@ $ make install
 
 - Load from last quit position
 - Nerdtree: `<C-n>`
-- Theme: solarized
+- Theme
+    - solarized
+	- [oldbook](https://github.com/KKPMW/oldbook-vim)
 - Status Bar: airline
 - ctrlp: `<C-p>`
 - :Ack `text you want to search in project`
