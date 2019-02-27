@@ -48,7 +48,7 @@ Plug 'sebastianmarkow/deoplete-rust'
 
 " Language
 " > Go
-Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 " > Rust
 Plug 'rust-lang/rust.vim'
 " > Peg
