@@ -39,6 +39,7 @@ $ make install
 - :Ack `text you want to search in project`
 - Git:
     - [fugitive](https://vimawesome.com/plugin/fugitive-vim)
+    - [vim-flog](https://github.com/rbong/vim-flog/)
     - [vim-gitgutter](https://vimawesome.com/plugin/vim-gitgutter): view git diff in real time
 - Language Server
     - `<C-b>`: go to defination

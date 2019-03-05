@@ -20,6 +20,7 @@ Plug 'mileszs/ack.vim', { 'as': 'ack.vim' }
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
 Plug 'airblade/vim-gitgutter'
 " Comment
 Plug 'tpope/vim-commentary'
