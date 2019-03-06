@@ -125,6 +125,7 @@ set background=dark
 " Optional Theme
 " colorscheme solarized
 colorscheme distilled
+set termguicolors
 
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
