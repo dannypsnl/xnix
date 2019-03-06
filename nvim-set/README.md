@@ -33,7 +33,8 @@ $ make install
 - Nerdtree: `<C-n>`
 - Theme
     - solarized
-	- [oldbook](https://github.com/KKPMW/oldbook-vim)
+    - [oldbook](https://github.com/KKPMW/oldbook-vim)
+    - [distilled](https://github.com/KKPMW/distilled-vim)
 - Status Bar: airline
 - ctrlp: `<C-p>`
 - :Ack `text you want to search in project`
