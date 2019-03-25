@@ -34,6 +34,9 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
+" Spell check
+Plug 'kamykn/spelunker.vim'
+
 " Language Server
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
@@ -89,7 +92,9 @@ let g:deoplete#sources#rust#rust_source_path='/Users/dannypsnl/workspace/rust/sr
 set tabstop=4
 set shiftwidth=4
 set undofile
-" > hightlight cursor's current line
+" Spell check
+let g:enable_spelunker_vim = 1
+" > highlight cursor's current line
 set cursorline
 " > show line number
 set number
@@ -108,7 +113,7 @@ set mouse=a
 let g:rustfmt_autosave = 1
 call glaive#Install()
 augroup autoformat_settings
-  autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
+  autocmd FileType c,cpp AutoFormatBuffer clang-format
   autocmd FileType python AutoFormatBuffer autopep8
 augroup END
 
