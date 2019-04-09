@@ -113,7 +113,7 @@ set mouse=a
 let g:rustfmt_autosave = 1
 call glaive#Install()
 augroup autoformat_settings
-  autocmd FileType c,cpp AutoFormatBuffer clang-format
+  autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
   autocmd FileType python AutoFormatBuffer autopep8
 augroup END
 
