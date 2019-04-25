@@ -69,7 +69,7 @@ call plug#end()
 set hidden
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'go': ['$GOPATH/bin/bingo'],
+    \ 'go': ['$GOPATH/bin/gopls'],
     \ 'cpp': ['ccls'],
     \ 'c': ['ccls'],
     \ 'python': ['pyls'],
@@ -113,7 +113,7 @@ set mouse=a
 let g:rustfmt_autosave = 1
 call glaive#Install()
 augroup autoformat_settings
-  autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
+  autocmd FileType c,cpp AutoFormatBuffer clang-format
   autocmd FileType python AutoFormatBuffer autopep8
 augroup END
 
