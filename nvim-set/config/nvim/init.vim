@@ -85,8 +85,8 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#go#sort_class = [ 'package', 'func', 'type', 'var', 'const' ]
 let g:deoplete#sources#go#pointer = 1
 " deoplete: rust
-let g:deoplete#sources#rust#racer_binary='/Users/dannypsnl/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/Users/dannypsnl/workspace/rust/src'
+let g:deoplete#sources#rust#racer_binary='$HOME/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='$HOME/.cargo/rust/src'
 
 " extra setting
 set tabstop=4
