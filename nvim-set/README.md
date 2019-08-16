@@ -52,6 +52,7 @@ $ make install
     - C/C++
     - Rust
     - Go
+    - Haskell
 - auto pair
 - auto format
     - c/c++
@@ -59,6 +60,7 @@ $ make install
     - go
     - rust
     - python
+    - haskell
 - Type Completion
     - Go
     - Rust

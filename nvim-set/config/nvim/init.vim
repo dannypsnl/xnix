@@ -33,6 +33,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'Chiel92/vim-autoformat'
 
 " Spell check
 Plug 'kamykn/spelunker.vim'
@@ -43,7 +44,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 " Multi-entry selection UI
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Type-Complete Plugin
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " deoplete: go
@@ -73,6 +74,7 @@ let g:LanguageClient_serverCommands = {
     \ 'cpp': ['ccls'],
     \ 'c': ['ccls'],
     \ 'python': ['pyls'],
+    \ 'haskell': ['hie-wrapper'],
     \ }
 map <C-b> :call LanguageClient#textDocument_definition()<CR>
 map <C-d> :call LanguageClient#textDocument_hover()<CR>
@@ -116,6 +118,8 @@ augroup autoformat_settings
   autocmd FileType c,cpp AutoFormatBuffer clang-format
   autocmd FileType python AutoFormatBuffer autopep8
 augroup END
+" Haskell auto formatter
+autocmd BufWrite *.hs :Autoformat
 
 " Only work on MacOS that install ctags by brew
 " command `brew install ctags-exuberant`
