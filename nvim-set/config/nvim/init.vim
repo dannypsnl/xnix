@@ -35,9 +35,6 @@ Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'Chiel92/vim-autoformat'
 
-" Spell check
-Plug 'kamykn/spelunker.vim'
-
 " Language Server
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
@@ -94,8 +91,6 @@ let g:deoplete#sources#rust#rust_source_path='$HOME/.cargo/rust/src'
 set tabstop=4
 set shiftwidth=4
 set undofile
-" Spell check
-let g:enable_spelunker_vim = 1
 " > highlight cursor's current line
 set cursorline
 " > show line number
