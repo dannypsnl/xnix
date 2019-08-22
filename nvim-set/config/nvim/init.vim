@@ -12,8 +12,6 @@ Plug 'KKPMW/distilled-vim'
 " Status Bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" tagbar
-Plug 'majutsushi/tagbar'
 " ctrlp
 Plug 'ctrlpvim/ctrlp.vim'
 " search file via content
@@ -116,10 +114,6 @@ augroup END
 " Haskell auto formatter
 autocmd BufWrite *.hs :Autoformat
 
-" Only work on MacOS that install ctags by brew
-" command `brew install ctags-exuberant`
-let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
-autocmd BufEnter * nested :call tagbar#autoopen(0)
 " let ack.vim using ag rather than ack
 let g:ackprg = 'ag --vimgrep'
 

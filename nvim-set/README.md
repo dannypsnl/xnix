@@ -66,6 +66,5 @@ $ make install
     - Rust
 - Hightlight only
     - Peg(grammar syntax)
-- Ctags: auto open
 - Comment: Commentary type command `:10,17Commentary`, [Doc](https://vimawesome.com/plugin/commentary-vim)
 - Ignore cap for `:wq`
