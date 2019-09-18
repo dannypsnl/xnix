@@ -21,7 +21,7 @@ Plug 'mileszs/ack.vim', { 'as': 'ack.vim' }
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
 Plug 'airblade/vim-gitgutter'
-" Comment
+" Comment, command `:Commentary`
 Plug 'tpope/vim-commentary'
 
 " Auto
@@ -128,6 +128,7 @@ set termguicolors
 
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
+" Improve window switching, remove <C-W>
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
