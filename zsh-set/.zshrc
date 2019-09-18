@@ -64,4 +64,16 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 export BXSHARE="/opt/bochs/share/bochs"
 export PATH=$PATH:/opt/bochs/bin
 
+export SSL_CERT_FILE=~/.nix-profile/etc/ssl/certs/ca-bundle.crt
+export NIX_SSL_CERT_FILE=~/.nix-profile/etc/ssl/certs/ca-bundle.crt
+
+# General commands
+alias ls='ls -GFh'
+alias ll='ls -l'
+alias la='ll -a'
+alias lm='ll | more'
+alias lam='la | more'
+alias vim='nvim'
+alias vi='nvim'
+
 eval "$(direnv hook zsh)"
