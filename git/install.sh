@@ -1,1 +1,1 @@
-git config --global --add core.excludesfile $PWD/.gitignore
+git config --global --add core.excludesfile $(pwd)/.gitignore
