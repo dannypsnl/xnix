@@ -68,3 +68,4 @@ $ make install
     - Peg(grammar syntax)
 - Comment: Commentary type command `:10,17Commentary`, [Doc](https://vimawesome.com/plugin/commentary-vim)
 - Ignore cap for `:wq`
+- Clap: https://github.com/liuchengxu/vim-clap#commands

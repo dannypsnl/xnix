@@ -16,6 +16,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 " search file via content
 Plug 'mileszs/ack.vim', { 'as': 'ack.vim' }
+" Clap
+Plug 'liuchengxu/vim-clap'
 
 " Git
 Plug 'tpope/vim-fugitive'
