@@ -1,4 +1,4 @@
-# my xnix env
+# xnix
 
 This project put my setting of *nix environment.
 
