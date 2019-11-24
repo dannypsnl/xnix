@@ -64,7 +64,6 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 export BXSHARE="/opt/bochs/share/bochs"
 export PATH=$PATH:/opt/bochs/bin
 
-export NIX_SSL_CERT_FILE=~/.nix-profile/etc/ssl/certs/ca-bundle.crt
 export SSL_CERT_FILE=$NIX_SSL_CERT_FILE
 
 # General commands
