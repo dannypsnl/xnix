@@ -55,14 +55,13 @@ if [ -f '/Users/dannypsnl/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source /Users/dannypsnl/code/go/src/github.com/dannypsnl/on/on-completion.sh
-
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH=$HOME/.cache/rebar3/bin:$PATH
 export PATH=$HOME/.cache/bin:$PATH
 export PATH="/usr/local/opt/qt/bin:$PATH"
 export BXSHARE="/opt/bochs/share/bochs"
 export PATH=$PATH:/opt/bochs/bin
+export PATH=$PATH:~/code/go/bin
 
 export SSL_CERT_FILE=$NIX_SSL_CERT_FILE
 
