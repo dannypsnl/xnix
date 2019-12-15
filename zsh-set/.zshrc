@@ -62,6 +62,7 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 export BXSHARE="/opt/bochs/share/bochs"
 export PATH=$PATH:/opt/bochs/bin
 export PATH=$PATH:~/code/go/bin
+export PATH=$PATH:/Applications/Racket\ v7.5/bin
 
 export SSL_CERT_FILE=$NIX_SSL_CERT_FILE
 
