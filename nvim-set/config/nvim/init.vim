@@ -58,7 +58,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'pest-parser/pest.vim'
 
 " Funny
-Plug 'johngrib/vim-game-code-break'
+" Plug 'johngrib/vim-game-code-break'
 
 " Initialize plugin system
 call plug#end()
