@@ -2,13 +2,21 @@
 
 Trying to using neovim instead of vim at future so start record plugin stack.
 
-## Install Neovim
+## Install Neovim (https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
-- MacOS
-    ```bash
-    $ brew install neovim
-    $ pip3 install neovim # python3 support for neovim
-    ```
+```bash
+# macos
+brew install neovim
+# ubuntu
+apt-get install -y neovim
+# windows
+choco install neovim
+# nix
+nix-env -iA nixpkgs.neovim
+# openSUSE
+sudo zypper in neovim
+pip3 install neovim # python3 support for neovim
+```
 
 ## Dependency
 
@@ -18,7 +26,14 @@ Trying to using neovim instead of vim at future so start record plugin stack.
     ```
 - ag: [github.com/ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
     ```
+    # macos
     brew install the_silver_searcher
+    # ubuntu
+    apt-get install -y silversearcher-ag
+    # openSUSE
+    zypper install the_silver_searcher
+    # windows
+    choco install ag
     ```
 
 ## Supports
