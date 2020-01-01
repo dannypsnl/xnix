@@ -56,6 +56,8 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'rust-lang/rust.vim'
 " > Peg
 Plug 'pest-parser/pest.vim'
+" > Agda
+Plug 'derekelkins/agda-vim'
 
 " Funny
 " Plug 'johngrib/vim-game-code-break'
@@ -127,6 +129,11 @@ set background=dark
 " colorscheme solarized
 colorscheme distilled
 set termguicolors
+
+" Agda
+au BufNewFile,BufRead *.agda setf agda
+"" Disable jump to definition to speed up the loads
+let g:agdavim_enable_goto_definition = 0
 
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
