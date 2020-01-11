@@ -46,21 +46,7 @@ if [ -f '/Users/dannypsnl/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH=$PATH:$HOME/.cabal/bin
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH=$PATH:$HOME/node_modules/.bin
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/opt/GNAT/2019/bin:$PATH"
-export PATH="/opt/gps/bin:$PATH"
-export PATH="$PATH":"$HOME/.pub-cache/bin"
-export PATH=$HOME/.cache/rebar3/bin:$PATH
-export PATH=$HOME/.cache/bin:$PATH
-export PATH="/usr/local/opt/qt/bin:$PATH"
-export BXSHARE="/opt/bochs/share/bochs"
-export PATH=$PATH:/opt/bochs/bin
-export PATH=$PATH:~/code/go/bin
-export PATH=$PATH:/Applications/Racket\ v7.5/bin
+source ~/.local.sh
 
 export SSL_CERT_FILE=$NIX_SSL_CERT_FILE
 
