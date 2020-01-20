@@ -17,3 +17,4 @@ git config --global user.name "dannypsnl"
 git config --global core.editor 'nvim'
 git config --global branch.autosetuprebase 'always'
 git config --global push.default 'current'
+git config --global rebase.autosquash true
