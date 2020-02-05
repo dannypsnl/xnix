@@ -75,6 +75,7 @@ pip3 install neovim # python3 support for neovim
     - Go
     - Rust
 - Hightlight only
+    - Pie
     - Peg(grammar syntax)
 - Comment: Commentary type command `:10,17Commentary`, [Doc](https://vimawesome.com/plugin/commentary-vim)
 - Ignore cap for `:wq`

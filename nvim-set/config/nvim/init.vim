@@ -58,6 +58,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'pest-parser/pest.vim'
 " > Agda
 Plug 'derekelkins/agda-vim'
+" > Pie
+Plug 'felipesere/pie-highlight.vim'
 
 " Funny
 " Plug 'johngrib/vim-game-code-break'
