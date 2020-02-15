@@ -9,3 +9,4 @@ install:
 	@ln -s $(ROOT)/zsh-set/.zshrc $(HOME)/.zshrc
 	@mkdir -p $(HOME)/.config/nvim
 	@ln -s $(ROOT)/nvim-set/config/nvim/init.vim $(HOME)/.config/nvim/init.vim
+	@sh $(ROOT)/nvim-set/install.sh
