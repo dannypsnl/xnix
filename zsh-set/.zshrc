@@ -48,8 +48,6 @@ if [ -f '/Users/dannypsnl/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users
 
 source ~/.local.sh
 
-export SSL_CERT_FILE=$NIX_SSL_CERT_FILE
-
 # General commands
 alias ls='ls -GFh'
 alias ll='ls -l'
