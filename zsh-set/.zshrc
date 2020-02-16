@@ -35,15 +35,6 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# added by travis gem
-[ -f /Users/dannypsnl/.travis/travis.sh ] && source /Users/dannypsnl/.travis/travis.sh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/dannypsnl/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dannypsnl/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/dannypsnl/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dannypsnl/google-cloud-sdk/completion.zsh.inc'; fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.local.sh
