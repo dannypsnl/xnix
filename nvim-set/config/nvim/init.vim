@@ -75,7 +75,7 @@ let g:LanguageClient_serverCommands = {
     \ 'cpp': ['ccls'],
     \ 'c': ['ccls'],
     \ 'python': ['pyls'],
-    \ 'haskell': ['hie-wrapper'],
+    \ 'haskell': ['hie-wrapper', '--lsp'],
     \ }
 map <C-b> :call LanguageClient#textDocument_definition()<CR>
 map <C-d> :call LanguageClient#textDocument_hover()<CR>
