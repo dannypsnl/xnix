@@ -15,7 +15,8 @@ export CLICOLOR=true
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export LIBRARY_PATH=/usr/local/lib:$LIBRARY_PATH
 
-source $HOME/.nix-profile/etc/profile.d/nix.sh
+nix_profile=$HOME/.nix-profile/etc/profile.d/nix.sh
+[ -f $nix_profile ] && source $nix_profile
 
 source ~/.company.env
 
