@@ -15,6 +15,8 @@ install-git:
 install-zsh:
 	@[ -f $(HOME)/.zshrc ] && rm $(HOME)/.zshrc || true
 	@ln -s $(ROOT)/zsh-set/.zshrc $(HOME)/.zshrc
+	@touch $(HOME)/.local.sh
+	@touch $(HOME)/.company.env
 
 .PHONY: install-neovim
 install-neovim:
