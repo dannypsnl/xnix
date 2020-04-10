@@ -44,8 +44,6 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Type-Complete Plugin
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" deoplete: go
-Plug 'zchee/deoplete-go', { 'do': 'make' }
 " deoplete: rust
 Plug 'sebastianmarkow/deoplete-rust'
 
@@ -84,9 +82,6 @@ map <C-a> :call LanguageClient#textDocument_references()<CR>
 
 " for deoplete
 let g:deoplete#enable_at_startup = 1
-" deoplete: go
-let g:deoplete#sources#go#sort_class = [ 'package', 'func', 'type', 'var', 'const' ]
-let g:deoplete#sources#go#pointer = 1
 " deoplete: rust
 let g:deoplete#sources#rust#racer_binary='$HOME/.cargo/bin/racer'
 let g:deoplete#sources#rust#rust_source_path='$HOME/.cargo/rust/src'
