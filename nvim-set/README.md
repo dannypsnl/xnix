@@ -80,3 +80,4 @@ pip3 install neovim # python3 support for neovim
 - Comment: Commentary type command `:10,17Commentary`, [Doc](https://vimawesome.com/plugin/commentary-vim)
 - Ignore cap for `:wq`
 - Clap: https://github.com/liuchengxu/vim-clap#commands
+- move cursor freely in the buffer: `set virtualedit=all`

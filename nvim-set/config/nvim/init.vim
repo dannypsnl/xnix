@@ -104,6 +104,8 @@ if has("autocmd")
 endif
 " > allow mouse
 set mouse=a
+" > allow to move cursor freely in the buffer
+set virtualedit=all
 
 " auto commands
 let g:rustfmt_autosave = 1
