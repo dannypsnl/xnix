@@ -15,6 +15,7 @@ install-git:
 install-zsh:
 	@[ -f $(HOME)/.zshrc ] && rm $(HOME)/.zshrc || true
 	@ln -s $(ROOT)/zsh-set/.zshrc $(HOME)/.zshrc
+	@sh $(ROOT)/zsh-set/install.sh
 	@touch $(HOME)/.local.sh
 	@touch $(HOME)/.company.env
 
