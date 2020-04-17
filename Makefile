@@ -22,6 +22,5 @@ install-zsh:
 .PHONY: install-neovim
 install-neovim:
 	@mkdir -p $(HOME)/.config/nvim
-	@[ -f $(HOME)/.config/nvim/init.vim ] && rm $(HOME)/.config/nvim/init.vim
 	@ln -s $(ROOT)/nvim-set/config/nvim/init.vim $(HOME)/.config/nvim/init.vim
 	@sh $(ROOT)/nvim-set/install.sh
