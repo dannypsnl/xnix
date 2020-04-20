@@ -31,14 +31,14 @@ plugins=(
   kubectl
 )
 
+source ~/.local.sh
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-source ~/.local.sh
 
 # General commands
 alias ls='ls -GFh'
