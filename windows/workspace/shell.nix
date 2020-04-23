@@ -13,5 +13,7 @@
       nlohmann_json
       curl
       cpp-netlib
+      libnats-c
+      howard-hinnant-date
     ];
 }
