@@ -1,9 +1,12 @@
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
-    buildInputs = [
-      pkgs.cmake
-      pkgs.gcc
-      pkgs.gnumake
-      pkgs.boost
+    buildInputs = with pkgs; [
+      cmake
+      gcc
+      gnumake
+      boost
+      protobuf
+      gtest
+      grpc
     ];
 }
