@@ -8,5 +8,8 @@
       protobuf
       gtest
       grpc
+      nlohmann_json
+      curl
+      cpp-netlib
     ];
 }
