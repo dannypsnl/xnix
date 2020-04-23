@@ -15,5 +15,6 @@
       cpp-netlib
       libnats-c
       howard-hinnant-date
+      libmysqlclient
     ];
 }
