@@ -1,9 +1,11 @@
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
     buildInputs = with pkgs; [
+      # build system
       cmake
       gcc
       gnumake
+      # c++ dev dependencies
       boost
       protobuf
       gtest
