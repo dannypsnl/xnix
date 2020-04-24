@@ -16,5 +16,9 @@
       libnats-c
       howard-hinnant-date
       libmysqlclient
+      libmysqlconnectorcpp
+      soci
+      mysql80
+      tbb
     ];
 }
