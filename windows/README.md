@@ -6,6 +6,12 @@ This folder uses [vagrant](https://www.vagrantup.com/) to create VM on non-unix-
 
 Before using command to create VM, move your repository into `./workspace/`
 
+Dependencies:
+
+```sh
+vagrant plugin install vagrant-disksize
+```
+
 Commands:
 
 ```sh
