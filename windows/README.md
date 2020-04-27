@@ -10,6 +10,7 @@ Dependencies:
 
 ```sh
 vagrant plugin install vagrant-disksize
+vagrant halt
 ```
 
 Commands:
