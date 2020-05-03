@@ -113,9 +113,8 @@ call glaive#Install()
 augroup autoformat_settings
   autocmd FileType c,cpp AutoFormatBuffer clang-format
   autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType haskell AutoFormatBuffer stylish-haskell
 augroup END
-" Haskell auto formatter
-autocmd BufWrite *.hs :Autoformat
 
 " let ack.vim using ag rather than ack
 let g:ackprg = 'ag --vimgrep'
