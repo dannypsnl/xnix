@@ -34,8 +34,6 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'Chiel92/vim-autoformat'
-" > Complete
-Plug 'rhysd/github-complete.vim'
 
 " Language Server
 Plug 'autozimu/LanguageClient-neovim', {
