@@ -11,9 +11,6 @@ git config --global alias.rb 'rebase'
 
 git config --global color.ui true
 
-git config --global user.email "dannypsnl@gmail.com"
-git config --global user.name "dannypsnl"
-
 git config --global core.editor 'nvim'
 git config --global branch.autosetuprebase 'always'
 git config --global push.default 'current'
