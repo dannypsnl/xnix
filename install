@@ -16,7 +16,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 mkdir -p "${HOME}"/.config/nvim
 [ -f "${HOME}"/.config/nvim/init.vim ] && rm "${HOME}"/.config/nvim/init.vim || true
 ln -s $(pwd)/nvim-set/config/nvim/init.vim "${HOME}"/.config/nvim/init.vim
-$(pwd)/nvim-set/install.sh
+# Install VIM Plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # terminal
 nix-env -i direnv neovim silver-searcher
