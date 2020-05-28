@@ -5,17 +5,12 @@ Trying to using neovim instead of vim at future so start record plugin stack.
 ## Install Neovim (https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
 ```bash
-# macos
-brew install neovim
-# ubuntu
-apt-get install -y neovim
 # windows
 choco install neovim
 # nix
 nix-env -iA nixpkgs.neovim
-# openSUSE
-sudo zypper in neovim
-pip3 install neovim # python3 support for neovim
+# python3 support for neovim
+pip3 install neovim
 ```
 
 ## Dependency
