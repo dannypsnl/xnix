@@ -312,6 +312,11 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (global-git-commit-mode t)
   (xterm-mouse-mode -1)
+  (load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
+  (require 'agda-input);
+  (add-hook 'evil-insert-state-entry-hook (lambda () (set-input-method "Agda")))
+  (add-hook 'evil-insert-state-exit-hook (lambda () (set-input-method nil)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
