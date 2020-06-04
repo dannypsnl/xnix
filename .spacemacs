@@ -43,6 +43,7 @@ values."
      git
      markdown
      racket
+     agda
      org
      ;; (shell :variables
      ;;        shell-default-height 30
