@@ -318,6 +318,9 @@ you should place your code here."
   (require 'agda-input);
   (add-hook 'evil-insert-state-entry-hook (lambda () (set-input-method "Agda")))
   (add-hook 'evil-insert-state-exit-hook (lambda () (set-input-method nil)))
+  (evil-leader/set-key "ci" 'org-clock-in)
+  (evil-leader/set-key "co" 'org-clock-out)
+  (evil-leader/set-key "cr" 'org-clock-report)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
