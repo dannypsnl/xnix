@@ -26,4 +26,4 @@ ln -s "$(pwd)"/.spacemacs "${HOME}"/.spacemacs
 # terminal
 nix-env -i direnv neovim silver-searcher
 # language
-nix-env -i cmake clang-tools llvm gcc racket go
+nix-env -i cmake clang-tools llvm gcc racket go julia
