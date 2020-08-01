@@ -44,6 +44,7 @@ values."
      markdown
      racket
      agda
+     coq
      org
      ;; (shell :variables
      ;;        shell-default-height 30
