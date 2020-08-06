@@ -46,7 +46,6 @@ pip3 install neovim
     - [fugitive](https://vimawesome.com/plugin/fugitive-vim)
     - [vim-flog](https://github.com/rbong/vim-flog/)
     - [vim-gitgutter](https://vimawesome.com/plugin/vim-gitgutter): view git diff in real time
-- Agda: reference to https://wiki.portal.chalmers.se/agda/uploads/Main.VIMEditing/agda-utf8 to know why we need this
 - Language Server
     - `<C-b>`: go to defination
     - `<C-d>`: see defination
@@ -54,10 +53,11 @@ pip3 install neovim
     - `<C-a>`: list references
 
     Supports:
+    - Haskell
+    - Julia
     - C/C++
     - Rust
     - Go
-    - Haskell
 - auto pair
 - auto format
     - c/c++

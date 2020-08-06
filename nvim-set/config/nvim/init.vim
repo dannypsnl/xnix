@@ -52,12 +52,10 @@ Plug 'sebastianmarkow/deoplete-rust'
 Plug 'fatih/vim-go', { 'tag': '*' }
 " > Rust
 Plug 'rust-lang/rust.vim'
-" > Peg
-Plug 'pest-parser/pest.vim'
-" > Agda
-Plug 'derekelkins/agda-vim'
 " > Pie
 Plug 'felipesere/pie-highlight.vim'
+" > Julia
+Plug 'JuliaEditorSupport/julia-vim'
 
 " Funny
 " Plug 'johngrib/vim-game-code-break'
