@@ -128,6 +128,9 @@ set background=dark
 colorscheme distilled
 set termguicolors
 
+" idris2 vim
+filetype on
+filetype plugin indent on
 " Agda
 au BufNewFile,BufRead *.agda setf agda
 "" Disable jump to definition to speed up the loads
