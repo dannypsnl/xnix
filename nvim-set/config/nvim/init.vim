@@ -48,6 +48,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'sebastianmarkow/deoplete-rust'
 
 " Language
+" > Idris 2
+Plug 'edwinb/idris2-vim'
 " > Go
 Plug 'fatih/vim-go', { 'tag': '*' }
 " > Rust

@@ -53,6 +53,7 @@ pip3 install neovim
     - `<C-a>`: list references
 
     Supports:
+    - Idris2
     - Haskell
     - Julia
     - C/C++
