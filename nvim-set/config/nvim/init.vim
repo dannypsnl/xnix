@@ -48,6 +48,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'sebastianmarkow/deoplete-rust'
 
 " Language
+" > Coq
+Plug 'whonore/Coqtail'
 " > Idris 2
 Plug 'edwinb/idris2-vim'
 " > Go
@@ -124,8 +126,8 @@ syntax on
 let g:solarized_termcolors=256
 set background=dark
 " Optional Theme
-" colorscheme solarized
-colorscheme distilled
+colorscheme solarized
+"colorscheme distilled
 set termguicolors
 
 " idris2 vim
