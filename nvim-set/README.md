@@ -54,7 +54,7 @@ pip3 install neovim
 
     Supports:
     - Coq
-    - Idris2
+    - [Idris2](https://github.com/idris-hackers/idris-vim#interactive-editing-commands)
     - Haskell
     - Julia
     - C/C++
