@@ -122,13 +122,12 @@ augroup END
 let g:ackprg = 'ag --vimgrep'
 
 " Theme
-syntax on
+syntax enable
 let g:solarized_termcolors=256
-set background=dark
-" Optional Theme
+set background=light
+" > Option
 colorscheme solarized
 "colorscheme distilled
-set termguicolors
 
 " idris2 vim
 filetype on
