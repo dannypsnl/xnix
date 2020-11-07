@@ -1,5 +1,4 @@
-# leave issue number in (), e.g. (#19)
-(#)
+[topic]
 
 # if have to list something, use *
 # for example:
