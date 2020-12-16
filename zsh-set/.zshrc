@@ -22,13 +22,9 @@ source ~/.company.env
 
 plugins=(
   git
-  bundler
   dotenv
   osx
-  rake
-  ruby
-  rbenv
-  kubectl
+  k
 )
 
 source ~/.local.sh

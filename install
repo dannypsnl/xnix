@@ -12,6 +12,7 @@ git config --global --add core.excludesfile "$(pwd)"/git/.gitignore
 [ -f "${HOME}"/.zshrc ] && rm "${HOME}"/.zshrc || true
 ln -s "$(pwd)"/zsh-set/.zshrc "${HOME}"/.zshrc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 
 mkdir -p "${HOME}"/.config/nvim
 [ -f "${HOME}"/.config/nvim/init.vim ] && rm "${HOME}"/.config/nvim/init.vim || true
