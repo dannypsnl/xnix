@@ -126,8 +126,8 @@ syntax enable
 let g:solarized_termcolors=256
 set background=light
 " > Option
-colorscheme solarized
-"colorscheme distilled
+"colorscheme solarized
+colorscheme distilled
 
 " idris2 vim
 filetype on
