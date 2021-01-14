@@ -74,8 +74,6 @@ let g:LanguageClient_serverCommands = {
     \ 'go': ['$GOPATH/bin/gopls'],
     \ 'cpp': ['ccls'],
     \ 'c': ['ccls'],
-    \ 'python': ['pyls'],
-    \ 'haskell': ['hie-wrapper', '--lsp'],
     \ }
 map <C-b> :call LanguageClient#textDocument_definition()<CR>
 map <C-d> :call LanguageClient#textDocument_hover()<CR>
@@ -114,8 +112,6 @@ let g:rustfmt_autosave = 1
 call glaive#Install()
 augroup autoformat_settings
   autocmd FileType c,cpp AutoFormatBuffer clang-format
-  autocmd FileType python AutoFormatBuffer autopep8
-  autocmd FileType haskell AutoFormatBuffer stylish-haskell
 augroup END
 
 " let ack.vim using ag rather than ack
@@ -123,11 +119,13 @@ let g:ackprg = 'ag --vimgrep'
 
 " Theme
 syntax enable
-let g:solarized_termcolors=256
-set background=light
+"let g:solarized_termcolors=256
+"set background=light
 " > Option
 "colorscheme solarized
-colorscheme distilled
+"colorscheme distilled
+colorscheme oldbook
+set termguicolors
 
 " idris2 vim
 filetype on
