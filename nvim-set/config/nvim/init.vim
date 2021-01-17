@@ -123,8 +123,8 @@ syntax enable
 "set background=light
 " > Option
 "colorscheme solarized
-"colorscheme distilled
-colorscheme oldbook
+colorscheme distilled
+"colorscheme oldbook
 set termguicolors
 
 " idris2 vim
