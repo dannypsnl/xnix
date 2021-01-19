@@ -44,10 +44,6 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ }
 " Multi-entry selection UI
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Type-Complete Plugin
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" deoplete: rust
-Plug 'sebastianmarkow/deoplete-rust'
 
 " Language
 " > Coq
@@ -58,8 +54,6 @@ Plug 'edwinb/idris2-vim'
 Plug 'leanprover/lean.vim'
 " > Go
 Plug 'fatih/vim-go', { 'tag': '*' }
-" > Rust
-Plug 'rust-lang/rust.vim'
 " > Pie
 Plug 'felipesere/pie-highlight.vim'
 " > Julia
@@ -84,12 +78,6 @@ map <C-d> :call LanguageClient#textDocument_hover()<CR>
 map <C-r> :call LanguageClient#textDocument_rename()<CR>
 map <C-a> :call LanguageClient#textDocument_references()<CR>
 
-" for deoplete
-let g:deoplete#enable_at_startup = 1
-" deoplete: rust
-let g:deoplete#sources#rust#racer_binary='$HOME/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='$HOME/.cargo/rust/src'
-
 " extra setting
 set tabstop=4
 set shiftwidth=4
@@ -112,7 +100,6 @@ set mouse=a
 set virtualedit=all
 
 " auto commands
-let g:rustfmt_autosave = 1
 call glaive#Install()
 augroup autoformat_settings
   autocmd FileType c,cpp AutoFormatBuffer clang-format
