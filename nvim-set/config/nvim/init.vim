@@ -60,6 +60,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'felipesere/pie-highlight.vim'
 " > Julia
 Plug 'JuliaEditorSupport/julia-vim'
+" > Lean
+Plug 'mk12/vim-lean', { 'for': 'lean' }
 
 " Funny
 " Plug 'johngrib/vim-game-code-break'
@@ -116,6 +118,8 @@ augroup END
 
 " let ack.vim using ag rather than ack
 let g:ackprg = 'ag --vimgrep'
+" auto replace Lean symbol with Unicode
+let g:lean_auto_replace = 1
 
 " Theme
 syntax enable
