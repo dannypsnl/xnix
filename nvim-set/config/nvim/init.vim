@@ -19,6 +19,8 @@ Plug 'mileszs/ack.vim', { 'as': 'ack.vim' }
 " Clap
 Plug 'liuchengxu/vim-clap'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
@@ -52,6 +54,8 @@ Plug 'sebastianmarkow/deoplete-rust'
 Plug 'whonore/Coqtail'
 " > Idris 2
 Plug 'edwinb/idris2-vim'
+" > Lean
+Plug 'leanprover/lean.vim'
 " > Go
 Plug 'fatih/vim-go', { 'tag': '*' }
 " > Rust
@@ -60,8 +64,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'felipesere/pie-highlight.vim'
 " > Julia
 Plug 'JuliaEditorSupport/julia-vim'
-" > Lean
-Plug 'mk12/vim-lean', { 'for': 'lean' }
 
 " Funny
 " Plug 'johngrib/vim-game-code-break'
@@ -118,12 +120,10 @@ augroup END
 
 " let ack.vim using ag rather than ack
 let g:ackprg = 'ag --vimgrep'
-" auto replace Lean symbol with Unicode
-let g:lean_auto_replace = 1
 
 " Theme
 syntax enable
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 "set background=light
 " > Option
 "colorscheme solarized
@@ -134,10 +134,6 @@ set termguicolors
 " idris2 vim
 filetype on
 filetype plugin indent on
-" Agda
-au BufNewFile,BufRead *.agda setf agda
-"" Disable jump to definition to speed up the loads
-let g:agdavim_enable_goto_definition = 0
 
 " Mapping key
 map <C-n> :NERDTreeToggle<CR>
