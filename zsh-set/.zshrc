@@ -48,3 +48,5 @@ alias vi='nvim'
 alias g='git'
 
 eval "$(direnv hook zsh)"
+
+if [ -e /Users/dannypsnl/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/dannypsnl/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
