@@ -9,9 +9,11 @@ git config --global commit.template "$(pwd)"/git/git-message.txt
 git config --global --add core.excludesfile "$(pwd)"/git/.gitignore
 "$(pwd)"/git/git-alias-setting.sh
 
+# setup zsh
 [ -f "${HOME}"/.zshrc ] && rm "${HOME}"/.zshrc || true
 ln -s "$(pwd)"/zsh-set/.zshrc "${HOME}"/.zshrc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# install zsh plugin: k
 git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 
 mkdir -p "${HOME}"/.config/nvim
