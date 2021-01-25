@@ -52,6 +52,7 @@ Plug 'whonore/Coqtail'
 Plug 'edwinb/idris2-vim'
 " > Lean
 Plug 'leanprover/lean.vim'
+Plug 'mk12/vim-lean', { 'for': 'lean' }
 " > Go
 Plug 'fatih/vim-go', { 'tag': '*' }
 " > Pie
@@ -104,6 +105,7 @@ call glaive#Install()
 augroup autoformat_settings
   autocmd FileType c,cpp AutoFormatBuffer clang-format
 augroup END
+let g:lean_auto_replace = 1
 
 " let ack.vim using ag rather than ack
 let g:ackprg = 'ag --vimgrep'
@@ -113,8 +115,8 @@ syntax enable
 let g:solarized_termcolors=256
 "set background=light
 " > Option
-"colorscheme solarized
-colorscheme distilled
+colorscheme solarized
+"colorscheme distilled
 "colorscheme oldbook
 set termguicolors
 
