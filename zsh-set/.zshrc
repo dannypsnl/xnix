@@ -28,7 +28,6 @@ plugins=(
 )
 
 source ~/.local.sh
-source $HOME/.elan/env
 
 source $ZSH/oh-my-zsh.sh
 
