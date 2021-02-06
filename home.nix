@@ -27,6 +27,7 @@
     silver-searcher
     ant
     vagrant
+    fzf
     # language
     racket
     elan
@@ -39,8 +40,6 @@
     go
     python3
     jdk14
-    # env
-    direnv
     # nice tools
     youtube-dl # youtube downloader
     unzip
