@@ -30,7 +30,7 @@
     racket
     elan
     coq
-    agda agda-pkg
+    (agda.withPackages [ agdaPackages.standard-library ])
     idris
     rustup
     gcc gdb gnumake cmake clang-tools llvm
