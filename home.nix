@@ -63,6 +63,37 @@
     ];
   };
 
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    enableCompletion = true;
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "dotenv"
+        "osx"
+      ];
+      theme = "robbyrussell";
+    };
+
+    plugins = [];
+
+    shellAliases = {
+      g = "git";
+      ls = "ls -GFh";
+      ll = "ls -l";
+      la = "ll -a";
+      lm = "ll | more";
+      lam = "la | more";
+      vi = "nvim";
+      vim = "nvim";
+    };
+  };
+
+  programs.direnv.enable = true;
+
   programs.git = {
     enable = true;
     userName = "Lîm Tsú-thuàn";
