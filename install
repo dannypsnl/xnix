@@ -9,7 +9,6 @@ ln -s $(pwd)/xnix/home.nix ${HOME}/.config/nixpkgs/home.nix
 
 git config --global commit.template "$(pwd)"/git/git-message.txt
 git config --global --add core.excludesfile "$(pwd)"/git/.gitignore
-"$(pwd)"/git/git-alias-setting.sh
 
 # setup zsh
 [ -f "${HOME}"/.zshrc ] && rm "${HOME}"/.zshrc || true
