@@ -21,7 +21,6 @@
 
   home.packages = with pkgs; [
     # editor
-    emacs
     neovim
     # dev tools
     tig
@@ -52,6 +51,16 @@
     wget
     tdesktop # telegram
   ];
+
+  programs.emacs = {
+    enable = true;
+    extraPackages = epkgs: with epkgs; [
+      agda2-mode
+      idris-mode
+      racket-mode
+      magit
+    ];
+  };
 
   programs.git = {
     enable = true;
