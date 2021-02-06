@@ -37,6 +37,9 @@
     gcc
     gdb
     gnumake
+    cmake
+    clang-tools
+    llvm
     nodejs
     go
     python3
