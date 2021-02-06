@@ -7,8 +7,7 @@ touch "${HOME}"/.company.env
 
 ln -s $(pwd)/xnix/home.nix ${HOME}/.config/nixpkgs/home.nix
 
-git config --global commit.template "$(pwd)"/git/git-message.txt
-git config --global --add core.excludesfile "$(pwd)"/git/.gitignore
+git config --global commit.template "$(pwd)"/git-message.txt
 
 # install zsh plugin: k
 # FIXME ?git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
