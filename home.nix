@@ -77,7 +77,7 @@
       rb = "rebase";
       tree = "log --graph --decorate --pretty=oneline --abbrev-commit";
     };
-    ignores = [ "*~" "*.swp" ];
+    ignores = [ "*~" "*.swp" "*.o" "*.a" "*.so" "*.aux" "*.dylib" ];
     extraConfig = {
       init.defaultBranch = "develop";
       core.editor = "nvim";
