@@ -53,19 +53,14 @@
       nerdtree
       # theme
       solarized #oldbook-vim distilled-vim
-
-      ack-vim
+      ack-vim ctrlp
       coc-nvim
       airline
-      ctrlp
       vim-clap
-      vim-fugitive
-      vim-gitgutter
+      vim-fugitive vim-gitgutter
       vim-commentary
-
       auto-pairs
       fzf-vim
-
       julia-vim
       vim-go
     ];
