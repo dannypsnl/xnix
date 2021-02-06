@@ -26,6 +26,7 @@
     tig
     silver-searcher
     ant
+    vagrant
     # language
     racket
     elan
