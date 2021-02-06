@@ -34,12 +34,7 @@
     agda
     idris
     rustup
-    gcc
-    gdb
-    gnumake
-    cmake
-    clang-tools
-    llvm
+    gcc gdb gnumake cmake clang-tools llvm
     nodejs
     go
     python3
