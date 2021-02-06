@@ -2,15 +2,9 @@
 
 curl https://nixos.org/nix/install | sh
 
-touch "${HOME}"/.local.sh
-touch "${HOME}"/.company.env
-
 ln -s $(pwd)/xnix/home.nix ${HOME}/.config/nixpkgs/home.nix
 
 git config --global commit.template "$(pwd)"/git-message.txt
 
 # install zsh plugin: k
 # FIXME ?git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
-
-# Nix flakes
-# FIXME ?nix-env -iA nixpkgs.nixFlakes
