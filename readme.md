@@ -41,3 +41,32 @@ This project put my setting of *nix environment.
 - Ignore cap for `:wq`
 - Clap: https://github.com/liuchengxu/vim-clap#commands
 - move cursor freely in the buffer: `set virtualedit=all`
+
+### Git
+
+#### Alias
+
+-  Checkout
+    `$ git co <branch>`
+-  Branch
+    `$ git br <--params>`
+-  Commit
+    `$ git cm <--params>`
+-  Merge
+    `$ git mg <branch>`
+-  Pretty Tree
+    `$ git tree`
+-  Add
+    `$ git ad <--path, files>`
+-  Diff
+    `$ git df <commit-log>`
+-  Status
+    `$ git st`
+-  Rebase
+    `$ git rb`
+
+#### setup global ignore file
+
+```
+git config --global core.excludesfile ~/.gitignore_global
+```
