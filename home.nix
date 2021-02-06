@@ -45,6 +45,25 @@
     tdesktop # telegram
   ];
 
+  home.file.".emacs".text = ''
+    (use-package nix-mode)
+    (use-package agda2-mode)
+    (use-package idris-mode)
+    (use-package racket-mode)
+    (use-package magit)
+  '';
+  programs.emacs = {
+    enable = true;
+    extraPackages = epkgs: with epkgs; [
+      use-package
+      nix-mode
+      agda2-mode
+      idris-mode
+      racket-mode
+      magit
+    ];
+  };
+
   programs.neovim = {
     enable = true;
     viAlias = true;
@@ -102,16 +121,6 @@
       cab WQ wq
       cab Q q
     '';
-  };
-
-  programs.emacs = {
-    enable = true;
-    extraPackages = epkgs: with epkgs; [
-      agda2-mode
-      idris-mode
-      racket-mode
-      magit
-    ];
   };
 
   programs.zsh = {
