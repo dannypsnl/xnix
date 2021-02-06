@@ -20,8 +20,6 @@
   home.stateVersion = "21.03";
 
   home.packages = with pkgs; [
-    # editor
-    neovim
     # dev tools
     tig
     silver-searcher
@@ -46,6 +44,70 @@
     wget
     tdesktop # telegram
   ];
+
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+    plugins = with pkgs.vimPlugins; [
+      nerdtree
+      # theme
+      solarized #oldbook-vim distilled-vim
+
+      ack-vim
+      coc-nvim
+      airline
+      ctrlp
+      vim-clap
+      vim-fugitive
+      vim-gitgutter
+      vim-commentary
+
+      auto-pairs
+      fzf-vim
+
+      julia-vim
+      vim-go
+    ];
+    extraConfig = ''
+      set tabstop=4
+      set shiftwidth=4
+      set undofile
+      set cursorline
+      set number
+      set nolist
+      set listchars=tab:→\ ,trail:•
+      set list
+      if has("autocmd")
+        au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+      endif
+
+      let g:ackprg = 'ag --vimgrep'
+
+      set mouse=a
+      set virtualedit=all
+
+      " Theme
+      syntax enable
+      let g:solarized_termcolors=256
+      colorscheme solarized
+      set termguicolors
+
+      " Mapping key
+      map <C-n> :NERDTreeToggle<CR>
+      " Improve window switching, remove <C-W>
+      map <C-J> <C-W><C-J>
+      map <C-K> <C-W><C-K>
+      map <C-L> <C-W><C-L>
+      map <C-H> <C-W><C-H>
+
+      cab W w
+      cab Wq wq
+      cab wQ wq
+      cab WQ wq
+      cab Q q
+    '';
+  };
 
   programs.emacs = {
     enable = true;
