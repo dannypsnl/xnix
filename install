@@ -2,7 +2,7 @@
 
 curl https://nixos.org/nix/install | sh
 
-ln -s $(pwd)/xnix/home.nix ${HOME}/.config/nixpkgs/home.nix
+ln -s $(pwd)/home.nix ${HOME}/.config/nixpkgs/home.nix
 
 git config --global commit.template "$(pwd)"/git-message.txt
 
