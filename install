@@ -5,6 +5,3 @@ curl https://nixos.org/nix/install | sh
 # generate current machine information
 echo "{ xnixPath = \"$(pwd)\"; operatingSystem = \"$(uname -v | awk '{ print $1 }' | sed 's/#.*-//')\"; }" > machine.nix
 ln -s $(pwd)/home.nix ${HOME}/.config/nixpkgs/home.nix
-
-# install zsh plugin: k
-# FIXME ?git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
