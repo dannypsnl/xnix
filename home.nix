@@ -56,7 +56,7 @@ in {
       z3
       # youtube downloader
       youtube-dl
-    ] ++ lib.optional isNix [
+    ] ++ lib.optionals isNix [
       racket
       isabelle
       idris

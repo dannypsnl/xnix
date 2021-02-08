@@ -30,8 +30,5 @@ pkgs: isMacOS: {
     vim = "nvim";
   };
 
-  initExtraFirst = if isMacOS then ''
-    source $HOME/.macos-extra
-  '' else
-    "";
+  initExtra = if isMacOS then "source $HOME/.macos-extra" else "";
 }
