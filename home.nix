@@ -60,39 +60,7 @@ in
     enableZshIntegration = true;
   };
 
-  programs.zsh = {
-    enable = true;
-    enableAutosuggestions = true;
-    enableCompletion = true;
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "git"
-        "dotenv"
-        "osx"
-      ];
-      theme = "robbyrussell";
-    };
-
-    plugins = [];
-
-    shellAliases = {
-      g = "git";
-      ls = "ls -GFh";
-      ll = "ls -l";
-      la = "ll -a";
-      lm = "ll | more";
-      lam = "la | more";
-      vi = "nvim";
-      vim = "nvim";
-    };
-
-    initExtraFirst =
-    if isMacOS then ''
-    source $HOME/.macos-extra
-    '' else "";
-  };
+  programs.zsh = (import ./zsh.nix) pkgs isMacOS;
 
   programs.direnv = {
     enable = true;
