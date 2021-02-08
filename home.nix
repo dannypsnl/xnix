@@ -125,6 +125,12 @@
     enableZshIntegration = true;
   };
 
+  programs.gh = {
+    enable = true;
+    editor = "nvim";
+    gitProtocol = "ssh";
+  };
+
   programs.git = {
     enable = true;
     userName = "Lîm Tsú-thuàn";
