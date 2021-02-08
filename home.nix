@@ -32,6 +32,7 @@
     elan
     coq
     (agda.withPackages [ agdaPackages.standard-library ])
+    #isabelle
     #idris
     rustup
     gcc gdb gnumake cmake clang-tools llvm
@@ -47,13 +48,7 @@
     #tdesktop # telegram
   ];
 
-  home.file.".emacs".text = ''
-    (use-package nix-mode)
-    (use-package agda2-mode)
-    (use-package idris-mode)
-    (use-package racket-mode)
-    (use-package magit)
-  '';
+  home.file.".emacs".text = builtins.readFile ./init.el;
   programs.emacs = {
     enable = true;
     extraPackages = epkgs: with epkgs; [
