@@ -14,4 +14,5 @@
 
 ; cmd+k for commit
 (global-set-key (kbd "s-k") 'magit-commit)
+; cmd+shift+k for push
 (global-set-key (kbd "s-K") 'magit-push)
