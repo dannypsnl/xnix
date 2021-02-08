@@ -31,6 +31,8 @@ home-manager switch
 - idris-mode
 - nix-mode
 - magit
+  - cmd+k: magit-commit
+  - cmd+shift+k: magit-push
 
 ### Neovim
 
