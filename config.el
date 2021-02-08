@@ -20,3 +20,7 @@
 (global-set-key (kbd "s-t") 'tab-bar-new-tab)
 ; cmd+w: close tab
 (global-set-key (kbd "s-w") 'tab-bar-close-tab)
+; M+left: prev tab
+(global-set-key (kbd "M-<left>") 'tab-bar-switch-to-prev-tab)
+; M+right: next tab
+(global-set-key (kbd "M-<right>") 'tab-bar-switch-to-next-tab)
