@@ -11,3 +11,6 @@
 (setq inhibit-startup-screen t)
 ; font size: 1/10pt * :height
 (set-face-attribute 'default nil :height 150)
+
+; cmd+k for commit
+(global-set-key (kbd "s-k") 'magit-commit)
