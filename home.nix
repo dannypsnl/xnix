@@ -26,7 +26,6 @@
     ant
     vagrant
     cloc
-    fzf
     # language
     #racket
     elan
@@ -81,6 +80,11 @@
       vim-go
     ];
     extraConfig = builtins.readFile ./vimrc;
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   programs.zsh = {
