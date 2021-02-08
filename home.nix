@@ -34,6 +34,7 @@ in {
       # language
       chez
       elan
+      sbcl
       coq
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
@@ -46,10 +47,13 @@ in {
       llvm
       erlang
       elixir
+      ocaml
+      opam
       nodejs
       go
       python3
       nixfmt
+      z3
       # youtube downloader
       youtube-dl
     ] ++ lib.optional isNix [
