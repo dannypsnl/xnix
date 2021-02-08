@@ -1,5 +1,9 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, lib, ... }:
+let
+  machine = import ./machine.nix;
+  isNix = machine.operatingSystem == "NixOS";
+  isMacOS = machine.operatingSystem == "Darwin";
+in
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -27,24 +31,24 @@
     vagrant
     cloc
     # language
-    #racket
+    chez
     elan
     coq
     (agda.withPackages [ agdaPackages.standard-library ])
-    #isabelle
-    #idris
+    idris2
     rustup
     gcc gdb gnumake cmake clang-tools llvm
     elixir
     nodejs
     go
     python3
-    #jdk14
     # nice tools
     youtube-dl # youtube downloader
     unzip
     wget
-    #tdesktop # telegram
+  ] ++ lib.optional isNix
+  [ racket isabelle idris jdk14
+    tdesktop # telegram
   ];
 
   home.file.".emacs".text = builtins.readFile ./init.el;
