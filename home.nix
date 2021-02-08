@@ -38,7 +38,7 @@ in
     idris2
     rustup
     gcc gdb gnumake cmake clang-tools llvm
-    elixir
+    erlang elixir
     nodejs
     go
     python3
