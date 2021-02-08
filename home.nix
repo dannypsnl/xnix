@@ -64,7 +64,7 @@ in {
       tdesktop # telegram
     ];
 
-  home.file.".emacs".text = builtins.readFile ./init.el;
+  home.file.".emacs".text = builtins.readFile ./config.el;
   programs.emacs = import ./emacs.nix;
   programs.neovim = (import ./neovim.nix) pkgs;
 

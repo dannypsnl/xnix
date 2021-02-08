@@ -4,5 +4,6 @@
 (use-package racket-mode)
 (use-package magit)
 
+; fullscreen by default
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
