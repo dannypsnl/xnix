@@ -73,5 +73,5 @@ in
     gitProtocol = "ssh";
   };
 
-  programs.git = (import ./git.nix) machine;
+  programs.git = (import ./git.nix) (machine.xnixPath + "/commit-template.txt");
 }

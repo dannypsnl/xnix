@@ -1,4 +1,4 @@
-machine:
+commitTemplatePath:
 {
   enable = true;
   userName = "Lîm Tsú-thuàn";
@@ -27,6 +27,6 @@ machine:
     branch.autosetuprebase = "always";
     push.default = "current";
     rebase.autosquash = true;
-    commit.template = machine.xnixPath + "/commit-template.txt";
+    commit.template = commitTemplatePath;
   };
 }
