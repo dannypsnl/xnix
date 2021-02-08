@@ -82,9 +82,3 @@ home-manager switch
     `$ git st`
 -  Rebase
     `$ git rb`
-
-#### setup global ignore file
-
-```
-git config --global core.excludesfile ~/.gitignore_global
-```
