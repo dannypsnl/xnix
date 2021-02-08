@@ -2,12 +2,11 @@
 
 curl https://nixos.org/nix/install | sh
 
-ln -s $(pwd)/home.nix ${HOME}/.config/nixpkgs/home.nix
-
-git config --global commit.template "$(pwd)"/git-message.txt
-
 # generate current machine information
 echo "{ operatingSystem = \"$(uname -v | awk '{ print $1 }' | sed 's/#.*-//')\"; }" > machine.nix
+ln -s $(pwd)/home.nix ${HOME}/.config/nixpkgs/home.nix
+
+git config --global commit.template "$(pwd)"/commit-template.txt
 
 # install zsh plugin: k
 # FIXME ?git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
