@@ -12,15 +12,12 @@
 ; font size: 1/10pt * :height
 (set-face-attribute 'default nil :height 150)
 
-; cmd+k: commit
+; Git
 (global-set-key (kbd "s-k") 'magit-commit)
-; cmd+shift+k: push
 (global-set-key (kbd "s-K") 'magit-push)
-; cmd+t: new tab
+
+; Tabs
 (global-set-key (kbd "s-t") 'tab-bar-new-tab)
-; cmd+w: close tab
 (global-set-key (kbd "s-w") 'tab-bar-close-tab)
-; M+left: prev tab
 (global-set-key (kbd "M-<left>") 'tab-bar-switch-to-prev-tab)
-; M+right: next tab
 (global-set-key (kbd "M-<right>") 'tab-bar-switch-to-next-tab)
