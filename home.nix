@@ -133,6 +133,7 @@ in
       branch.autosetuprebase = "always";
       push.default = "current";
       rebase.autosquash = true;
+      commit.template = machine.xnixPath + "/commit-template.txt";
     };
   };
 }

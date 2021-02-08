@@ -15,8 +15,6 @@ nix-channel --update
 nix-shell '<home-manager>' -A install
 
 home-manager switch
-# finally, install commit template
-git config --global commit.template "$(pwd)"/commit-template.txt
 ```
 
 ## Reference
