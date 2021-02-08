@@ -9,3 +9,5 @@
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 ; no show startup screen
 (setq inhibit-startup-screen t)
+; font size: 1/10pt * :height
+(set-face-attribute 'default nil :height 150)
