@@ -7,3 +7,5 @@
 ; fullscreen by default
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
+; no show startup screen
+(setq inhibit-startup-screen t)
