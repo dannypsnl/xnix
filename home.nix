@@ -11,7 +11,7 @@ in
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "dannypsnl";
-  home.homeDirectory = "/home/dannypsnl";
+  home.homeDirectory = if isMacOS then "/Users/dannypsnl" else "/home/dannypsnl";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
