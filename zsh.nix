@@ -1,5 +1,4 @@
-pkgs: isMacOS:
-{
+pkgs: isMacOS: {
   enable = true;
   enableAutosuggestions = true;
   enableCompletion = true;
@@ -10,17 +9,15 @@ pkgs: isMacOS:
     theme = "robbyrussell";
   };
 
-  plugins = [
-    {
-      name = "k";
-      src = pkgs.fetchFromGitHub {
-        owner = "supercrabtree";
-        repo = "k";
-        rev = "master";
-        sha256 = "053dd945qfxzk50agapc9ph601611niz1yzjqfx6fjza3j6cjsnz";
-      };
-    }
-  ];
+  plugins = [{
+    name = "k";
+    src = pkgs.fetchFromGitHub {
+      owner = "supercrabtree";
+      repo = "k";
+      rev = "master";
+      sha256 = "053dd945qfxzk50agapc9ph601611niz1yzjqfx6fjza3j6cjsnz";
+    };
+  }];
 
   shellAliases = {
     g = "git";
@@ -33,8 +30,8 @@ pkgs: isMacOS:
     vim = "nvim";
   };
 
-  initExtraFirst =
-  if isMacOS then ''
-  source $HOME/.macos-extra
-  '' else "";
+  initExtraFirst = if isMacOS then ''
+    source $HOME/.macos-extra
+  '' else
+    "";
 }

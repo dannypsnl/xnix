@@ -1,5 +1,4 @@
-commitTemplatePath:
-{
+commitTemplatePath: {
   enable = true;
   userName = "Lîm Tsú-thuàn";
   userEmail = "dannypsnl@gmail.com";
@@ -15,9 +14,16 @@ commitTemplatePath:
     tree = "log --graph --decorate --pretty=oneline --abbrev-commit";
   };
   ignores = [
-    "*~" "*.swp" "*.o" "*.a" "*.so" "*.aux" "*.dylib"
+    "*~"
+    "*.swp"
+    "*.o"
+    "*.a"
+    "*.so"
+    "*.aux"
+    "*.dylib"
     # editor/IDE
-    ".idea/" ".vscode/"
+    ".idea/"
+    ".vscode/"
     ".ccls-cache/"
   ];
   extraConfig = {

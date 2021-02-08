@@ -3,13 +3,13 @@ let
   machine = import ./machine.nix;
   isNix = machine.operatingSystem == "NixOS";
   isMacOS = machine.operatingSystem == "Darwin";
-in
-{
+in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "dannypsnl";
-  home.homeDirectory = if isMacOS then "/Users/dannypsnl" else "/home/dannypsnl";
+  home.homeDirectory =
+    if isMacOS then "/Users/dannypsnl" else "/home/dannypsnl";
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
@@ -20,39 +20,59 @@ in
   # changes in each release.
   home.stateVersion = "21.03";
 
-  home.packages = with pkgs; [
-    # dev tools
-    tig cloc
-    silver-searcher
-    ant
-    vagrant
-    unzip curl wget
-    # language
-    chez
-    elan
-    coq
-    (agda.withPackages [ agdaPackages.standard-library ])
-    idris2
-    rustup
-    gcc gdb gnumake cmake clang-tools llvm
-    erlang elixir
-    nodejs
-    go
-    python3
-    # youtube downloader
-    youtube-dl
-  ] ++ lib.optional isNix
-  [ racket isabelle idris jdk14
-    tdesktop # telegram
-  ];
+  home.packages = with pkgs;
+    [
+      # dev tools
+      tig
+      cloc
+      silver-searcher
+      ant
+      vagrant
+      unzip
+      curl
+      wget
+      # language
+      chez
+      elan
+      coq
+      (agda.withPackages [ agdaPackages.standard-library ])
+      idris2
+      rustup
+      gcc
+      gdb
+      gnumake
+      cmake
+      clang-tools
+      llvm
+      erlang
+      elixir
+      nodejs
+      go
+      python3
+      nixfmt
+      # youtube downloader
+      youtube-dl
+    ] ++ lib.optional isNix [
+      racket
+      isabelle
+      idris
+      jdk14
+      tdesktop # telegram
+    ];
 
   home.file.".emacs".text = builtins.readFile ./init.el;
   programs.emacs = import ./emacs.nix;
   programs.neovim = (import ./neovim.nix) pkgs;
 
   programs.zsh = (import ./zsh.nix) pkgs isMacOS;
-  programs.fzf = { enable = true; enableZshIntegration = true; };
-  programs.direnv = { enable = true; enableZshIntegration = true; };
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   programs.git = (import ./git.nix) (machine.xnixPath + "/commit-template.txt");
   programs.gh = {
