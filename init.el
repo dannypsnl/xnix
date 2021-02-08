@@ -3,3 +3,6 @@
 (use-package idris-mode)
 (use-package racket-mode)
 (use-package magit)
+
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
