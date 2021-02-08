@@ -2,11 +2,17 @@
 
 This project put my setting of *nix environment.
 
-### Installation
+## Installation
 
 ```zsh
 ./install
 ```
+
+## Reference
+
+- [home manager options](https://nix-community.github.io/home-manager/options.html)
+
+## Details
 
 ### Emacs
 
