@@ -52,39 +52,8 @@ in
   ];
 
   home.file.".emacs".text = builtins.readFile ./init.el;
-  programs.emacs = {
-    enable = true;
-    extraPackages = epkgs: with epkgs; [
-      use-package
-      nix-mode
-      agda2-mode
-      idris-mode
-      racket-mode
-      magit
-    ];
-  };
-
-  programs.neovim = {
-    enable = true;
-    viAlias = true;
-    vimAlias = true;
-    plugins = with pkgs.vimPlugins; [
-      nerdtree
-      # theme
-      solarized #oldbook-vim distilled-vim
-      ack-vim ctrlp
-      coc-nvim
-      airline
-      vim-clap
-      vim-fugitive vim-gitgutter
-      vim-commentary
-      auto-pairs
-      fzf-vim
-      julia-vim
-      vim-go
-    ];
-    extraConfig = builtins.readFile ./vimrc;
-  };
+  programs.emacs = import ./emacs.nix;
+  programs.neovim = (import ./neovim.nix){ pkgs = pkgs; };
 
   programs.fzf = {
     enable = true;
