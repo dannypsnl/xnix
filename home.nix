@@ -64,11 +64,11 @@ in {
       tdesktop # telegram
     ];
 
-  home.file.".emacs".text = builtins.readFile ./config.el;
-  programs.emacs = import ./emacs.nix;
-  programs.neovim = (import ./neovim.nix) pkgs;
+  home.file.".emacs".text = builtins.readFile ./emacs/init.el;
+  programs.emacs = import ./emacs/config.nix;
+  programs.neovim = (import ./neovim/config.nix) pkgs;
 
-  programs.zsh = (import ./zsh.nix) pkgs isMacOS;
+  programs.zsh = (import ./zsh/config.nix) pkgs isMacOS;
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
@@ -78,7 +78,7 @@ in {
     enableZshIntegration = true;
   };
 
-  programs.git = (import ./git.nix) (machine.xnixPath + "/commit-template.txt");
+  programs.git = (import ./git/config.nix) (machine.xnixPath + "/git/commit-template.txt");
   programs.gh = {
     enable = true;
     editor = "nvim";
