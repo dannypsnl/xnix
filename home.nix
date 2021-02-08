@@ -119,9 +119,10 @@ in
       vim = "nvim";
     };
 
-    initExtraFirst = ''
+    initExtraFirst =
+    if isMacOS then ''
     source $HOME/.macos-extra
-    '';
+    '' else "";
   };
 
   programs.direnv = {
