@@ -64,6 +64,9 @@ in {
       tdesktop # telegram
     ];
 
+  home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
+  home.file.".agda/defaults".text = builtins.readFile ./agda/defaults;
+
   home.file.".emacs".text = builtins.readFile ./emacs/init.el;
   programs.emacs = import ./emacs/config.nix;
   programs.neovim = (import ./neovim/config.nix) pkgs;
