@@ -5,16 +5,22 @@ This project put my setting of *nix environment.
 ## Installation
 
 ```zsh
-# install configuration
-./install
+# non-nixos have to install nix first
+curl https://nixos.org/nix/install | sh
 
 # install home manager
 nix-channel --add https://github.com/nix-community/home-manager/archive/release-20.09.tar.gz home-manager
 nix-channel --update
 # non-nixos might need:
-#export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
+export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
 nix-shell '<home-manager>' -A install
 
+# generate current machine config
+echo "{ xnixPath = \"$(pwd)\"; operatingSystem = \"$(uname -v | awk '{ print $1 }' | sed 's/#.*-//')\"; }" > machine.nix
+# install config to system
+ln -s $(pwd)/home.nix ${HOME}/.config/nixpkgs/home.nix
+
+# apply config
 home-manager switch
 ```
 

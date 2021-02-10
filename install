@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-
-curl https://nixos.org/nix/install | sh
-
-# generate current machine information
-echo "{ xnixPath = \"$(pwd)\"; operatingSystem = \"$(uname -v | awk '{ print $1 }' | sed 's/#.*-//')\"; }" > machine.nix
-ln -s $(pwd)/home.nix ${HOME}/.config/nixpkgs/home.nix
