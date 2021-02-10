@@ -31,6 +31,7 @@ in {
       unzip
       curl
       wget
+      ffmpeg
       # language
       chez
       elan
