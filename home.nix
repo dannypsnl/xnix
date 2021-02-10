@@ -57,6 +57,9 @@ in {
       z3
       # youtube downloader
       youtube-dl
+      # font
+      iosevka
+      iosevka-bin
     ] ++ lib.optionals isNix [
       racket
       isabelle
