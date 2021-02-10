@@ -30,7 +30,7 @@ in {
     # theme
     solarized
     oldbook-vim
-    #distilled-vim
+    distilled-vim
     ack-vim
     ctrlp
     coc-nvim
