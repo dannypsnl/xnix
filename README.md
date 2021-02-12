@@ -15,6 +15,9 @@ nix-channel --update
 export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
 nix-shell '<home-manager>' -A install
 
+# get this repo
+git clone https://github.com/dannypsnl/xnix.git
+cd xnix
 # generate current machine config
 echo "{ xnixPath = \"$(pwd)\"; operatingSystem = \"$(uname -v | awk '{ print $1 }' | sed 's/#.*-//')\"; }" > machine.nix
 # install config to system
