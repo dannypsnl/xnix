@@ -21,3 +21,9 @@
 (global-set-key (kbd "s-w") 'tab-bar-close-tab)
 (global-set-key (kbd "M-<left>") 'tab-bar-switch-to-prev-tab)
 (global-set-key (kbd "M-<right>") 'tab-bar-switch-to-next-tab)
+
+; File
+(cond
+ ((string-equal system-type "gnu/linux")
+  (global-set-key (kdb "M-s") 'save-buffer)
+  (global-set-key (kdb "M-z") 'undo)))
