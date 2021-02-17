@@ -25,6 +25,8 @@ commitTemplatePath: {
     ".idea/"
     ".vscode/"
     ".ccls-cache/"
+    # system
+    ".DS_Store"
   ];
   extraConfig = {
     init.defaultBranch = "develop";
