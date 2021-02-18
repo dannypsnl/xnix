@@ -23,8 +23,6 @@ let
   p = pkgs.vimPlugins // customPlugins;
 in {
   enable = true;
-  viAlias = true;
-  vimAlias = true;
   plugins = with p; [
     nerdtree
     # theme
