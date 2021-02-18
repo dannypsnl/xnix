@@ -45,6 +45,7 @@ in {
       gnumake
       cmake
       clang-tools
+      ccls
       llvm
       erlang
       elixir
