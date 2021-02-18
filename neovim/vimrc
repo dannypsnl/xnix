@@ -22,7 +22,9 @@ set virtualedit=all
 " Theme
 syntax enable
 let g:solarized_termcolors=256
-colorscheme solarized
+"colorscheme solarized
+colorscheme oldbook
+"colorscheme distilled
 set termguicolors
 
 " Mapping key

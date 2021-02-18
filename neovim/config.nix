@@ -31,6 +31,7 @@ in {
     solarized
     oldbook-vim
     distilled-vim
+    # tools
     ack-vim
     ctrlp
     coc-nvim
