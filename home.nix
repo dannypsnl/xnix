@@ -52,6 +52,7 @@ in {
       opam
       nodejs
       go
+      gopls
       python3
       nixfmt
       z3
