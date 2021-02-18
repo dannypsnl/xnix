@@ -21,15 +21,16 @@ set virtualedit=all
 
 " Theme
 syntax enable
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 "colorscheme solarized
 colorscheme oldbook
 "colorscheme distilled
 set termguicolors
 
 " Mapping key
+"" file true
 map <C-n> :NERDTreeToggle<CR>
-" Improve window switching, remove <C-W>
+"" Improve window switching, remove <C-W>
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
