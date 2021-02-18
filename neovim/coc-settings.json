@@ -29,5 +29,10 @@
         }
       }
     }
-  }
+  },
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go",
+    "c", "cpp",
+    "objc", "objcpp"
+  ]
 }
