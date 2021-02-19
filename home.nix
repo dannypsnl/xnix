@@ -54,6 +54,10 @@ in {
       ## erlang/elixir
       erlang
       elixir
+      ## purescript
+      purescript
+      nodePackages.purescript-language-server
+      nodePackages.purty
       ## ocaml
       ocaml
       opam
