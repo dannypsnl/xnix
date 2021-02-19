@@ -42,6 +42,7 @@ in {
     fzf-vim
     julia-vim
     vim-go
+    idris2-vim
   ];
   extraConfig = builtins.readFile ./vimrc;
 }
