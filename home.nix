@@ -33,13 +33,17 @@ in {
       wget
       ffmpeg
       # language
+      ## Scheme
       chez
-      elan
       sbcl
+      ## Prover
+      elan
       coq
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
+      ## rust
       rustup
+      ## C/C++
       gcc
       gdb
       gnumake
@@ -47,15 +51,26 @@ in {
       clang-tools
       ccls
       llvm
+      ## erlang/elixir
       erlang
       elixir
+      ## purescript
+      purescript
+      nodePackages.purescript-language-server
+      nodePackages.purty
+      ## ocaml
       ocaml
       opam
+      ## JS
       nodejs
+      ## Go
       go
       gopls
+      ## Python
       python3
+      ## Nix
       nixfmt
+      ## z3
       z3
       # youtube downloader
       youtube-dl
