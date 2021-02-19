@@ -33,7 +33,7 @@ in {
       wget
       ffmpeg
       # language
-      ## Scheme
+      ## Scheme/Lisp
       chez
       sbcl
       ## Prover
