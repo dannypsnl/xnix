@@ -50,7 +50,7 @@ in {
       cmake
       clang-tools
       ccls
-      llvm
+      llvm_11
       ## erlang/elixir
       erlang
       elixir
