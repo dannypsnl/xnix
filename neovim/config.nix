@@ -1,4 +1,4 @@
-pkgs:
+pkgs: lib: isMacOS:
 let
   customPlugins = {
     oldbook-vim = pkgs.vimUtils.buildVimPlugin {
@@ -42,6 +42,7 @@ in {
     fzf-vim
     julia-vim
     vim-go
+  ] ++ lib.optionals isMacOS [
     idris2-vim
   ];
   extraConfig = builtins.readFile ./vimrc;
