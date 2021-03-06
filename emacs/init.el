@@ -3,6 +3,7 @@
 (use-package idris-mode)
 (use-package racket-mode)
 (use-package magit)
+(use-package mermaid-mode)
 
 ; fullscreen by default
 (custom-set-variables
