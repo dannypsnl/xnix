@@ -8,6 +8,5 @@
       idris-mode
       racket-mode
       magit
-      mermaid-mode
     ];
 }
