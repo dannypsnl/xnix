@@ -36,6 +36,7 @@ in {
       ## Scheme/Lisp
       chez
       sbcl
+      guile
       ## Prover
       elan
       coq
