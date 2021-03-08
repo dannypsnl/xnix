@@ -32,6 +32,8 @@ in {
       curl
       wget
       ffmpeg
+      graphviz
+      mkdocs
       # language
       ## Scheme/Lisp
       chez
