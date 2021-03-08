@@ -42,6 +42,7 @@ in {
     fzf-vim
     julia-vim
     vim-go
+    zig-vim
   ] ++ lib.optionals isMacOS [
     idris2-vim
   ];
