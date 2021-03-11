@@ -36,9 +36,7 @@ in {
       mkdocs
       # language
       chez
-      sbcl
-      guile
-      ## Prover
+      #sbcl guile
       elan
       coq
       (agda.withPackages [ agdaPackages.standard-library ])
@@ -56,8 +54,7 @@ in {
       purescript
       nodePackages.purescript-language-server
       nodePackages.purty
-      ocaml
-      opam
+      #ocaml opam
       nodejs
       go
       gopls
