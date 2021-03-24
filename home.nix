@@ -36,7 +36,8 @@ in {
       mkdocs
       # language
       chez
-      #sbcl guile
+      sbcl
+      # guile
       elan
       coq
       (agda.withPackages [ agdaPackages.standard-library ])
