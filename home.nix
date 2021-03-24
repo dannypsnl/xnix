@@ -49,6 +49,7 @@ in {
       clang-tools
       ccls
       llvm_11
+      gforth
       erlang
       elixir
       purescript
