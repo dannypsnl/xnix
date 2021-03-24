@@ -69,8 +69,7 @@ in {
     ] ++ lib.optionals isNix [
       racket
       isabelle
-      idris
-      zig
+      factor-lang
       jdk14
       tdesktop # telegram
     ];
