@@ -34,6 +34,7 @@ in {
       ffmpeg
       graphviz
       mkdocs
+      postgresql
       # language
       chez
       sbcl
