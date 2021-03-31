@@ -38,6 +38,7 @@ in {
       # language
       chez
       sbcl
+      leiningen
       # guile
       elan
       coq
