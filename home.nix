@@ -36,11 +36,11 @@ in {
       mkdocs
       postgresql
       # language
-      chez
-      sbcl
-      leiningen
-      # guile
-      elan
+      chez # chez scheme
+      #guile
+      sbcl # common-lisp
+      leiningen # clojure
+      elan # lean prover
       coq
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
@@ -72,6 +72,7 @@ in {
       iosevka-bin
     ] ++ lib.optionals isNix [
       racket
+      gauche # gauche scheme
       isabelle
       factor-lang
       jdk14
