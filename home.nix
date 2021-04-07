@@ -34,6 +34,7 @@ in {
       ffmpeg
       graphviz
       mkdocs
+      hugo
       postgresql
       # language
       chez # chez scheme
