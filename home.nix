@@ -41,7 +41,7 @@ in {
       #guile
       sbcl # common-lisp
       leiningen # clojure
-      elan # lean prover
+      #elan # lean prover
       coq
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
