@@ -56,6 +56,7 @@ in {
       gforth
       erlang
       elixir
+      fsharp
       purescript
       nodePackages.purescript-language-server
       nodePackages.purty
