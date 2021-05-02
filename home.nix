@@ -54,6 +54,7 @@ in {
       ccls
       llvm_11
       gforth
+      julia
       erlang
       elixir
       fsharp
