@@ -36,6 +36,7 @@ in {
       mkdocs
       hugo
       postgresql
+      gradle
       # language
       chez # chez scheme
       #guile
