@@ -40,6 +40,7 @@ in {
       # language
       chez # chez scheme
       #guile
+      #gerbil
       sbcl # common-lisp
       leiningen # clojure
       #elan # lean prover
