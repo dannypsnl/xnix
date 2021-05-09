@@ -25,6 +25,7 @@ in {
       # dev tools
       tig
       cloc
+      croc
       silver-searcher
       ant
       vagrant
