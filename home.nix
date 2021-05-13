@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 let
   machine = import ./machine.nix;
-  isNix = machine.operatingSystem == "NixOS";
+  isNixOS = machine.operatingSystem == "NixOS";
   isMacOS = machine.operatingSystem == "Darwin";
 in {
   # Let Home Manager install and manage itself.
@@ -76,7 +76,7 @@ in {
       # font
       iosevka
       iosevka-bin
-    ] ++ lib.optionals isNix [
+    ] ++ lib.optionals isNixOS [
       racket
       gauche # gauche scheme
       isabelle
