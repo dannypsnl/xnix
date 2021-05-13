@@ -27,27 +27,34 @@ in {
       cloc
       croc
       silver-searcher
-      ant
-      vagrant
       unzip
       curl
       wget
       ffmpeg
       graphviz
+      vagrant
+      youtube-dl # youtube downloader
+      ## database
+      postgresql
+      ## static site generator
       mkdocs
       hugo
-      postgresql
+      ## build tool
+      ant
       gradle
       # language
+      ## lisp family
       chez # chez scheme
       #guile
       #gerbil
       sbcl # common-lisp
       leiningen # clojure
-      #elan # lean prover
+      ## prover
+      #elan # lean
       coq
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
+      ## system
       rustup
       gcc
       gdb
@@ -55,24 +62,24 @@ in {
       cmake
       clang-tools
       ccls
-      llvm_11
+      llvm_12
       gforth
+      ## science
       julia
+      python3
+      ## erlang family
       erlang
       elixir
-      fsharp
+      ## web
       purescript
       nodePackages.purescript-language-server
       nodePackages.purty
-      #ocaml opam
       nodejs
       go
       gopls
-      python3
+      ## misc
       nixfmt
       z3
-      # youtube downloader
-      youtube-dl
       # font
       iosevka
       iosevka-bin
@@ -81,7 +88,7 @@ in {
       gauche # gauche scheme
       isabelle
       factor-lang
-      jdk14
+      jdk
       tdesktop # telegram
     ];
 
