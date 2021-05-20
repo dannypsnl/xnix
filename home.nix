@@ -68,6 +68,7 @@ in {
       julia
       python3
       ## erlang family
+      rebar3
       erlang
       elixir
       ## web
