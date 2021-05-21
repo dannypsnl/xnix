@@ -32,7 +32,6 @@ in {
       wget
       ffmpeg
       graphviz
-      vagrant
       youtube-dl # youtube downloader
       ## database
       postgresql
@@ -55,7 +54,6 @@ in {
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
       ## system
-      rustup
       gcc
       gdb
       gnumake
@@ -65,7 +63,6 @@ in {
       llvm_12
       gforth
       ## science
-      julia
       python3
       ## erlang family
       rebar3
@@ -91,6 +88,11 @@ in {
       factor-lang
       jdk
       tdesktop # telegram
+    ] ++ lib.optionals isMacOS [
+      # tool
+      vagrant
+      # language
+      julia
     ];
 
   home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
