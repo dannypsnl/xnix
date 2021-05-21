@@ -82,7 +82,7 @@ in {
       iosevka
       iosevka-bin
     ] ++ lib.optionals isNixOS [
-      #racket
+      racket
       gauche # gauche scheme
       isabelle
       factor-lang
