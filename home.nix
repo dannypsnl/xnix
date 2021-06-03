@@ -54,6 +54,7 @@ in {
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
       ## system
+      nasm
       gcc
       gdb
       gnumake
