@@ -63,6 +63,7 @@ in {
       ccls
       llvm_12
       gforth
+      lua
       ## science
       python3
       ## erlang family
