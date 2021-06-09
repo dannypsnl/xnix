@@ -9,7 +9,7 @@ in {
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "dannypsnl";
   home.homeDirectory =
-    if isMacOS then "/Users/dannypsnl" else "/home/dannypsnl";
+    if isMacOS then "/Users/linzizhuan" else "/home/dannypsnl";
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
@@ -93,8 +93,6 @@ in {
     ] ++ lib.optionals isMacOS [
       # tool
       vagrant
-      # language
-      julia
     ];
 
   home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
