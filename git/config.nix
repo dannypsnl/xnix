@@ -35,6 +35,7 @@ commitTemplatePath: {
     branch.autosetuprebase = "always";
     push.default = "current";
     rebase.autosquash = true;
+    pull.rebase = true;
     commit.template = commitTemplatePath;
   };
 }
