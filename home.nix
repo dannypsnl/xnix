@@ -72,7 +72,7 @@ in {
       purescript
       nodePackages.purescript-language-server
       nodePackages.purty
-      nodejs
+      nodejs nodePackages.prettier
       go
       gopls
       ## misc
