@@ -1,7 +1,8 @@
 (use-package nix-mode)
 (use-package agda2-mode)
 (use-package idris-mode)
-(use-package racket-mode)
+(use-package racket-mode
+  :hook (racket-mode . racket-xp-mode))
 (use-package magit)
 (use-package company
   :config
@@ -26,6 +27,9 @@
 
 ; Racket
 (global-set-key (kbd "s-e") 'racket-run)
+(global-set-key (kbd "s-d") 'racket-xp-describe)
+(global-set-key (kbd "s-b") 'racket-xp-visit-definition)
+(global-set-key (kbd "s-B") 'racket-unvisit)
 
 ; Edit
 (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
