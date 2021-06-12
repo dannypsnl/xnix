@@ -8,6 +8,7 @@
       idris-mode
       racket-mode
       magit
+      company
       rainbow-delimiters
     ];
 }

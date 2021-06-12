@@ -3,6 +3,14 @@
 (use-package idris-mode)
 (use-package racket-mode)
 (use-package magit)
+(use-package company
+  :config
+  (setq company-minimum-prefix-length 2)
+  (setq company-idle-delay 0.1)
+  (setq company-tooltip-align-annotations t)
+  :hook
+  ((racket-mode . company-mode)
+   (racket-repl-mode . company-mode)))
 (use-package rainbow-delimiters
   :hook
   ((racket-mode . rainbow-delimiters-mode)
