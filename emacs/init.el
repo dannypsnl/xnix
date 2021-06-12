@@ -24,6 +24,9 @@
 ; font size: 1/10pt * :height
 (set-face-attribute 'default nil :height 150)
 
+; Racket
+(global-set-key (kbd "s-e") 'racket-run)
+
 ; Edit
 (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "s-<down>") 'end-of-buffer)
