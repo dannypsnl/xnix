@@ -8,5 +8,6 @@
       idris-mode
       racket-mode
       magit
+      rainbow-delimiters
     ];
 }
