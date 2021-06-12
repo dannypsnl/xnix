@@ -24,6 +24,12 @@
 ; font size: 1/10pt * :height
 (set-face-attribute 'default nil :height 150)
 
+; Edit
+(global-set-key (kbd "s-<up>") 'beginning-of-buffer)
+(global-set-key (kbd "s-<down>") 'end-of-buffer)
+(global-set-key (kbd "s-<left>") 'move-beginning-of-line)
+(global-set-key (kbd "s-<right>") 'move-end-of-line)
+
 ; Git
 (global-set-key (kbd "s-k") 'magit-commit)
 (global-set-key (kbd "s-K") 'magit-push)
