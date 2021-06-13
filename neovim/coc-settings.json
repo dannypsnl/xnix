@@ -1,5 +1,9 @@
 {
   "languageserver": {
+    "racket" : {
+      "command": "raco langserver",
+      "filetypes": ["racket"]
+    },
     "lean": {
       "command": "lean-language-server",
       "args": ["--stdio"],
@@ -44,6 +48,7 @@
     }
   },
   "coc.preferences.formatOnSaveFiletypes": [
+    "racket",
     "go",
     "c", "cpp",
     "objc", "objcpp",
