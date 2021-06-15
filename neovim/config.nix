@@ -29,6 +29,7 @@ in {
     solarized
     oldbook-vim
     distilled-vim
+    nord-vim
     # tools
     ack-vim
     ctrlp

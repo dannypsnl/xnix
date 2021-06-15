@@ -26,7 +26,8 @@ syntax enable
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "colorscheme oldbook
-colorscheme distilled
+"colorscheme distilled
+colorscheme nord
 set termguicolors
 
 " Mapping key
