@@ -9,15 +9,7 @@ pkgs: isMacOS: {
     theme = "robbyrussell";
   };
 
-  plugins = [{
-    name = "k";
-    src = pkgs.fetchFromGitHub {
-      owner = "supercrabtree";
-      repo = "k";
-      rev = "master";
-      sha256 = "053dd945qfxzk50agapc9ph601611niz1yzjqfx6fjza3j6cjsnz";
-    };
-  }];
+  plugins = [];
 
   shellAliases = {
     g = "git";
