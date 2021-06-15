@@ -3,6 +3,7 @@ let
   machine = import ./machine.nix;
   isNixOS = machine.operatingSystem == "NixOS";
   isMacOS = machine.operatingSystem == "Darwin";
+  my-zig = import ./mypkgs/zig.nix pkgs;
 in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -91,6 +92,8 @@ in {
     ] ++ lib.optionals isMacOS [
       # tool
       vagrant
+      # language
+      my-zig
     ];
 
   home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
