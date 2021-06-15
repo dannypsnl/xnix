@@ -1,5 +1,5 @@
 pkgs:
-  (pkgs.stdenv.mkDerivation {
+  pkgs.stdenv.mkDerivation {
         name = "zig";
         src = fetchTarball {
             url = "https://ziglang.org/download/0.8.0/zig-macos-aarch64-0.8.0.tar.xz";
@@ -15,4 +15,4 @@ pkgs:
         mkdir -p $out/doc
         #mv ./langref.html $out/doc
         '';
-  })
+  }
