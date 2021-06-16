@@ -5,7 +5,10 @@ pkgs: isMacOS: {
 
   oh-my-zsh = {
     enable = true;
-    plugins = [ "gh" "git" "dotenv" "osx" "kubectl" "docker" ];
+    plugins = [ "git" "dotenv" "osx"
+                "kubectl" "docker"
+                "gradle" "mix" "npm"
+                "vagrant" "heroku" ];
     theme = "robbyrussell";
   };
 
