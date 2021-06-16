@@ -12,7 +12,6 @@ pkgs: isMacOS: {
   plugins = [];
 
   shellAliases = {
-    g = "git";
     ls = "ls -GFh";
     ll = "ls -l";
     la = "ll -a";
