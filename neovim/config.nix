@@ -19,6 +19,15 @@ let
         sha256 = "182xcmlb10h611m0awrbj41pz5phn2smvclzn9rajzal4ihwlg2g";
       };
     };
+    no-vim = pkgs.vimUtils.buildVimPlugin {
+      name = "no-vim";
+      src = pkgs.fetchFromGitHub {
+        owner = "dannypsnl";
+        repo = "no.vim";
+        rev = "develop";
+        sha256 = "05id1nskb1gy1ndkwks62a92cfvfnss8a8ysvvabc2pr045clv27";
+      };
+    };
   };
   p = pkgs.vimPlugins // customPlugins;
 in {
@@ -44,6 +53,7 @@ in {
     julia-vim
     vim-go
     zig-vim
+    no-vim
   ] ++ lib.optionals isMacOS [
     idris2-vim
   ];
