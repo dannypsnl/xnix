@@ -63,7 +63,7 @@ in {
       ccls
       llvm_12
       gforth
-      rustc cargo
+      rustc cargo rls
       lua
       ## science
       python3

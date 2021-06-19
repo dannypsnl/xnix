@@ -11,6 +11,11 @@
       "args": ["--stdio"],
       "filetypes": ["lean"]
     },
+    "rust": {
+      "command": "rls",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    },
     "go": {
       "command": "gopls",
       "rootPatterns": ["go.mod"],
@@ -48,7 +53,9 @@
       }
     }
   },
+  "rust-client.disableRustup": true,
   "coc.preferences.formatOnSaveFiletypes": [
+    "rust",
     "go",
     "c", "cpp",
     "objc", "objcpp",
