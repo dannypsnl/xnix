@@ -1,11 +1,5 @@
 {
   "languageserver": {
-    "no": {
-      "command": "racket",
-      "args": ["-l", "no", "lps"],
-      "trace.server": "verbose",
-      "filetypes": ["no"]
-    },
     "lean": {
       "command": "lean-language-server",
       "args": ["--stdio"],
