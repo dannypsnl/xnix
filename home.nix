@@ -38,6 +38,7 @@ in {
       ## static site generator
       mkdocs
       hugo
+      nodePackages.gatsby-cli
       ## build tool
       ant
       gradle
