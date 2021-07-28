@@ -81,4 +81,5 @@ endfunction
 
 " GoTo code navigation.
 map <C-b> <Plug>(coc-definition)
+map <C-x> <Plug>(coc-references)
 map <C-r> <Plug>(coc-rename)
