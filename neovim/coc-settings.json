@@ -58,6 +58,7 @@
     "go",
     "c", "cpp",
     "objc", "objcpp",
-    "purescript"
+    "purescript",
+    "scheme"
   ]
 }
