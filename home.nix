@@ -70,6 +70,7 @@ in {
       rebar3 erlang
       elixir
       ## web
+      nodePackages.pnpm
       purescript
       nodePackages.purescript-language-server
       nodePackages.purty
