@@ -3,7 +3,7 @@
     "racket": {
       "command": "racket",
       "args": ["-l", "racket-langserver"],
-      "filetypes": ["racket", "info"]
+      "filetypes": ["racket", "info", "k"]
     },
     "lean": {
       "command": "lean-language-server",
@@ -59,6 +59,6 @@
     "c", "cpp",
     "objc", "objcpp",
     "purescript",
-    "racket", "info"
+    "racket", "info", "k"
   ]
 }
