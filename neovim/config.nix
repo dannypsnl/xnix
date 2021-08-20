@@ -44,7 +44,6 @@ in {
     julia-vim
     vim-go
     zig-vim
-    vim-racket
   ] ++ lib.optionals isMacOS [
     idris2-vim
   ];
