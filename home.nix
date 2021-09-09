@@ -23,6 +23,7 @@ in {
   home.packages = with pkgs;
     [
       # dev tools
+      qemu
       tig
       cloc
       croc
@@ -92,6 +93,7 @@ in {
       tdesktop # telegram
     ] ++ lib.optionals isMacOS [
       # tool
+      lima
       vagrant
       # language
       zig
