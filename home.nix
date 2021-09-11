@@ -68,9 +68,6 @@ in {
       ## misc
       nixfmt
       z3
-      # font
-      iosevka
-      iosevka-bin
     ] ++ lib.optionals isNixOS [
       racket
       gauche # gauche scheme
