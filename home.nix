@@ -61,7 +61,6 @@ in {
       elixir
       ## web
       nodePackages.pnpm
-      nodePackages.parcel-bundler
       nodejs nodePackages.prettier
       go
       gopls
