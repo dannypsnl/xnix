@@ -62,6 +62,8 @@ in {
       ## web
       nodePackages.pnpm
       nodejs nodePackages.prettier
+      ocaml opam
+      ocamlPackages.merlin
       go
       gopls
       ## misc
