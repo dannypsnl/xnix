@@ -39,32 +39,21 @@ in {
       ## static site generator
       nodePackages.gatsby-cli
       ## build tool
-      ant
       gradle
       # language
       ## lisp family
       chez # chez scheme
-      #guile
-      #gerbil
       sbcl # common-lisp
-      leiningen # clojure
       ## prover
-      #elan # lean
-      coq
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
       ## system
       nasm
-      gcc
-      gdb
       gnumake
-      cmake
       clang-tools
       ccls
       llvm_12
-      gforth
       rustc cargo rls
-      lua
       ## science
       python3
       ## erlang family
@@ -72,9 +61,7 @@ in {
       elixir
       ## web
       nodePackages.pnpm
-      purescript
-      nodePackages.purescript-language-server
-      nodePackages.purty
+      nodePackages.parcel-bundler
       nodejs nodePackages.prettier
       go
       gopls
