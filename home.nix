@@ -53,6 +53,7 @@ in {
       elixir
       ghc
       stack
+      haskell-language-server
       stylish-haskell
       ocaml
       opam
