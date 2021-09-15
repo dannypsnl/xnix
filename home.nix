@@ -36,18 +36,32 @@ in {
       postgresql
       nodePackages.gatsby-cli
       gradle
-      chez sbcl
+      chez
+      sbcl
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
-      nasm gnumake clang-tools ccls llvm_12
-      rustc cargo rls
-      rebar3 erlang elixir
-      ghc stack stylish-haskell
-      ocaml opam
+      nasm
+      gnumake
+      clang-tools
+      ccls
+      llvm_12
+      rustc
+      cargo
+      rls
+      rebar3
+      erlang
+      elixir
+      ghc
+      stack
+      stylish-haskell
+      ocaml
+      opam
       ocamlPackages.merlin
       nodePackages.pnpm
-      nodejs nodePackages.prettier
-      go gopls
+      nodejs
+      nodePackages.prettier
+      go
+      gopls
       python3
       nixfmt
       z3
@@ -58,11 +72,7 @@ in {
       factor-lang
       jdk
       tdesktop # telegram
-    ] ++ lib.optionals isMacOS [
-      lima
-      vagrant
-      zig
-    ];
+    ] ++ lib.optionals isMacOS [ lima vagrant zig ];
 
   home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
   home.file.".agda/defaults".text = builtins.readFile ./agda/defaults;
@@ -70,7 +80,8 @@ in {
   home.file.".emacs".text = builtins.readFile ./emacs/init.el;
   programs.emacs = import ./emacs/config.nix;
 
-  home.file.".config/nvim/coc-settings.json".text = builtins.readFile ./neovim/coc-settings.json;
+  home.file.".config/nvim/coc-settings.json".text =
+    builtins.readFile ./neovim/coc-settings.json;
   programs.neovim = (import ./neovim/config.nix) pkgs lib isMacOS;
 
   programs.zsh = (import ./zsh/config.nix) pkgs isMacOS;
@@ -83,7 +94,8 @@ in {
     enableZshIntegration = true;
   };
 
-  programs.git = (import ./git/config.nix) (machine.xnixPath + "/git/commit-template.txt");
+  programs.git =
+    (import ./git/config.nix) (machine.xnixPath + "/git/commit-template.txt");
   programs.gh = {
     enable = true;
     editor = "nvim";

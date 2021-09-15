@@ -23,29 +23,28 @@ let
   p = pkgs.vimPlugins // customPlugins;
 in {
   enable = true;
-  plugins = with p; [
-    nerdtree
-    # theme
-    solarized
-    oldbook-vim
-    distilled-vim
-    nord-vim
-    # tools
-    ack-vim
-    ctrlp
-    coc-nvim
-    airline
-    vim-fugitive
-    vim-gitgutter
-    vim-commentary
-    auto-pairs
-    fzf-vim
-    julia-vim
-    vim-go
-    zig-vim
-    vim-stylish-haskell
-  ] ++ lib.optionals isMacOS [
-    idris2-vim
-  ];
+  plugins = with p;
+    [
+      nerdtree
+      # theme
+      solarized
+      oldbook-vim
+      distilled-vim
+      nord-vim
+      # tools
+      ack-vim
+      ctrlp
+      coc-nvim
+      airline
+      vim-fugitive
+      vim-gitgutter
+      vim-commentary
+      auto-pairs
+      fzf-vim
+      julia-vim
+      vim-go
+      zig-vim
+      vim-stylish-haskell
+    ] ++ lib.optionals isMacOS [ idris2-vim ];
   extraConfig = builtins.readFile ./vimrc;
 }
