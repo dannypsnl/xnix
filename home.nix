@@ -22,7 +22,6 @@ in {
 
   home.packages = with pkgs;
     [
-      # dev tools
       qemu
       tig
       cloc
@@ -33,40 +32,23 @@ in {
       wget
       ffmpeg
       graphviz
-      youtube-dl # youtube downloader
-      ## database
+      youtube-dl
       postgresql
-      ## static site generator
       nodePackages.gatsby-cli
-      ## build tool
       gradle
-      # language
-      ## lisp family
-      chez # chez scheme
-      sbcl # common-lisp
-      ## prover
+      chez sbcl
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
-      ## system
-      nasm
-      gnumake
-      clang-tools
-      ccls
-      llvm_12
+      nasm gnumake clang-tools ccls llvm_12
       rustc cargo rls
-      ## science
-      python3
-      ## erlang family
-      rebar3 erlang
-      elixir
-      ## web
-      nodePackages.pnpm
-      nodejs nodePackages.prettier
+      rebar3 erlang elixir
+      ghc stack stylish-haskell
       ocaml opam
       ocamlPackages.merlin
-      go
-      gopls
-      ## misc
+      nodePackages.pnpm
+      nodejs nodePackages.prettier
+      go gopls
+      python3
       nixfmt
       z3
     ] ++ lib.optionals isNixOS [
@@ -77,10 +59,8 @@ in {
       jdk
       tdesktop # telegram
     ] ++ lib.optionals isMacOS [
-      # tool
       lima
       vagrant
-      # language
       zig
     ];
 

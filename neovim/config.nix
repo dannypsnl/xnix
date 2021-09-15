@@ -35,7 +35,6 @@ in {
     ctrlp
     coc-nvim
     airline
-    vim-clap
     vim-fugitive
     vim-gitgutter
     vim-commentary
@@ -44,6 +43,7 @@ in {
     julia-vim
     vim-go
     zig-vim
+    vim-stylish-haskell
   ] ++ lib.optionals isMacOS [
     idris2-vim
   ];
