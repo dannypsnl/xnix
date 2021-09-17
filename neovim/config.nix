@@ -2,7 +2,8 @@ pkgs: lib: isMacOS:
 let
   customPlugins = {
     oldbook-vim = pkgs.vimUtils.buildVimPlugin {
-      name = "oldbook-vim";
+      pname = "oldbook-vim";
+      version = "master";
       src = pkgs.fetchFromGitHub {
         owner = "karoliskoncevicius";
         repo = "oldbook-vim";
@@ -11,7 +12,8 @@ let
       };
     };
     distilled-vim = pkgs.vimUtils.buildVimPlugin {
-      name = "distilled-vim";
+      pname = "distilled-vim";
+      version = "master";
       src = pkgs.fetchFromGitHub {
         owner = "karoliskoncevicius";
         repo = "distilled-vim";
