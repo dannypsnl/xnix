@@ -75,6 +75,7 @@ in {
       qemu
       vagrant
       zig
+      gtk3
     ];
 
   home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
