@@ -30,6 +30,7 @@ in {
       unzip
       curl
       wget
+      htop
       ffmpeg
       graphviz
       youtube-dl
