@@ -59,8 +59,8 @@ in {
       ocaml
       opam
       ocamlPackages.merlin
-      nodePackages.pnpm
       nodejs
+      nodePackages.pnpm
       nodePackages.prettier
       go
       gopls
@@ -74,7 +74,11 @@ in {
       factor-lang
       jdk
       tdesktop # telegram
-    ] ++ lib.optionals isMacOS [ lima vagrant zig ];
+    ] ++ lib.optionals isMacOS [
+      lima
+      vagrant
+      zig
+    ];
 
   home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
   home.file.".agda/defaults".text = builtins.readFile ./agda/defaults;
