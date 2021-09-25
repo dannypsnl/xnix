@@ -55,9 +55,6 @@ in {
       stack
       haskell-language-server
       stylish-haskell
-      ocaml
-      opam
-      ocamlPackages.merlin
       nodejs
       nodePackages.pnpm
       nodePackages.prettier
