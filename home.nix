@@ -22,7 +22,6 @@ in {
 
   home.packages = with pkgs;
     [
-      qemu
       tig
       cloc
       croc
@@ -76,6 +75,7 @@ in {
       tdesktop # telegram
     ] ++ lib.optionals isMacOS [
       lima
+      qemu
       vagrant
       zig
     ];
