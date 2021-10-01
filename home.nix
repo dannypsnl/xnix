@@ -71,8 +71,6 @@ in {
       jdk
       tdesktop # telegram
     ] ++ lib.optionals isMacOS [
-      lima
-      qemu
       vagrant
       zig
       gtk3
