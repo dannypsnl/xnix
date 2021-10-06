@@ -34,7 +34,6 @@ in {
       graphviz
       youtube-dl
       postgresql
-      nodePackages.gatsby-cli
       gradle
       chez
       sbcl
@@ -52,9 +51,6 @@ in {
       erlang
       elixir
       ghc
-      stack
-      haskell-language-server
-      stylish-haskell
       nodejs
       nodePackages.pnpm
       nodePackages.prettier
@@ -73,7 +69,11 @@ in {
     ] ++ lib.optionals isMacOS [
       vagrant
       zig
+      stack
+      haskell-language-server
+      stylish-haskell
       gtk3
+      nodePackages.gatsby-cli
     ];
 
   home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
