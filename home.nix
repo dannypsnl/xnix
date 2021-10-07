@@ -97,9 +97,6 @@ in {
     isNixOS = isNixOS;
   };
 
-  home.file.".emacs".text = builtins.readFile ./emacs/init.el;
-  programs.emacs = import ./emacs/config.nix;
-
   home.file.".config/nvim/coc-settings.json".text =
     builtins.readFile ./neovim/coc-settings.json;
   programs.neovim = (import ./neovim/config.nix) pkgs lib isMacOS;
