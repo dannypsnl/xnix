@@ -86,7 +86,7 @@ in {
   home.file.".agda/defaults".text = builtins.readFile ./agda/defaults;
 
   programs.alacritty = {
-    enable = isNixOS;
+    enable = true;
     settings = {
       window = {
         dimensions = {
@@ -154,11 +154,45 @@ in {
           white = "#aeb3bb";
         };
       };
-      key_bindings = [{
-        key = "K";
-        mods = "Control";
-        chars = "\\x0c";
-      }];
+      key_bindings = lib.optionals isNixOS [
+        {
+          key = "C";
+          mods = "Super";
+          action = "Copy";
+        }
+        {
+          key = "V";
+          mods = "Super";
+          action = "Paste";
+        }
+        {
+          key = "K";
+          mods = "Super";
+          action = "ClearHistory";
+        }
+        {
+          key = "Q";
+          mods = "Super";
+          action = "Quit";
+        }
+        {
+          key = "F";
+          mods = "Super";
+          mode = "~Search";
+          action = "SearchForward";
+        }
+        {
+          key = "Return";
+          mode = "Search";
+          action = "SearchFocusNext";
+        }
+        {
+          key = "Return";
+          mods = "Shift";
+          mode = "Search";
+          action = "SearchFocusPrevious";
+        }
+      ];
     };
   };
 
