@@ -61,6 +61,12 @@ let
       version = "0.0.10";
       sha256 = "15sq8g16bxmw6wzacz757nkkpqr03gsxxj4ig3fpr8blzf6v2bd0";
     }
+    {
+      name = "idris2-lsp";
+      publisher = "bamboo";
+      version = "0.7.0";
+      sha256 = "0i9my3iqy62ziank4mr5j5adgbv8g7x3jcscwwg8h1hgllffzqpi";
+    }
   ];
 in {
   enable = true;
