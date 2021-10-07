@@ -5,10 +5,9 @@
       "args": ["-l", "racket-langserver"],
       "filetypes": ["scheme"]
     },
-    "lean": {
-      "command": "lean-language-server",
-      "args": ["--stdio"],
-      "filetypes": ["lean"]
+    "idris2": {
+      "command": "idris2-lsp",
+      "filetypes": ["idris2"]
     },
     "rust": {
       "command": "rls",
@@ -37,28 +36,15 @@
           "directory": "/tmp/ccls"
         }
       }
-    },
-    "purescript": {
-      "command": "purescript-language-server",
-      "args": ["--stdio"],
-      "filetypes": ["purescript"],
-      "trace.server": "off",
-      "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"],
-      "settings": {
-        "purescript": {
-          "addSpagoSources": true,
-          "addNpmPath": true
-        }
-      }
     }
   },
   "rust-client.disableRustup": true,
   "coc.preferences.formatOnSaveFiletypes": [
+    "idris2",
     "rust",
     "go",
     "c", "cpp",
     "objc", "objcpp",
-    "purescript",
     "scheme"
   ]
 }
