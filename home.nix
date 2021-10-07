@@ -43,6 +43,7 @@ in {
       gnumake
       clang-tools
       ccls
+      gcc
       llvm_12
       rustc
       cargo
@@ -50,7 +51,6 @@ in {
       rebar3
       erlang
       elixir
-      ghc
       nodejs
       nodePackages.pnpm
       nodePackages.prettier
@@ -66,10 +66,16 @@ in {
       factor-lang
       jdk
       tdesktop # telegram
+      kubectl
+      kubernetes-helm
+      kube3d
+      google-cloud-sdk
+      transcrypt
     ] ++ lib.optionals isMacOS [
       vagrant
       zig
       stack
+      ghc
       haskell-language-server
       stylish-haskell
       gtk3
