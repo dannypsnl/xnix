@@ -93,6 +93,7 @@ in {
 
   programs.vscode = (import ./vscode/config.nix) {
     pkgs = pkgs;
+    lib = lib;
     isNixOS = isNixOS;
   };
 

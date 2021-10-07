@@ -1,11 +1,9 @@
-{ pkgs, isNixOS }: {
+{ pkgs, lib, isNixOS }: {
   enable = isNixOS;
   package = pkgs.vscode;
-  extensions = with pkgs.vscode-extensions; [
-    bbenoist.Nix
-    WakaTime.vscode-wakatime
-    ms-vsliveshare.vsliveshare
-  ];
+  extensions = with pkgs.vscode-extensions;
+    [ WakaTime.vscode-wakatime ]
+    ++ lib.optionals isNixOS [ bbenoist.Nix ms-vsliveshare.vsliveshare ];
   userSettings = {
     "workbench.colorTheme" = "Visual Studio Light";
     "editor.fontSize" = 13;
