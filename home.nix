@@ -3,7 +3,10 @@ let
   machine = import ./machine.nix;
   isNixOS = machine.operatingSystem == "NixOS";
   isMacOS = machine.operatingSystem == "Darwin";
-  zig = import ./mypkgs/zig.nix pkgs;
+  zig = (import ./mypkgs/zig.nix) {
+    pkgs = pkgs;
+    isNixOS = isNixOS;
+  };
 in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -40,6 +43,7 @@ in {
       sbcl
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
+      zig
       nasm
       gnumake
       clang-tools
@@ -74,7 +78,6 @@ in {
       transcrypt
     ] ++ lib.optionals isMacOS [
       vagrant
-      zig
       stack
       ghc
       haskell-language-server
