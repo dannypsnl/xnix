@@ -22,10 +22,7 @@ let
       };
     };
   };
-  p = pkgs.vimPlugins // customPlugins;
-in {
-  enable = true;
-  plugins = with p;
+  plugins = with pkgs.vimPlugins // customPlugins;
     [
       nerdtree
       # theme
@@ -48,6 +45,14 @@ in {
       zig-vim
       vim-stylish-haskell
     ] ++ lib.optionals isMacOS [ idris2-vim ];
+  config = builtins.readFile ./vimrc;
+in if isMacOS then {
+  enable = true;
+  plugins = plugins;
+  extraConfig = config;
+} else {
+  enable = true;
+  plugins = plugins;
   withPython = false;
-  extraConfig = builtins.readFile ./vimrc;
+  extraConfig = config;
 }
