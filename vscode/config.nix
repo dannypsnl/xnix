@@ -73,6 +73,9 @@ in {
     # font
     "editor.fontSize" = 13;
     "editor.fontFamily" = "'PragmataPro Mono Liga'";
+    # idris
+    "idris.idris2Mode" = true;
+    "idris.idrisPath" = "idris2";
     # formatter
     "[elixir]" = { "editor.defaultFormatter" = "JakeBecker.elixir-ls"; };
     "[javascript]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
