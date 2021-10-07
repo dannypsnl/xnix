@@ -18,7 +18,7 @@ pkgs.stdenv.mkDerivation {
   installPhase = ''
     mkdir -p $out
     mv ./lib $out/
-    mkdir -p $out/bin  
+    mkdir -p $out/bin
     mv ./zig $out/bin
     mkdir -p $out/doc
   '';
