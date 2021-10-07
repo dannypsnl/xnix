@@ -1,6 +1,6 @@
 # xnix
 
-This project put my setting of *nix environment.
+This project put my setting of \*nix environment.
 
 ## Installation
 
@@ -22,6 +22,8 @@ cd xnix
 echo "{ xnixPath = \"$(pwd)\"; operatingSystem = \"$(uname -v | awk '{ print $1 }' | sed 's/#.*-//')\"; homePath=\"$HOME\"; }" > machine.nix
 # install config to system
 ln -s $(pwd)/home.nix ${HOME}/.config/nixpkgs/home.nix
+# (optional) on non-NixOS you can do the following to install pkg config to system
+ln -s $(pwd)/config.nix ${HOME}/.config/nixpkgs/config.nix
 
 # apply config
 home-manager switch
