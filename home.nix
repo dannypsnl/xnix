@@ -85,6 +85,20 @@ in {
   home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
   home.file.".agda/defaults".text = builtins.readFile ./agda/defaults;
 
+  programs.vscode = {
+    enable = isNixOS;
+    package = pkgs.vscode;
+    extensions = with pkgs.vscode-extensions; [
+      bbenoist.Nix
+      WakaTime.vscode-wakatime
+      ms-vsliveshare.vsliveshare
+    ];
+    userSettings = {
+      "workbench.colorTheme" = "Visual Studio Light";
+      "editor.fontSize" = 13;
+    };
+  };
+
   home.file.".emacs".text = builtins.readFile ./emacs/init.el;
   programs.emacs = import ./emacs/config.nix;
 
