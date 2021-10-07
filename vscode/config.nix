@@ -76,6 +76,9 @@ in {
     # idris
     "idris.idris2Mode" = true;
     "idris.idrisPath" = "idris2";
+    # git
+    "git.confirmSync" = false;
+    "git.enableSmartCommit" = true;
     # formatter
     "[elixir]" = { "editor.defaultFormatter" = "JakeBecker.elixir-ls"; };
     "[javascript]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
