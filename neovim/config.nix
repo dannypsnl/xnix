@@ -48,5 +48,6 @@ in {
       zig-vim
       vim-stylish-haskell
     ] ++ lib.optionals isMacOS [ idris2-vim ];
+  withPython = false;
   extraConfig = builtins.readFile ./vimrc;
 }
