@@ -20,6 +20,12 @@ let
       sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
     }
     {
+      name = "nixfmt-vscode";
+      publisher = "brettm12345";
+      version = "0.0.1";
+      sha256 = "07w35c69vk1l6vipnq3qfack36qcszqxn8j3v332bl0w6m02aa7k";
+    }
+    {
       name = "vsliveshare";
       publisher = "MS-vsliveshare";
       version = "1.0.4962";
@@ -29,37 +35,31 @@ let
       name = "vsliveshare-pack";
       publisher = "MS-vsliveshare";
       version = "0.4.0";
-      sha256 = "07w35c69vk1l6vipnq3qfack36qcszqxn8j3v332bl0w6m02aa7k";
+      sha256 = "09h2yxpmbvxa3mz5wdnpb35h437f0z6j0n3blsb0d93jlwx5ydy5";
     }
     {
       name = "vsliveshare-audio";
       publisher = "MS-vsliveshare";
       version = "0.1.91";
-      sha256 = "07w35c69vk1l6vipnq3qfack36qcszqxn8j3v332bl0w6m02aa7k";
-    }
-    {
-      name = "nixfmt-vscode";
-      publisher = "brettm12345";
-      version = "0.0.1";
-      sha256 = "07w35c69vk1l6vipnq3qfack36qcszqxn8j3v332bl0w6m02aa7k";
+      sha256 = "0p00bgn2wmzy9c615h3l3is6yf5cka84il5331z0rkfv2lzh6r7n";
     }
     {
       name = "change-case";
       publisher = "wmaurer";
       version = "1.0.0";
-      sha256 = "07w35c69vk1l6vipnq3qfack36qcszqxn8j3v332bl0w6m02aa7k";
+      sha256 = "0dxsdahyivx1ghxs6l9b93filfm8vl5q2sa4g21fiklgdnaf7pxl";
     }
     {
       name = "magic-racket";
       publisher = "evzen-wybitul";
       version = "0.5.8";
-      sha256 = "07w35c69vk1l6vipnq3qfack36qcszqxn8j3v332bl0w6m02aa7k";
+      sha256 = "0wfpimaanj6mh9qqip09rb2jzv7jscf9fzkp7l3885nwkx4xfqca";
     }
     {
       name = "idris-vscode";
       publisher = "meraymond";
       version = "0.0.10";
-      sha256 = "07w35c69vk1l6vipnq3qfack36qcszqxn8j3v332bl0w6m02aa7k";
+      sha256 = "15sq8g16bxmw6wzacz757nkkpqr03gsxxj4ig3fpr8blzf6v2bd0";
     }
   ];
 in {
