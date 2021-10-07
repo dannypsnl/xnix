@@ -22,6 +22,7 @@ in {
 
   home.packages = with pkgs;
     [
+      gh
       tig
       cloc
       croc
@@ -114,9 +115,4 @@ in {
 
   programs.git =
     (import ./git/config.nix) (machine.xnixPath + "/git/commit-template.txt");
-  programs.gh = {
-    enable = true;
-    editor = "nvim";
-    gitProtocol = "ssh";
-  };
 }
