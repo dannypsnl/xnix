@@ -4,17 +4,27 @@ This project put my setting of \*nix environment.
 
 ## Installation
 
+### (Optional) Install Nix on non-NixOS
+
 ```zsh
 # non-nixos have to install nix first
 curl https://nixos.org/nix/install | sh
+```
 
+### Install Home Manager
+
+```zsh
 # install home manager
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
 # non-nixos might need:
 export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
 nix-shell '<home-manager>' -A install
+```
 
+### Apply config
+
+```zsh
 # get this repo
 git clone https://github.com/dannypsnl/xnix.git
 cd xnix
