@@ -21,6 +21,5 @@ pkgs.stdenv.mkDerivation {
     mkdir -p $out/bin  
     mv ./zig $out/bin
     mkdir -p $out/doc
-    #mv ./langref.html $out/doc
   '';
 }
