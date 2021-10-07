@@ -11,7 +11,7 @@ pkgs.stdenv.mkDerivation {
     fetchTarball {
       url =
         "https://ziglang.org/builds/zig-macos-aarch64-0.9.0-dev.1324+598db831f.tar.xz";
-      sha256 = "0vpi3cwcknav7mc7yyw52hv0lf00plpqsjv77d2pvfyj79jmsr0x";
+      sha256 = "00qxfaagph4rx08351c0shfgcp382cs5q77932wwv1cp864v7yqq";
     };
   dontConfigure = true;
   dontBuild = true;
