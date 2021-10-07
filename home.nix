@@ -7,6 +7,15 @@ let
     pkgs = pkgs;
     isNixOS = isNixOS;
   };
+  idris2libs = (import ./mypkgs/idris2libs.nix) {
+    pkgs = pkgs;
+    homePath = machine.homePath;
+  };
+  idris2-lsp = (import ./mypkgs/idris2-lsp.nix) {
+    pkgs = pkgs;
+    idris2libs = idris2libs;
+    homePath = machine.homePath;
+  };
 in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -41,6 +50,7 @@ in {
       sbcl
       (agda.withPackages [ agdaPackages.standard-library ])
       idris2
+      idris2-lsp
       zig
       nasm
       gnumake
