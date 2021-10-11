@@ -69,6 +69,7 @@ in {
       factor-lang
       jdk
       tdesktop # telegram
+      slack
       kubectl
       kubernetes-helm
       kube3d
