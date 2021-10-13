@@ -31,9 +31,7 @@ cd xnix
 # generate current machine config
 echo "{ xnixPath = \"$(pwd)\"; operatingSystem = \"$(uname -v | awk '{ print $1 }' | sed 's/#.*-//')\"; homePath=\"$HOME\"; }" > machine.nix
 # install config to system
-ln -s $(pwd)/home.nix ${HOME}/.config/nixpkgs/home.nix
-ln -s $(pwd)/config.nix ${HOME}/.config/nixpkgs/config.nix
-ln -s $(pwd)/nix.conf ${HOME}/.config/nix/nix.conf
+./install.sh
 
 # apply config
 home-manager switch
