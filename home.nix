@@ -108,13 +108,14 @@ in {
     enable = true;
     enableZshIntegration = true;
   };
-  programs.direnv = {
+  programs.direnv = if isMacOS then {
     enable = true;
-    enableZshIntegration = true;
     nix-direnv = {
       enable = true;
       enableFlakes = true;
     };
+  } else {
+    enable = true;
   };
 
   programs.git =
