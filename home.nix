@@ -33,6 +33,7 @@ in {
       unzip
       curl
       wget
+      google-cloud-sdk
       ffmpeg
       graphviz
       youtube-dl
@@ -47,7 +48,7 @@ in {
       clang-tools
       ccls
       gcc
-      llvm_12
+      llvm
       rustc
       cargo
       rls
@@ -73,7 +74,6 @@ in {
       kubectl
       kubernetes-helm
       kube3d
-      google-cloud-sdk
       transcrypt
     ] ++ lib.optionals isMacOS [
       vagrant
