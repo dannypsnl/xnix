@@ -67,6 +67,12 @@ let
       version = "0.7.0";
       sha256 = "0i9my3iqy62ziank4mr5j5adgbv8g7x3jcscwwg8h1hgllffzqpi";
     }
+    {
+      name = "Go";
+      publisher = "golang";
+      version = "0.28.1";
+      sha256 = "sha256-/4Et77sYjCuWZSdMWjIDBNC2TH/h2ndmbz8So3VjPro=";
+    }
   ];
 in {
   enable = true;
