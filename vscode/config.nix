@@ -73,6 +73,12 @@ let
       version = "0.28.1";
       sha256 = "sha256-/4Et77sYjCuWZSdMWjIDBNC2TH/h2ndmbz8So3VjPro=";
     }
+    {
+      name = "rust";
+      publisher = "rust-lang";
+      version = "0.7.8";
+      sha256 = "sha256-Y33agSNMVmaVCQdYd5mzwjiK5JTZTtzTkmSGTQrSNg0=";
+    }
   ];
 in {
   enable = true;
