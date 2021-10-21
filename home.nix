@@ -24,66 +24,11 @@ in {
   home.stateVersion = "21.03";
 
   home.packages = with pkgs;
-    [
-      gh
-      tig
-      cloc
-      croc
-      silver-searcher
-      unzip
-      curl
-      wget
-      google-cloud-sdk
-      ffmpeg
-      graphviz
-      youtube-dl
-      gradle
-      chez
-      sbcl
-      (agda.withPackages [ agdaPackages.standard-library ])
-      idris2
-      zig
-      nasm
-      gnumake
-      clang-tools
-      ccls
-      gcc
-      llvm
-      rustc
-      cargo
-      rls
-      rebar3
-      erlang
-      elixir
-      nodejs
-      nodePackages.pnpm
-      nodePackages.prettier
-      go
-      gopls
-      python3
-      nixfmt
-      z3
-    ] ++ lib.optionals isNixOS [
-      racket
-      gauche # gauche scheme
-      isabelle
-      factor-lang
-      jdk
-      tdesktop # telegram
-      slack
-      kubectl
-      kubernetes-helm
-      kube3d
-      transcrypt
-    ] ++ lib.optionals isMacOS [
-      vagrant
-      stack
-      ghc
-      haskell-language-server
-      stylish-haskell
-      gtk3
-      nodePackages.gatsby-cli
-    ];
+    (import ./pkgs.nix {
+      pkgs = pkgs;
+      zig = zig;
+    }) ++ lib.optionals isNixOS (import ./nixos-pkgs.nix { pkgs = pkgs; })
+    ++ lib.optionals isMacOS (import ./macos-pkgs.nix { pkgs = pkgs; });
 
   home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
   home.file.".agda/defaults".text = builtins.readFile ./agda/defaults;
