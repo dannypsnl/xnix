@@ -46,7 +46,11 @@ in {
 
   home.file.".config/nvim/coc-settings.json".text =
     builtins.readFile ./neovim/coc-settings.json;
-  programs.neovim = (import ./neovim/config.nix) pkgs lib isMacOS;
+  programs.neovim = (import ./neovim/config.nix) {
+    pkgs = pkgs;
+    lib = lib;
+    isMacOS = isMacOS;
+  };
 
   programs.zsh = (import ./zsh/config.nix) pkgs isMacOS;
   programs.fzf = {
