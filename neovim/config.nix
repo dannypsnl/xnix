@@ -31,6 +31,26 @@ let
         sha256 = "sha256-2tmYKRPzt/T5Tx2qv1QOtxCLwpyx4xeLC49rHnGDJto=";
       };
     };
+    nix-vim = pkgs.vimUtils.buildVimPlugin {
+      pname = "nix-vim";
+      version = "master";
+      src = pkgs.fetchFromGitHub {
+        owner = "LnL7";
+        repo = "vim-nix";
+        rev = "master";
+        sha256 = "sha256-wQzNXfE7JFalgiCQ2ksPAUyFKacmJV7mNKmKDe9jySI=";
+      };
+    };
+    racket-vim = pkgs.vimUtils.buildVimPlugin {
+      pname = "racket-vim";
+      version = "master";
+      src = pkgs.fetchFromGitHub {
+        owner = "dannypsnl";
+        repo = "racket.vim";
+        rev = "develop";
+        sha256 = "sha256-r6ICrOkbVZJ/zpwrj0Kc3c03JG59zux+maWAjqo5NL8=";
+      };
+    };
   };
   plugins = with pkgs.vimPlugins // customPlugins;
     [
@@ -50,9 +70,11 @@ let
       vim-commentary
       auto-pairs
       fzf-vim
+      racket-vim
       julia-vim
       vim-go
       zig-vim
+      nix-vim
       vim-stylish-haskell
       wakatime
     ] ++ lib.optionals isMacOS [ idris2-vim ];
