@@ -21,6 +21,16 @@ let
         sha256 = "182xcmlb10h611m0awrbj41pz5phn2smvclzn9rajzal4ihwlg2g";
       };
     };
+    wakatime = pkgs.vimUtils.buildVimPlugin {
+      pname = "wakatime";
+      version = "master";
+      src = pkgs.fetchFromGitHub {
+        owner = "wakatime";
+        repo = "vim-wakatime";
+        rev = "master";
+        sha256 = "sha256-2tmYKRPzt/T5Tx2qv1QOtxCLwpyx4xeLC49rHnGDJto=";
+      };
+    };
   };
   plugins = with pkgs.vimPlugins // customPlugins;
     [
@@ -44,6 +54,7 @@ let
       vim-go
       zig-vim
       vim-stylish-haskell
+      wakatime
     ] ++ lib.optionals isMacOS [ idris2-vim ];
   config = builtins.readFile ./vimrc;
 in if isMacOS then {
