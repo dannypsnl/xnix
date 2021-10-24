@@ -19,7 +19,9 @@ with pkgs; [
   idris2
   zig
   nasm
+  lua
   gnumake
+  cmake
   clang-tools
   ccls
   gcc
