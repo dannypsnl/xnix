@@ -39,5 +39,6 @@ pkgs: isMacOS: {
                    ''
               else ''
                    export IDRIS2_PREFIX=$HOME/.idris;
+                   source $HOME/.nixos-extra
                    '';
 }
