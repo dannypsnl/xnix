@@ -26,6 +26,7 @@ with pkgs; [
   ccls
   gcc
   llvm
+  doxygen
   rustc
   cargo
   rls
