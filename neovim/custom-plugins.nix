@@ -42,13 +42,13 @@ in {
     };
   };
   racket-vim = vimPlug {
-    pname = "racket-vim";
+    pname = "vim-racket";
     version = "master";
     src = pkgs.fetchFromGitHub {
-      owner = "dannypsnl";
-      repo = "racket.vim";
-      rev = "develop";
-      sha256 = "sha256-r6ICrOkbVZJ/zpwrj0Kc3c03JG59zux+maWAjqo5NL8=";
+      owner = "wlangstroth";
+      repo = "vim-racket";
+      rev = "master";
+      sha256 = "sha256-eYHwrbj/QAHb0cYtEPr93O0DfJzfE+WfkTuEGw7p2Ps=";
     };
   };
 }
