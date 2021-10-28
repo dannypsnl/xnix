@@ -25,6 +25,7 @@ in with pkgs; [
   zig
   nasm
   lua
+  binutils
   gnumake
   cmake
   clang-tools
