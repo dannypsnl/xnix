@@ -79,6 +79,12 @@ let
       version = "0.7.8";
       sha256 = "sha256-Y33agSNMVmaVCQdYd5mzwjiK5JTZTtzTkmSGTQrSNg0=";
     }
+    {
+      name = "svelte-vscode";
+      publisher = "svelte";
+      version = "105.4.2";
+      sha256 = "sha256-y10K529uMSwscwtOXFe5el0IcCNzdwv0NOyS6UNkmuk=";
+    }
   ];
 in {
   enable = true;
