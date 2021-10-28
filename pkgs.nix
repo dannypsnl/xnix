@@ -1,5 +1,10 @@
-{ pkgs, zig, ... }:
-with pkgs; [
+{ pkgs, isNixOS, ... }:
+let
+  zig = (import ./mypkgs/zig.nix) {
+    pkgs = pkgs;
+    isNixOS = isNixOS;
+  };
+in with pkgs; [
   gh
   tig
   cloc

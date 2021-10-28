@@ -3,10 +3,6 @@ let
   machine = import ./machine.nix;
   isNixOS = machine.operatingSystem == "NixOS";
   isMacOS = machine.operatingSystem == "Darwin";
-  zig = (import ./mypkgs/zig.nix) {
-    pkgs = pkgs;
-    isNixOS = isNixOS;
-  };
 in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -26,7 +22,7 @@ in {
   home.packages = with pkgs;
     (import ./pkgs.nix {
       pkgs = pkgs;
-      zig = zig;
+      isNixOS = isNixOS;
     }) ++ lib.optionals isNixOS (import ./nixos-pkgs.nix { pkgs = pkgs; })
     ++ lib.optionals isMacOS (import ./macos-pkgs.nix { pkgs = pkgs; });
 

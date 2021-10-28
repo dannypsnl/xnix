@@ -32,13 +32,11 @@ pkgs: isMacOS: {
     vim = "nvim";
   };
 
-  initExtra = if isMacOS
-              then ''
-                   export IDRIS2_PREFIX=$HOME/.idris;
-                   source $HOME/.macos-extra
-                   ''
-              else ''
-                   export IDRIS2_PREFIX=$HOME/.idris;
-                   source $HOME/.nixos-extra
-                   '';
+  initExtra = "" + (if isMacOS then ''
+    export IDRIS2_PREFIX=$HOME/.idris;
+    source $HOME/.macos-extra
+  '' else ''
+    export IDRIS2_PREFIX=$HOME/.idris;
+    source $HOME/.nixos-extra
+  '');
 }
