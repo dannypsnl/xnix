@@ -30,7 +30,7 @@ in with pkgs; [
   cmake
   clang-tools
   ccls
-  gcc-unwrapped
+  gcc
   llvm
   doxygen
   rustc
