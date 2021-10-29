@@ -2,7 +2,7 @@
 with pkgs; [
   racket
   gauche # gauche scheme
-  isabelle
+  gcc
   factor-lang
   jdk
   tdesktop # telegram
