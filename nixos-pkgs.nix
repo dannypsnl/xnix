@@ -11,4 +11,5 @@ with pkgs; [
   kubernetes-helm
   kube3d
   transcrypt
+  xclip
 ]

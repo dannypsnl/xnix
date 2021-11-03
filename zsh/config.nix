@@ -38,5 +38,7 @@ pkgs: isMacOS: {
   '' else ''
     export IDRIS2_PREFIX=$HOME/.idris;
     source $HOME/.nixos-extra
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
   '');
 }
