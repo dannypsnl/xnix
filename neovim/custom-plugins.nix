@@ -41,14 +41,4 @@ in {
       sha256 = "sha256-wQzNXfE7JFalgiCQ2ksPAUyFKacmJV7mNKmKDe9jySI=";
     };
   };
-  racket-vim = vimPlug {
-    pname = "vim-racket";
-    version = "master";
-    src = pkgs.fetchFromGitHub {
-      owner = "wlangstroth";
-      repo = "vim-racket";
-      rev = "master";
-      sha256 = "sha256-eYHwrbj/QAHb0cYtEPr93O0DfJzfE+WfkTuEGw7p2Ps=";
-    };
-  };
 }
