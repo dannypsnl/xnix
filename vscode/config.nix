@@ -85,12 +85,6 @@ let
       version = "105.4.2";
       sha256 = "sha256-y10K529uMSwscwtOXFe5el0IcCNzdwv0NOyS6UNkmuk=";
     }
-    {
-      name = "cpptools";
-      publisher = "ms-vscode";
-      version = "1.7.1";
-      sha256 = "sha256-2vgkfpoQCA+1B4r3h2YjBhnxYf2inCojNDFXALh9hkE=";
-    }
   ];
 in {
   enable = true;
