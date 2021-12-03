@@ -44,6 +44,12 @@ let
       sha256 = "0p00bgn2wmzy9c615h3l3is6yf5cka84il5331z0rkfv2lzh6r7n";
     }
     {
+      name = "remote-ssh";
+      publisher = "ms-vscode-remote";
+      version = "0.66.1";
+      sha256 = "sha256-+v4UnGRG5xOc8k0IzvHUBHa128fhgd3jcmEuciiMQmI=";
+    }
+    {
       name = "change-case";
       publisher = "wmaurer";
       version = "1.0.0";
