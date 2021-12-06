@@ -28,8 +28,8 @@ let
     {
       name = "vsliveshare";
       publisher = "MS-vsliveshare";
-      version = "1.0.4962";
-      sha256 = "0j0kv6pbfkm0p29p37ykdpqnm88hm9sg6pvfll6iqzn8sg6nsais";
+      version = "1.0.5090";
+      sha256 = "sha256-gQ4tChmGxYIt+/izw9NvLCLHD8ypNO7pcWuLw4umhF0=";
     }
     {
       name = "vsliveshare-pack";
