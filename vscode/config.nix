@@ -62,6 +62,12 @@ let
       sha256 = "0wfpimaanj6mh9qqip09rb2jzv7jscf9fzkp7l3885nwkx4xfqca";
     }
     {
+      name = "language-julia";
+      publisher = "julialang";
+      version = "1.5.6";
+      sha256 = "sha256-gThEwb7Ng9tT9JlHHJ2zbTYQkCpubjfhJ853mPchNYk=";
+    }
+    {
       name = "idris-vscode";
       publisher = "meraymond";
       version = "0.0.10";
