@@ -8,6 +8,7 @@ in with pkgs; [
   gh
   tig
   cloc
+  tree
   croc
   silver-searcher
   unzip
