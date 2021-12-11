@@ -21,10 +21,7 @@ in with pkgs; [
   chez
   sbcl
   (agda.withPackages [ agdaPackages.standard-library ])
-  idris2
   zig
-  nasm
-  lua
   binutils
   gnumake
   cmake
