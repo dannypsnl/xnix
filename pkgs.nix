@@ -28,7 +28,6 @@ in with pkgs; [
   cmake
   clang-tools
   ccls
-  llvm
   doxygen
   rustc
   cargo

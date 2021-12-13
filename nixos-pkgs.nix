@@ -3,6 +3,7 @@ with pkgs; [
   racket
   gauche # gauche scheme
   gcc
+  llvm
   factor-lang
   jdk
   tdesktop # telegram
