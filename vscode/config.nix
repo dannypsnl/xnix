@@ -107,6 +107,7 @@ in {
     "workbench.colorTheme" = "Visual Studio Light";
     "editor.formatOnSave" = true;
     "editor.guides.bracketPairs" = true;
+    "editor.wordWrap" = "on";
     # font
     "editor.fontSize" = 13;
     "editor.fontFamily" = "'PragmataPro Mono Liga'";
