@@ -14,7 +14,6 @@ in with pkgs; [
   unzip
   curl
   wget
-  google-cloud-sdk
   ffmpeg
   graphviz
   youtube-dl
