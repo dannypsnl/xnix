@@ -97,6 +97,12 @@ let
       version = "105.4.2";
       sha256 = "sha256-y10K529uMSwscwtOXFe5el0IcCNzdwv0NOyS6UNkmuk=";
     }
+    {
+      name = "python";
+      publisher = "ms-python";
+      version = "2021.12.1559732655";
+      sha256 = "sha256-hXTVZ7gbu234zyAg0ZrZPUo6oULB98apxe79U2yQHD4=";
+    }
   ];
 in {
   enable = true;
