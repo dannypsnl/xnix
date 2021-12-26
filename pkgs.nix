@@ -21,7 +21,7 @@ in with pkgs; [
   chez
   sbcl
   (agda.withPackages [ agdaPackages.standard-library ])
-  zig
+  #zig
   binutils
   gnumake
   cmake
