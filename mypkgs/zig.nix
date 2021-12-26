@@ -3,15 +3,13 @@ pkgs.stdenv.mkDerivation {
   name = "zig";
   src = if isNixOS then
     fetchTarball {
-      url =
-        "https://ziglang.org/builds/zig-linux-x86_64-0.9.0-dev.1324+598db831f.tar.xz";
-      sha256 = "0vpi3cwcknav7mc7yyw52hv0lf00plpqsjv77d2pvfyj79jmsr0x";
+      url = "https://ziglang.org/download/0.9.0/zig-linux-x86_64-0.9.0.tar.xz";
+      sha256 = "5c55344a877d557fb1b28939785474eb7f4f2f327aab55293998f501f7869fa6";
     }
   else
     fetchTarball {
-      url =
-        "https://ziglang.org/builds/zig-macos-aarch64-0.9.0-dev.1324+598db831f.tar.xz";
-      sha256 = "00qxfaagph4rx08351c0shfgcp382cs5q77932wwv1cp864v7yqq";
+      url = "https://ziglang.org/download/0.9.0/zig-macos-aarch64-0.9.0.tar.xz";
+      sha256 = "sha256:0irr2b8nvj43d7f3vxnz0x70m8jlz71mv3756hx49p5d7ramdrp7";
     };
   dontConfigure = true;
   dontBuild = true;
