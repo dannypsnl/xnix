@@ -28,7 +28,7 @@ in {
       owner = "wakatime";
       repo = "vim-wakatime";
       rev = "master";
-      sha256 = "sha256-2tmYKRPzt/T5Tx2qv1QOtxCLwpyx4xeLC49rHnGDJto=";
+      sha256 = "sha256-PFbXffeQLL2/n/xeIvsiZ1WzZVf0aPIFT/h1Kr3gMpM=";
     };
   };
   nix-vim = vimPlug {
