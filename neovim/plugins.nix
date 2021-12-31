@@ -18,7 +18,6 @@ in with pkgs.vimPlugins // customPlugins;
   vim-commentary
   auto-pairs
   fzf-vim
-  vim-racket
   julia-vim
   zig-vim
   vim-go

@@ -3,7 +3,7 @@
     "racket": {
       "command": "racket",
       "args": ["-l", "racket-langserver"],
-      "filetypes": ["info", "racket", "racketgui", "scribble"]
+      "filetypes": ["scheme"]
     },
     "idris2": {
       "command": "idris2-lsp",
@@ -40,7 +40,7 @@
   },
   "rust-client.disableRustup": true,
   "coc.preferences.formatOnSaveFiletypes": [
-    "info", "racket", "racketgui", "scribble",
+    "scheme",
     "idris2",
     "rust",
     "go",
