@@ -1,5 +1,6 @@
 { pkgs, ... }:
 with pkgs; [
+  kitty
   racket
   gauche # gauche scheme
   gcc

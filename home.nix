@@ -29,10 +29,7 @@ in {
   home.file.".agda/libraries".text = builtins.readFile ./agda/libraries;
   home.file.".agda/defaults".text = builtins.readFile ./agda/defaults;
 
-  programs.alacritty = (import ./alacritty/config.nix) {
-    lib = lib;
-    isNixOS = isNixOS;
-  };
+  home.file.".config/kitty/kitty.conf".text = builtins.readFile ./kitty/kitty.conf;
 
   programs.vscode = (import ./vscode/config.nix) {
     pkgs = pkgs;
