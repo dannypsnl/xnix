@@ -10,8 +10,8 @@ let
     {
       name = "elixir-ls";
       publisher = "JakeBecker";
-      version = "0.8.1";
-      sha256 = "18ky671zs4a4lj2bdnwngfh4qf0pcvd3skywq0w49isa93ymypig";
+      version = "0.9.0";
+      sha256 = "sha256-KNfZOrVxK3/rClHPcIyPgE9CRtjkI7NLY0xZ9W+X6OM=";
     }
     {
       name = "Nix";
