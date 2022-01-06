@@ -31,12 +31,6 @@ in {
 
   home.file.".config/kitty/kitty.conf".text = builtins.readFile ./kitty/kitty.conf;
 
-  programs.vscode = (import ./vscode/config.nix) {
-    pkgs = pkgs;
-    lib = lib;
-    isNixOS = isNixOS;
-  };
-
   home.file.".config/nvim/coc-settings.json".text =
     builtins.readFile ./neovim/coc-settings.json;
   programs.neovim = (import ./neovim/config.nix) {
