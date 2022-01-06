@@ -123,6 +123,7 @@ in {
     # git
     "git.confirmSync" = false;
     "git.enableSmartCommit" = true;
+    "emmet.includeLanguages" = { "html-eex" = "html"; };
     # formatter
     "[elixir]" = { "editor.defaultFormatter" = "JakeBecker.elixir-ls"; };
     "[javascript]" = { "editor.defaultFormatter" = "esbenp.prettier-vscode"; };
