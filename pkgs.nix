@@ -28,17 +28,12 @@ in with pkgs; [
   clang-tools
   ccls
   doxygen
-  rustc
-  cargo
-  rls
   rebar3
   erlang
   elixir
   nodejs
   nodePackages.pnpm
   nodePackages.prettier
-  go
-  gopls
   python3
   nixfmt
   z3

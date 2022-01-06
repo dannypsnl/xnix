@@ -20,7 +20,6 @@ in with pkgs.vimPlugins // customPlugins;
   fzf-vim
   julia-vim
   zig-vim
-  vim-go
   nix-vim
   vim-stylish-haskell
   wakatime

@@ -9,16 +9,6 @@
       "command": "idris2-lsp",
       "filetypes": ["idris2"]
     },
-    "rust": {
-      "command": "rls",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
-    },
-    "go": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "filetypes": ["go"]
-    },
     "ccls": {
       "command": "ccls",
       "filetypes": [
@@ -38,12 +28,9 @@
       }
     }
   },
-  "rust-client.disableRustup": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "scheme",
     "idris2",
-    "rust",
-    "go",
     "c", "cpp", "objc", "objcpp"
   ]
 }
