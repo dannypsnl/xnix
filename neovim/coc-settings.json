@@ -31,6 +31,8 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "scheme",
     "idris2",
+    "elixir",
+    "julia",
     "c", "cpp", "objc", "objcpp"
   ]
 }
