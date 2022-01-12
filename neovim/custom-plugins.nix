@@ -1,6 +1,16 @@
 { pkgs, ... }:
 let vimPlug = pkgs.vimUtils.buildVimPlugin;
 in {
+  copilot = vimPlug {
+    pname = "copilot";
+    version = "release";
+    src = pkgs.fetchFromGitHub {
+      owner = "github";
+      repo = "copilot.vim";
+      rev = "release";
+      sha256 = "sha256-gnFiuXpKF55cWxCXNXe3zqQaVmGoUV5aRBGIlyUUfIM=";
+    };
+  };
   oldbook-vim = vimPlug {
     pname = "oldbook-vim";
     version = "master";

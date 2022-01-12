@@ -23,4 +23,5 @@ in with pkgs.vimPlugins // customPlugins;
   nix-vim
   vim-stylish-haskell
   wakatime
+  copilot
 ] ++ lib.optionals isMacOS [ idris2-vim ]
