@@ -34,7 +34,7 @@ echo "{ xnixPath = \"$(pwd)\"; operatingSystem = \"$(uname -v | awk '{ print $1 
 ./install.sh
 
 # apply config
-home-manager switch
+home-manager switch -b backup
 ```
 
 ## Reference
