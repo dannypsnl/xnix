@@ -8,7 +8,7 @@ pkgs: isMacOS: {
     plugins = [
       "git"
       "dotenv"
-      "osx"
+      "macos"
       "kubectl"
       "docker"
       "gradle"
