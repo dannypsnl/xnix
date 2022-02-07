@@ -19,7 +19,6 @@ in with pkgs; [
   youtube-dl
   gradle
   chez
-  sbcl
   (agda.withPackages [ agdaPackages.standard-library ])
   #zig
   binutils
