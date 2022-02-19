@@ -4,38 +4,46 @@ This project put my setting of \*nix environment.
 
 ## Installation
 
-### (Optional) Install Nix on non-NixOS
+1. (Optional) Install Nix on non-NixOS
 
-```zsh
-# non-nixos have to install nix first
-curl https://nixos.org/nix/install | sh
-```
+   ```zsh
+   # non-nixos have to install nix first
+   curl https://nixos.org/nix/install | sh
+   ```
 
-### Install Home Manager
+2. Install Home Manager
 
-```zsh
-# install home manager
-nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-nix-channel --update
-# non-nixos might need:
-export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
-nix-shell '<home-manager>' -A install
-```
+   ```zsh
+   # install home manager
+   nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+   nix-channel --update
+   # non-nixos might need:
+   export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
+   nix-shell '<home-manager>' -A install
+   ```
 
-### Apply config
+3. Get Repository
 
-```zsh
-# get this repo
-git clone https://github.com/dannypsnl/xnix.git
-cd xnix
-# generate current machine config
-echo "{ xnixPath = \"$(pwd)\"; operatingSystem = \"$(uname -v | awk '{ print $1 }' | sed 's/#.*-//')\"; homePath=\"$HOME\"; }" > machine.nix
-# install config to system
-./install.sh
+   ```zsh
+   git clone https://github.com/dannypsnl/xnix.git
+   cd xnix
+   ```
 
-# apply config
-home-manager switch -b backup
-```
+4. Install Configuration
+
+   ```zsh
+   # generate current machine config
+   echo "{ xnixPath = \"$(pwd)\"; operatingSystem = \"$(uname -v | awk '{ print $1 }' | sed 's/#.*-//')\"; homePath=\"$HOME\"; }" > machine.nix
+   # install config to system
+   ./install.sh
+   ```
+
+5. Apply
+
+   ```zsh
+   # apply config
+   home-manager switch -b backup
+   ```
 
 ## Reference
 
