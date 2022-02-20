@@ -9,6 +9,7 @@ with pkgs; [
   jdk
   tdesktop # telegram
   slack
+  caffeine-ng # prevent sleep
   kubectl
   kubernetes-helm
   kube3d
