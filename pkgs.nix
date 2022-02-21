@@ -6,6 +6,7 @@ let
   };
 in with pkgs; [
   gh
+  pijul
   tig
   cloc
   tree
