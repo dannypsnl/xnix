@@ -6,7 +6,6 @@ let
   };
 in with pkgs; [
   gh
-  pijul
   tig
   cloc
   tree
@@ -18,16 +17,13 @@ in with pkgs; [
   ffmpeg
   graphviz
   youtube-dl
-  gradle
-  chez
-  (agda.withPackages [ agdaPackages.standard-library ])
-  #zig
+  #(agda.withPackages [ agdaPackages.standard-library ])
+  zig
   binutils
   gnumake
   cmake
   clang-tools
   ccls
-  doxygen
   rebar3
   erlang
   elixir
