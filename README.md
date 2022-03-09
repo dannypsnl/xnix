@@ -8,7 +8,7 @@ This project put my setting of \*nix environment.
 
    ```zsh
    # non-nixos have to install nix first
-   curl https://nixos.org/nix/install | sh
+   sh <(curl -L https://nixos.org/nix/install)
    ```
 
 2. Install Home Manager
