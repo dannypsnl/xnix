@@ -13,6 +13,5 @@ with pkgs; [
   kubectl
   kubernetes-helm
   kube3d
-  transcrypt
   xclip
 ]

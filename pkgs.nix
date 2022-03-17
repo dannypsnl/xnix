@@ -15,6 +15,7 @@ in with pkgs; [
   curl
   wget
   ffmpeg
+  transcrypt
   graphviz
   youtube-dl
   #(agda.withPackages [ agdaPackages.standard-library ])
