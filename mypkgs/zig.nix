@@ -8,8 +8,8 @@ pkgs.stdenv.mkDerivation {
     }
   else
     fetchTarball {
-      url = "https://ziglang.org/download/0.9.0/zig-macos-aarch64-0.9.0.tar.xz";
-      sha256 = "sha256:0irr2b8nvj43d7f3vxnz0x70m8jlz71mv3756hx49p5d7ramdrp7";
+      url = "https://ziglang.org/builds/zig-macos-aarch64-0.10.0-dev.1393+291f5055f.tar.xz";
+      sha256 = "sha256:07jbh61kzdjdx4x595kkb6jbchc5ij5zz31szvpziar28hw2j481";
     };
   dontConfigure = true;
   dontBuild = true;
