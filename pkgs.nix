@@ -5,7 +5,6 @@ let
     isNixOS = isNixOS;
   };
 in with pkgs; [
-  gh
   tig
   cloc
   tree
@@ -18,7 +17,7 @@ in with pkgs; [
   transcrypt
   graphviz
   youtube-dl
-  #(agda.withPackages [ agdaPackages.standard-library ])
+  #agda
   zig
   binutils
   gnumake
