@@ -4,6 +4,7 @@ retab
 set shiftwidth=4
 set undofile
 set cursorline
+set whichwrap+=<,>,[,]
 " show line number
 set number
 set nolist
