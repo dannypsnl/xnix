@@ -16,7 +16,6 @@ in with pkgs; [
   ffmpeg
   transcrypt
   graphviz
-  youtube-dl
   #agda
   zig
   binutils
