@@ -9,6 +9,10 @@
       "command": "idris2-lsp",
       "filetypes": ["idris2"]
     },
+    "erlang": {
+      "command": "erlang_ls",
+      "filetypes": ["erlang"]
+    },
     "ccls": {
       "command": "ccls",
       "filetypes": [
