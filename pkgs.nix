@@ -14,7 +14,6 @@ in with pkgs; [
   curl
   wget
   ffmpeg
-  transcrypt
   graphviz
   #agda
   zig
@@ -23,9 +22,6 @@ in with pkgs; [
   cmake
   clang-tools
   ccls
-  rebar3
-  erlang
-  elixir
   nodejs
   nodePackages.pnpm
   nodePackages.prettier

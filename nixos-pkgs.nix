@@ -3,6 +3,9 @@ with pkgs; [
   kitty
   racket
   gauche # gauche scheme
+  rebar3
+  erlang
+  elixir
   gcc
   llvm
   factor-lang
