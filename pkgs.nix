@@ -17,11 +17,6 @@ in with pkgs; [
   graphviz
   #agda
   zig
-  binutils
-  gnumake
-  cmake
-  clang-tools
-  ccls
   nodejs
   nodePackages.pnpm
   nodePackages.prettier
