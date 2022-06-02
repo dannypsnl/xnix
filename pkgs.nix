@@ -18,8 +18,6 @@ in with pkgs; [
   #agda
   zig
   nodejs
-  nodePackages.pnpm
-  nodePackages.prettier
   python3
   nixfmt
   z3
