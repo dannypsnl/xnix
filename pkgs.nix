@@ -17,8 +17,6 @@ in with pkgs; [
   graphviz
   #agda
   zig
-  nodejs
-  python3
   nixfmt
   z3
 ]
