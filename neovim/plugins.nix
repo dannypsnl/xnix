@@ -21,7 +21,6 @@ in with pkgs.vimPlugins // customPlugins;
   julia-vim
   zig-vim
   nix-vim
-  vim-stylish-haskell
   wakatime
   copilot
 ] ++ lib.optionals isMacOS [ idris2-vim ]
