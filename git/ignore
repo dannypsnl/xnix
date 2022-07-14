@@ -1,0 +1,11 @@
+*~
+*.swp
+*.o
+*.a
+*.so
+*.aux
+*.dylib
+.idea/
+.vscode/
+.ccls-cache/
+.DS_Store

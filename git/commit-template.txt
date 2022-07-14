@@ -1,7 +1,0 @@
-[topic]
-
-# if have to list something, use *
-# for example:
-#   * abc
-#   * def
-#   * ghi

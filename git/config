@@ -1,0 +1,35 @@
+[alias]
+	ad = "add"
+	br = "branch"
+	cm = "commit"
+	co = "checkout"
+	df = "diff"
+	mg = "merge"
+	rb = "rebase"
+	st = "status"
+	tree = "log --graph --decorate --pretty=oneline --abbrev-commit"
+
+[branch]
+	autosetuprebase = "always"
+
+[color]
+	ui = true
+
+[core]
+	editor = "nvim"
+
+[init]
+	defaultBranch = "develop"
+
+[pull]
+	rebase = true
+
+[push]
+	default = "current"
+
+[rebase]
+	autosquash = true
+
+[user]
+	email = "dannypsnl@gmail.com"
+	name = "Lîm Tsú-thuàn"

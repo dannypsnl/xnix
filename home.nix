@@ -31,6 +31,9 @@ in {
 
   home.file.".config/kitty/kitty.conf".text = builtins.readFile ./kitty/kitty.conf;
 
+  home.file.".config/git/config".text = builtins.readFile ./git/config;
+  home.file.".config/git/ignore".text = builtins.readFile ./git/ignore;
+
   home.file.".config/nvim/coc-settings.json".text =
     builtins.readFile ./neovim/coc-settings.json;
   programs.neovim = (import ./neovim/config.nix) {
@@ -52,7 +55,4 @@ in {
   } else {
     enable = true;
   };
-
-  programs.git =
-    (import ./git/config.nix) (machine.xnixPath + "/git/commit-template.txt");
 }
