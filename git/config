@@ -1,7 +1,7 @@
 [alias]
 	ad = "add"
 	br = "branch"
-	cm = "commit"
+	cm = "commit -s"
 	co = "checkout"
 	df = "diff"
 	mg = "merge"
