@@ -12,9 +12,7 @@ in {
   home.packages = with pkgs;
     (import ./pkgs.nix {
       pkgs = pkgs;
-      isNixOS = isNixOS;
-    })
-    ++ lib.optionals isMacOS (import ./macos-pkgs.nix { pkgs = pkgs; });
+    });
 
   programs.zsh = (import ./zsh/config.nix) pkgs isMacOS;
   programs.fzf = {

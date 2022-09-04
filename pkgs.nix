@@ -1,10 +1,5 @@
-{ pkgs, isNixOS, ... }:
-let
-  zig = (import ./mypkgs/zig.nix) {
-    pkgs = pkgs;
-    isNixOS = isNixOS;
-  };
-in with pkgs; [
+{ pkgs, ... }:
+with pkgs; [
   tig
   cloc
   tree
@@ -15,8 +10,6 @@ in with pkgs; [
   wget
   ffmpeg
   graphviz
-  #agda
-  zig
   nixfmt
   z3
 ]
