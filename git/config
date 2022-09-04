@@ -16,7 +16,7 @@
 	ui = true
 
 [core]
-	editor = "nvim"
+	editor = "vim"
 
 [init]
 	defaultBranch = "develop"

@@ -28,8 +28,6 @@ pkgs: isMacOS: {
     la = "ll -a";
     lm = "ll | more";
     lam = "la | more";
-    vi = "nvim";
-    vim = "nvim";
   };
 
   initExtra = "" + (if isMacOS then ''
