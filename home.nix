@@ -9,22 +9,8 @@ in {
   home.homeDirectory = machine.homePath;
   home.stateVersion = "21.03";
 
-  home.packages = with pkgs;
-    (import ./pkgs.nix {
-      pkgs = pkgs;
-    });
-
-  programs.zsh = (import ./zsh/config.nix) pkgs isMacOS;
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
-  };
-  programs.direnv = if isMacOS then {
-    enable = true;
-    nix-direnv = {
-      enable = true;
-    };
-  } else {
-    enable = true;
   };
 }

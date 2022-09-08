@@ -4,48 +4,37 @@ This project put my setting of \*nix environment.
 
 ## Installation
 
-1. (Optional) Install Nix on non-NixOS
-
-   ```zsh
-   # non-nixos have to install nix first
-   sh <(curl -L https://nixos.org/nix/install)
-   ```
-
-2. Install Home Manager
-
-   ```zsh
-   # install home manager
-   nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-   nix-channel --update
-   # non-nixos might need:
-   export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
-   nix-shell '<home-manager>' -A install
-   ```
-
-3. Get Repository
+1. Get Repository
 
    ```zsh
    git clone https://github.com/dannypsnl/xnix.git
    cd xnix
    ```
 
-4. Install Configuration
+2. Install
 
    ```zsh
-   # generate current machine config
-   echo "{ xnixPath = \"$(pwd)\"; operatingSystem = \"$(uname -v | awk '{ print $1 }' | sed 's/#.*-//')\"; homePath=\"$HOME\"; }" > machine.nix
-   # install config to system
    ./install.sh
    ```
 
-5. Apply
+## Neovim
 
-   ```zsh
-   # apply config
-   home-manager switch -b backup
-   ```
-
-## Reference
-
-- [home manager options](https://nix-community.github.io/home-manager/options.html)
-- [emacs: use-package](https://github.com/jwiegley/use-package)
+- Load from last quit position
+- Nerdtree: `<C-n>`
+- Theme
+    - solarized
+    - [oldbook](https://github.com/KKPMW/oldbook-vim)
+    - [distilled](https://github.com/KKPMW/distilled-vim)
+- Status Bar: airline
+- ctrlp: `<C-p>`
+- :Ack `text you want to search in project`
+- Git:
+    - [fugitive](https://vimawesome.com/plugin/fugitive-vim)
+    - [vim-gitgutter](https://vimawesome.com/plugin/vim-gitgutter): view git diff in real time
+- auto pair
+- auto format
+- Type Completion
+- Comment: Commentary type command `:10,17Commentary`, [Doc](https://vimawesome.com/plugin/commentary-vim)
+- Ignore cap for `:wq`
+- Clap: https://github.com/liuchengxu/vim-clap#commands
+- move cursor freely in the buffer: `set virtualedit=all`
