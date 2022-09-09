@@ -27,17 +27,6 @@ call plug#end()
 
 let mapleader="\<Space>"
 
-" Open/close file tree
-nnoremap <leader>f :NERDTreeToggle<CR>
-" Window
-map <leader>ws       <C-W>s
-map <leader>wv       <C-W>v
-" Improve window switching, remove <C-W>
-map <leader>w<down>  <C-W><C-J>
-map <leader>w<up>    <C-W><C-K>
-map <leader>w<right> <C-W><C-L>
-map <leader>w<left>  <C-W><C-H>
-
 " Common useful vim configuration
 set nobackup
 set backspace=indent,eol,start
@@ -86,8 +75,20 @@ cab QW wq
 cab Qw wq
 cab qW wq
 
-" language server
 lua << EOF
+local keymap = vim.keymap.set
+-- Open/close file tree
+keymap('n', '<leader>f', '<cmd>NERDTreeToggle<CR>')
+-- Window
+keymap('n', '<leader>ws', '<C-W>s')
+keymap('n', '<leader>wv', '<C-W>v')
+-- Improve window switching, remove <C-W>
+keymap('n', '<leader>w<down>', '<C-W><C-J>')
+keymap('n', '<leader>w<up>', '<C-W><C-K>')
+keymap('n', '<leader>w<right>', '<C-W><C-L>')
+keymap('n', '<leader>w<left>', '<C-W><C-H>')
+
+-- language server
 require("mason").setup()
 require('lspsaga').init_lsp_saga()
 
