@@ -91,7 +91,7 @@ keymap('n', '<leader>w<right>', '<C-W><C-L>')
 keymap('n', '<leader>w<left>', '<C-W><C-H>')
 
 -- Git keymappings
-
+keymap('n', '<leader>g', '<cmd>LazyGit<CR>')
 
 -- language server
 require("mason").setup()
