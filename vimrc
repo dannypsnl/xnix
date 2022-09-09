@@ -17,7 +17,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'chrisbra/vim-commentary'
 " Language
 Plug 'benknoble/vim-racket'
-"Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 let mapleader="\<Space>"
