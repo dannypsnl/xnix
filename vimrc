@@ -21,6 +21,7 @@ Plug 'benknoble/vim-racket'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ojroques/nvim-lspfuzzy'
+Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 call plug#end()
 
 let mapleader="\<Space>"
@@ -86,28 +87,61 @@ cab qW wq
 
 " language server
 lua << EOF
+require('lspsaga').init_lsp_saga()
+
 local on_attach = function(client, bufnr)
+  local keymap = vim.keymap.set
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-  vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-  vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-  vim.keymap.set('n', '<leader>wl', function()
-    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+  -- Lsp finder find the symbol definition implement reference
+  -- when you use action in finder like open vsplit then you can
+  -- use <C-t>to jump back
+  keymap("n", "<leader>lf", "<cmd>Lspsaga lsp_finder<CR>", bufopts)
+  -- Goto definition
+  keymap('n', '<leader>lD', vim.lsp.buf.declaration, bufopts)
+  keymap('n', '<leader>ld', vim.lsp.buf.definition, bufopts)
+  keymap('n', '<leader>li', vim.lsp.buf.implementation, bufopts)
+  -- Definition preview
+  keymap('n', '<leader>lt', vim.lsp.buf.type_definition, bufopts)
+  keymap("n", "<leader>lp", "<cmd>Lspsaga preview_definition<CR>", bufopts)
+  -- Goto references
+  keymap('n', '<leader>lu', vim.lsp.buf.references, bufopts)
+  -- Hover Doc
+  keymap("n", "<leader>lh", "<cmd>Lspsaga hover_doc<CR>", bufopts)
+  -- Rename
+  keymap("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", bufopts)
+  -- Code action
+  keymap("n", "<leader>lc", "<cmd>Lspsaga code_action<CR>", bufopts)
+  keymap("v", "<leader>lc", "<cmd>Lspsaga range_code_action<CR>", bufopts)
+  -- Show line diagnostics
+  keymap("n", "<leader>lld", "<cmd>Lspsaga show_line_diagnostics<CR>", bufopts)
+  -- Show cursor diagnostic
+  keymap("n", "<leader>llc", "<cmd>Lspsaga show_cursor_diagnostics<CR>", bufopts)
+  -- Outline
+  keymap("n","<leader>lo", "<cmd>LSoutlineToggle<CR>", bufopts)
+  -- Diagnsotic jump can use `<c-o>` to jump back
+  keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts)
+  keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts)
+  -- Only jump to error
+  keymap("n", "[E", function()
+    require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
   end, bufopts)
-  vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
-  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, bufopts)
+  keymap("n", "]E", function()
+    require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
+  end, bufopts)
+  -- Formatting
+  -- FIXME: auto it
+  keymap('n', '<leader>lf', vim.lsp.buf.formatting, bufopts)
+
+  -- Float terminal
+  -- FIXME: close float terminal has problem
+  --keymap("n", "<leader>t", "<cmd>Lspsaga open_floaterm<CR>", bufopts)
+  -- close floaterm
+  --keymap("t", "<leader>t", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], bufopts)
 end
 
 require'lspconfig'.ccls.setup{
