@@ -133,15 +133,18 @@ local on_attach = function(client, bufnr)
   keymap("n", "]E", function()
     require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
   end, bufopts)
-  -- Formatting
-  -- FIXME: auto it
-  keymap('n', '<leader>lf', vim.lsp.buf.formatting, bufopts)
 
   -- Float terminal
   -- FIXME: close float terminal has problem
   --keymap("n", "<leader>t", "<cmd>Lspsaga open_floaterm<CR>", bufopts)
   -- close floaterm
   --keymap("t", "<leader>t", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], bufopts)
+
+  -- Auto formatting
+  vim.cmd [[augroup Format]]
+  vim.cmd [[autocmd! * <buffer>]]
+  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+  vim.cmd [[augroup END]]
 end
 
 require'lspconfig'.ccls.setup{
