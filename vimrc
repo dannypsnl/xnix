@@ -50,6 +50,9 @@ set list
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+" close whole editor when only NERDTree window leave
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+      \ && b:NERDTree.isTabTree()) | q | endif
 
 let g:ackprg = 'ag --vimgrep'
 
