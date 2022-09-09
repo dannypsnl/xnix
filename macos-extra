@@ -1,0 +1,26 @@
+# PATH
+export PATH=/Applications/Racket\ v8.6/bin:$PATH
+export PATH=$HOME/Library/Racket/8.6/bin:$PATH
+export PATH=$HOME/tools/zigmod/zig-out/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=/Applications/Julia-1.7.app/Contents/Resources/julia/bin:$PATH
+export PATH=~/.emacs.d/bin:$PATH
+
+# LLVM
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+# OCaml
+eval $(opam env)
+
+# Rust
+. "$HOME/.cargo/env"
+
+# Haskell
+source /Users/dannypsnl/.ghcup/env
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dannypsnl/tools/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dannypsnl/tools/google-cloud-sdk/path.zsh.inc'; fi
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/dannypsnl/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dannypsnl/tools/google-cloud-sdk/completion.zsh.inc'; fi 
