@@ -7,6 +7,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'wakatime/vim-wakatime'
 " Highlight changes in Git
 Plug 'airblade/vim-gitgutter'
+" Git operation
+Plug 'kdheepak/lazygit.nvim'
 " Tools
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
@@ -87,6 +89,9 @@ keymap('n', '<leader>w<down>', '<C-W><C-J>')
 keymap('n', '<leader>w<up>', '<C-W><C-K>')
 keymap('n', '<leader>w<right>', '<C-W><C-L>')
 keymap('n', '<leader>w<left>', '<C-W><C-H>')
+
+-- Git keymappings
+
 
 -- language server
 require("mason").setup()

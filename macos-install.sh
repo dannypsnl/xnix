@@ -10,4 +10,5 @@ brew install \
   cloc \
   tig \
   direnv \
-  fzf
+  fzf \
+  lazygit
