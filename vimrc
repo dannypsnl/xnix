@@ -20,6 +20,7 @@ Plug 'chrisbra/vim-commentary'
 Plug 'benknoble/vim-racket'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
 Plug 'ojroques/nvim-lspfuzzy'
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 call plug#end()
@@ -27,7 +28,7 @@ call plug#end()
 let mapleader="\<Space>"
 
 " Open/close file tree
-nnoremap <leader>y :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeToggle<CR>
 " Window
 map <leader>ws       <C-W>s
 map <leader>wv       <C-W>v
@@ -87,6 +88,7 @@ cab qW wq
 
 " language server
 lua << EOF
+require("mason").setup()
 require('lspsaga').init_lsp_saga()
 
 local on_attach = function(client, bufnr)
@@ -147,12 +149,18 @@ local on_attach = function(client, bufnr)
   vim.cmd [[augroup END]]
 end
 
-require'lspconfig'.ccls.setup{
-  on_attach = on_attach,
+local servers = {
+  'astro',
+  'ccls',
+  'ocamllsp',
+  --'racket',
+  'rust_analyzer',
+  'hls',
+  'zls'
 }
-require'lspconfig'.zls.setup{
-  on_attach = on_attach,
-}
+for _, lsp in ipairs(servers) do
+  require('lspconfig')[lsp].setup { on_attach = on_attach }
+end
 
 require('lspfuzzy').setup {}
 EOF
