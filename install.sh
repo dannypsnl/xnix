@@ -5,9 +5,8 @@ ln -s $(pwd)/macos-extra ${HOME}/.macos-extra
 ln -s $(pwd)/zshrc ${HOME}/.zshrc
 
 # neovim
-mkdir -p ${HOME}/.config/nvim/lua/lspconfig/server_configurations
+mkdir -p ${HOME}/.config/nvim
 ln -s $(pwd)/vimrc ${HOME}/.config/nvim/init.vim
-ln -s $(pwd)/lua/racket.lua ${HOME}/.config/nvim/lua/lspconfig/server_configurations/racket.lua
 
 # kitty
 ln -s $(pwd)/kitty/kitty.conf ${HOME}/.config/kitty/kitty.conf

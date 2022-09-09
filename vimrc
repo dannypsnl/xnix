@@ -153,7 +153,7 @@ local servers = {
   'astro',
   'ccls',
   'ocamllsp',
-  --'racket',
+  'racket_langserver',
   'rust_analyzer',
   'hls',
   'zls'
