@@ -9,6 +9,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'airblade/vim-gitgutter'
 " Git operation
 Plug 'kdheepak/lazygit.nvim'
+Plug 'tpope/vim-fugitive'
 " Tools
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
@@ -95,6 +96,7 @@ keymap('n', '<leader>w<left>', '<C-W><C-H>')
 
 -- Git keymappings
 keymap('n', '<leader>g', '<cmd>LazyGit<CR>')
+keymap('n', '<leader>b', '<cmd>Git blame<CR>')
 
 -- language server
 require("mason").setup()
