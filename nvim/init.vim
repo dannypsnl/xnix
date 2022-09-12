@@ -21,11 +21,18 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'chrisbra/vim-commentary'
 " Language
 Plug 'benknoble/vim-racket'
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/mason.nvim'
-Plug 'ojroques/nvim-lspfuzzy'
+" Language server
+Plug 'neovim/nvim-lspconfig'           " language server configuration
+Plug 'williamboman/nvim-lsp-installer' " client installation
+Plug 'williamboman/mason.nvim'         " install language server
+Plug 'ojroques/nvim-lspfuzzy'          " fuzzy searcher for references
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
+""" completion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp' | Plug 'hrsh7th/cmp-buffer' | Plug 'hrsh7th/cmp-path' | Plug 'hrsh7th/cmp-cmdline'
+Plug 'L3MON4D3/LuaSnip' | Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-vsnip' | Plug 'hrsh7th/vim-vsnip'
+
 call plug#end()
 
 let mapleader="\<Space>"
@@ -81,6 +88,9 @@ cab QW wq
 cab Qw wq
 cab qW wq
 
+" completion setup
+set completeopt=menu,menuone,noselect
+
 lua << EOF
 local keymap = vim.keymap.set
 -- Open/close file tree
@@ -120,7 +130,7 @@ local on_attach = function(client, bufnr)
   keymap('n', '<leader>li', vim.lsp.buf.implementation, bufopts)
   -- Definition preview
   keymap('n', '<leader>lt', vim.lsp.buf.type_definition, bufopts)
-  keymap("n", "<leader>lp", "<cmd>Lspsaga preview_definition<CR>", bufopts)
+  keymap("n", "<leader>lp", "<cmd>Lspsaga peek_definition<CR>", bufopts)
   -- Goto references
   keymap('n', '<leader>lu', vim.lsp.buf.references, bufopts)
   -- Hover Doc
@@ -160,6 +170,8 @@ local on_attach = function(client, bufnr)
   vim.cmd [[augroup END]]
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 local servers = {
   'astro',
   'ccls',
@@ -170,8 +182,56 @@ local servers = {
   'zls'
 }
 for _, lsp in ipairs(servers) do
-  require('lspconfig')[lsp].setup { on_attach = on_attach }
+  require('lspconfig')[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
 end
 
 require('lspfuzzy').setup {}
+
+local luasnip = require 'luasnip'
+local cmp = require 'cmp'
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  }, {
+    { name = 'buffer' },
+    { name = 'path' },
+  }),
+}
+
 EOF
