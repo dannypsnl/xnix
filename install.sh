@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # zsh
-ln -s $(pwd)/macos-extra ${HOME}/.macos-extra
+touch ${HOME}/.macos-extra
 ln -s $(pwd)/zshrc ${HOME}/.zshrc
 
 # neovim
