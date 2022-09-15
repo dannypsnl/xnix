@@ -94,6 +94,8 @@ cab qW wq
 set completeopt=menu,menuone,noselect
 
 lua << EOF
-require("setup")
+require("git")
+require("window")
+require("lsp_setup")
 require("setup-org-mode")
 EOF
