@@ -27,11 +27,20 @@ require('packer').startup(function(use)
     -- Language server
     use 'neovim/nvim-lspconfig' -- language server configuration
     use 'williamboman/nvim-lsp-installer' -- client installation
-    use 'williamboman/mason.nvim' -- install language server
+    -- install language server
+    use {
+        'williamboman/mason.nvim',
+        config = function()
+            require('mason').setup()
+        end
+    }
     use 'ojroques/nvim-lspfuzzy' -- fuzzy searcher for references
     use {
         'glepnir/lspsaga.nvim',
-        branch = 'main'
+        branch = 'main',
+        config = function()
+            require('lspsaga').init_lsp_saga()
+        end
     }
     -- completion
     use 'hrsh7th/nvim-cmp'

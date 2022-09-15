@@ -1,7 +1,3 @@
--- language server
-require('mason').setup()
-require('lspsaga').init_lsp_saga()
-
 local on_attach = function(client, bufnr)
     local keymap = vim.keymap.set
     -- Enable completion triggered by <c-x><c-o>
@@ -77,6 +73,7 @@ end
 
 require('lspfuzzy').setup({})
 
+-- completion
 local luasnip = require('luasnip')
 local cmp = require('cmp')
 cmp.setup {
