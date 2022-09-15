@@ -5,6 +5,7 @@ require('packer').startup(function(use)
     use 'karoliskoncevicius/oldbook-vim'
     use 'karoliskoncevicius/distilled-vim'
     use 'altercation/vim-colors-solarized'
+    use 'EdenEast/nightfox.nvim'
     -- Code time recording
     use 'wakatime/vim-wakatime'
     -- Git
@@ -85,7 +86,8 @@ syntax enable
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "colorscheme oldbook
-colorscheme distilled
+"colorscheme distilled
+colorscheme dayfox
 set termguicolors
 ]]
 
