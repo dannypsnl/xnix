@@ -1,14 +1,32 @@
 * neovim configuration
 
-** entry: [[file:init.vim]]
+** entry: [[file:init.lua]]
 
 configure theme and shortcut
 
-** [[file:lua/setup.lua]]
+** [[file:lua/files_setup.lua]]
+
+**** `<leader>f` open files viewer
+**** `<leader>.` search files in project(git repo)
+**** `<leader>a` search text in files
+
+** [[file:lua/git_setup.lua]]
+
+**** `<leader>g` open lazygit
+**** `<leader>b` git blame
+
+** [[file:lua/window_setup.lua]]
+
+**** `<leader>ws` split window
+**** `<leader>wv` split window vertically
+**** `<leader>w` + `up/down/right/left` navigation in windows
+
+** [[file:lua/lsp_setup.lua]]
 
 lsp and completion
 
-** [[file:lua/setup-org-mode.lua]]
+**** `<leader>ld` go to definition
+
+** [[file:lua/orgmode_setup.lua]]
 
 org-mode spec
-
