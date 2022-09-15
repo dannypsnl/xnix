@@ -14,7 +14,6 @@ require('packer').startup(function(use)
   -- Tools
   use 'vim-airline/vim-airline'
   use 'preservim/nerdtree'
-  use 'kien/ctrlp.vim'
   use 'mileszs/ack.vim'
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
@@ -65,8 +64,6 @@ vim.o.mouse = 'a' -- allow mouse action
 vim.o.virtualedit = 'all' -- allow virtual editing
 -- completion setup
 vim.o.completeopt = 'menu,menuone,noselect'
--- ack
-vim.g.ackprg = 'ag --vimgrep'
 
 -- open from last editing point
 cmd [[
