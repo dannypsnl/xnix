@@ -1,13 +1,14 @@
 * neovim configuration
 
-** entry: init.vim
+** entry: [[file:init.vim]]
 
 configure theme and shortcut
 
-** lua/setup
+** [[file:lua/setup.lua]]
 
 lsp and completion
 
-** lua/setup-org-mode
+** [[file:lua/setup-org-mode.lua]]
 
 org-mode spec
+
