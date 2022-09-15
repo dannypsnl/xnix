@@ -1,6 +1,4 @@
 local keymap = vim.keymap.set
--- Open/close file tree
-keymap('n', '<leader>f', '<cmd>NERDTreeToggle<CR>')
 -- Window
 keymap('n', '<leader>ws', '<C-W>s')
 keymap('n', '<leader>wv', '<C-W>v')

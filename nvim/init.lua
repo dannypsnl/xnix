@@ -103,7 +103,8 @@ cab Qw wq
 cab qW wq
 ]]
 
-require("git")
-require("window")
+require("git_setup")
+require("window_setup")
+require("files_setup")
 require("lsp_setup")
-require("setup-org-mode")
+require("orgmode_setup")
