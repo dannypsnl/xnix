@@ -2,7 +2,10 @@
 
 ** entry: [[file:init.lua]]
 
-configure theme and shortcut
+  configure theme and shortcut
+
+  + *<leader>* key is *<space>*
+  + *<leader>t* open terminal
 
 ** [[file:lua/files_setup.lua]]
 
@@ -29,4 +32,7 @@ lsp and completion
 
 ** [[file:lua/orgmode_setup.lua]]
 
-org-mode spec
+  org-mode
+
+  + *<leader>oa* open agenda
+  + *<leader>oc* open task
