@@ -1,4 +1,5 @@
 brew install \
+  agda \
   the_silver_searcher \
   wget \
   curl \
