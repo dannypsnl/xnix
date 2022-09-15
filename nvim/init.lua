@@ -14,7 +14,6 @@ require('packer').startup(function(use)
   -- Tools
   use 'vim-airline/vim-airline'
   use 'preservim/nerdtree'
-  use 'mileszs/ack.vim'
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
   use 'jiangmiao/auto-pairs'
