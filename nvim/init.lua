@@ -54,7 +54,7 @@ cmd [[ retab ]]
 vim.o.undofile = true
 vim.o.cursorline = true
 vim.o.whichwrap = vim.o.whichwrap .. '<,>,[,]'
-vim.o.hlsearch = true
+vim.o.hlsearch = true -- highlight search
 vim.o.backup = false -- no backup file
 vim.o.number = true -- show line number
 vim.o.list = false
