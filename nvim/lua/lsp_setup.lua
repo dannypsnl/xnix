@@ -47,12 +47,6 @@ local on_attach = function(client, bufnr)
         require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
     end, bufopts)
 
-    -- Float terminal
-    -- FIXME: close float terminal has problem
-    --keymap("n", "<leader>t", "<cmd>Lspsaga open_floaterm<CR>", bufopts)
-    -- close floaterm
-    --keymap("t", "<leader>t", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], bufopts)
-
     -- Auto formatting
     vim.cmd [[
     augroup Format

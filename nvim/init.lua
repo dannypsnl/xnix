@@ -18,6 +18,7 @@ require('packer').startup(function(use)
     use 'junegunn/fzf.vim'
     use 'jiangmiao/auto-pairs'
     use 'chrisbra/vim-commentary'
+    use 'voldikss/vim-floaterm'
     -- Language
     use 'nvim-treesitter/nvim-treesitter'
     use 'benknoble/vim-racket'
@@ -63,6 +64,8 @@ vim.o.mouse = 'a' -- allow mouse action
 vim.o.virtualedit = 'all' -- allow virtual editing
 -- completion setup
 vim.o.completeopt = 'menu,menuone,noselect'
+
+vim.keymap.set('n', '<leader>t', '<cmd>FloatermToggle<cr>')
 
 -- open from last editing point
 cmd [[
