@@ -1,44 +1,44 @@
 require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  -- Themes
-  use 'karoliskoncevicius/oldbook-vim'
-  use 'karoliskoncevicius/distilled-vim'
-  use 'altercation/vim-colors-solarized'
-  -- Code time recording
-  use 'wakatime/vim-wakatime'
-  -- Git
-  use 'kdheepak/lazygit.nvim'
-  use 'tpope/vim-fugitive'
-  use 'airblade/vim-gitgutter' -- highlight changes
-  -- Tools
-  use 'vim-airline/vim-airline'
-  use 'preservim/nerdtree'
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
-  use 'jiangmiao/auto-pairs'
-  use 'chrisbra/vim-commentary'
-  -- Language
-  use 'nvim-treesitter/nvim-treesitter'
-  use 'benknoble/vim-racket'
-  use 'nvim-orgmode/orgmode'
-  -- Language server
-  use 'neovim/nvim-lspconfig'           -- language server configuration
-  use 'williamboman/nvim-lsp-installer' -- client installation
-  use 'williamboman/mason.nvim'         -- install language server
-  use 'ojroques/nvim-lspfuzzy'          -- fuzzy searcher for references
-  use {
-    'glepnir/lspsaga.nvim',
-    branch = 'main'
-  }
-  -- completion
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+    -- Themes
+    use 'karoliskoncevicius/oldbook-vim'
+    use 'karoliskoncevicius/distilled-vim'
+    use 'altercation/vim-colors-solarized'
+    -- Code time recording
+    use 'wakatime/vim-wakatime'
+    -- Git
+    use 'kdheepak/lazygit.nvim'
+    use 'tpope/vim-fugitive'
+    use 'airblade/vim-gitgutter' -- highlight changes
+    -- Tools
+    use 'vim-airline/vim-airline'
+    use 'preservim/nerdtree'
+    use 'junegunn/fzf'
+    use 'junegunn/fzf.vim'
+    use 'jiangmiao/auto-pairs'
+    use 'chrisbra/vim-commentary'
+    -- Language
+    use 'nvim-treesitter/nvim-treesitter'
+    use 'benknoble/vim-racket'
+    use 'nvim-orgmode/orgmode'
+    -- Language server
+    use 'neovim/nvim-lspconfig' -- language server configuration
+    use 'williamboman/nvim-lsp-installer' -- client installation
+    use 'williamboman/mason.nvim' -- install language server
+    use 'ojroques/nvim-lspfuzzy' -- fuzzy searcher for references
+    use {
+        'glepnir/lspsaga.nvim',
+        branch = 'main'
+    }
+    -- completion
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
 end)
 
 local cmd = vim.cmd
