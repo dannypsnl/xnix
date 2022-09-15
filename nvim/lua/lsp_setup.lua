@@ -55,10 +55,12 @@ local on_attach = function(client, bufnr)
   --keymap("t", "<leader>t", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], bufopts)
 
   -- Auto formatting
-  vim.cmd [[augroup Format]]
-  vim.cmd [[autocmd! * <buffer>]]
-  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
-  vim.cmd [[augroup END]]
+  vim.cmd [[
+  augroup Format
+    autocmd! * <buffer>
+    autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+  augroup END
+  ]]
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
