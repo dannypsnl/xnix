@@ -29,10 +29,3 @@
 lsp and completion
 
  + *<leader>ld* go to definition
-
-** [[file:lua/orgmode_setup.lua]]
-
-  org-mode
-
-  + *<leader>oa* open agenda
-  + *<leader>oc* open task

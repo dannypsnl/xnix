@@ -21,9 +21,7 @@ require('packer').startup(function(use)
     use 'chrisbra/vim-commentary'
     use 'voldikss/vim-floaterm'
     -- Language
-    use 'nvim-treesitter/nvim-treesitter'
     use 'benknoble/vim-racket'
-    use 'nvim-orgmode/orgmode'
     -- Language server
     use 'neovim/nvim-lspconfig' -- language server configuration
     use 'williamboman/nvim-lsp-installer' -- client installation
@@ -117,4 +115,3 @@ require("git_setup")
 require("window_setup")
 require("files_setup")
 require("lsp_setup")
-require("orgmode_setup")
