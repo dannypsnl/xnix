@@ -19,7 +19,7 @@
 	editor = "nvim"
 
 [init]
-	defaultBranch = "develop"
+	defaultBranch = "main"
 
 [pull]
 	rebase = true
