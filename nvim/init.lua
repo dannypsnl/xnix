@@ -20,8 +20,11 @@ require('packer').startup(function(use)
     use 'jiangmiao/auto-pairs'
     use 'chrisbra/vim-commentary'
     use 'voldikss/vim-floaterm'
+    -- REPL
+    use 'rhysd/reply.vim'
     -- Language
     use 'benknoble/vim-racket'
+    use 'benknoble/scribble.vim'
     -- Language server
     use 'neovim/nvim-lspconfig' -- language server configuration
     use 'williamboman/nvim-lsp-installer' -- client installation
@@ -110,6 +113,10 @@ cab QW wq
 cab Qw wq
 cab qW wq
 ]]
+
+vim.g.reply_repls = {
+    ["racket"] = { "racket" }
+}
 
 require("git_setup")
 require("window_setup")
