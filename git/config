@@ -18,6 +18,9 @@
 [core]
 	editor = "nvim"
 
+[commit]
+	gpgsign = true
+
 [init]
 	defaultBranch = "main"
 
