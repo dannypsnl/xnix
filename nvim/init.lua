@@ -96,8 +96,8 @@ syntax enable
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "colorscheme oldbook
-"colorscheme distilled
-colorscheme dayfox
+colorscheme distilled
+"colorscheme dayfox
 set termguicolors
 ]]
 
