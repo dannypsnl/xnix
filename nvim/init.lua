@@ -2,16 +2,20 @@ require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     -- Themes
-    use 'karoliskoncevicius/oldbook-vim'
-    use 'karoliskoncevicius/distilled-vim'
-    use 'altercation/vim-colors-solarized'
-    use 'EdenEast/nightfox.nvim'
+    use {
+        'karoliskoncevicius/oldbook-vim',
+        'karoliskoncevicius/distilled-vim',
+        'altercation/vim-colors-solarized',
+        'EdenEast/nightfox.nvim',
+    }
     -- Code time recording
     use 'wakatime/vim-wakatime'
     -- Git
-    use 'kdheepak/lazygit.nvim'
-    use 'tpope/vim-fugitive'
-    use 'airblade/vim-gitgutter' -- highlight changes
+    use {
+        'kdheepak/lazygit.nvim',
+        'tpope/vim-fugitive',
+        'airblade/vim-gitgutter', -- highlight changes
+    }
     -- Tools
     use 'vim-airline/vim-airline'
     use 'preservim/nerdtree'
@@ -30,26 +34,9 @@ require('packer').startup(function(use)
         'neovim/nvim-lspconfig', -- language server configuration
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
-        config = function()
-            require('mason').setup()
-            require("mason-lspconfig").setup({
-                ensure_installed = {
-                    'astro',
-                    'ccls',
-                    'ocamllsp',
-                    'gopls',
-                    'racket_langserver',
-                    'rust_analyzer',
-                    'julials',
-                    'sumneko_lua',
-                    'hls',
-                    'zls'
-                }
-            })
-        end
+        'williamboman/nvim-lsp-installer', -- client installation
+        'ojroques/nvim-lspfuzzy', -- fuzzy searcher for references
     }
-    use 'williamboman/nvim-lsp-installer' -- client installation
-    use 'ojroques/nvim-lspfuzzy' -- fuzzy searcher for references
     use {
         'glepnir/lspsaga.nvim',
         branch = 'main',
@@ -58,13 +45,15 @@ require('packer').startup(function(use)
         end
     }
     -- completion
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
-    use 'L3MON4D3/LuaSnip'
-    use 'saadparwaiz1/cmp_luasnip'
+    use {
+        'hrsh7th/nvim-cmp',
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-cmdline',
+        'L3MON4D3/LuaSnip',
+        'saadparwaiz1/cmp_luasnip',
+    }
 end)
 
 local cmd = vim.cmd

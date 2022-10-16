@@ -66,6 +66,10 @@ local servers = {
     'hls',
     'zls'
 }
+require('mason').setup()
+require('mason-lspconfig').setup({
+    ensure_installed = servers
+})
 for _, lsp in ipairs(servers) do
     require('lspconfig')[lsp].setup {
         on_attach = on_attach,
