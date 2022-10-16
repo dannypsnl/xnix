@@ -26,15 +26,29 @@ require('packer').startup(function(use)
     use 'benknoble/vim-racket'
     use 'benknoble/scribble.vim'
     -- Language server
-    use 'neovim/nvim-lspconfig' -- language server configuration
-    use 'williamboman/nvim-lsp-installer' -- client installation
-    -- install language server
     use {
+        'neovim/nvim-lspconfig', -- language server configuration
         'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
         config = function()
             require('mason').setup()
+            require("mason-lspconfig").setup({
+                ensure_installed = {
+                    'astro',
+                    'ccls',
+                    'ocamllsp',
+                    'gopls',
+                    'racket_langserver',
+                    'rust_analyzer',
+                    'julials',
+                    'sumneko_lua',
+                    'hls',
+                    'zls'
+                }
+            })
         end
     }
+    use 'williamboman/nvim-lsp-installer' -- client installation
     use 'ojroques/nvim-lspfuzzy' -- fuzzy searcher for references
     use {
         'glepnir/lspsaga.nvim',
