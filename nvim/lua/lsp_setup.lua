@@ -56,21 +56,19 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local servers = {
     'astro',
-    'ccls',
     'ocamllsp',
     'gopls',
-    'racket_langserver',
     'rust_analyzer',
     'julials',
     'sumneko_lua',
     'hls',
-    'zls'
+    'zls',
 }
 require('mason').setup()
 require('mason-lspconfig').setup({
     ensure_installed = servers
 })
-for _, lsp in ipairs(servers) do
+for _, lsp in ipairs({ 'ccls', 'racket_langserver', unpack(servers) }) do
     require('lspconfig')[lsp].setup {
         on_attach = on_attach,
         capabilities = capabilities,
