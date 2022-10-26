@@ -34,8 +34,8 @@ require('packer').startup(function(use)
         'neovim/nvim-lspconfig', -- language server configuration
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
-        'lvimuser/lsp-inlayhints.nvim', -- inlay hints in neovim
         'williamboman/nvim-lsp-installer', -- client installation
+        'lvimuser/lsp-inlayhints.nvim', -- inlay hints in neovim
         'ojroques/nvim-lspfuzzy', -- fuzzy searcher for references
     }
     use {
