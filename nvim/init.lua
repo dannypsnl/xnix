@@ -107,7 +107,7 @@ set termguicolors
 ]]
 
 cmd [[
-hi LspInlayHint guifg=#6194ba guibg=#3a3a3a
+hi LspInlayHint guifg=#6194ba guibg=#24364b
 ]]
 
 -- Ignore up/low case and order! I'm typo king
