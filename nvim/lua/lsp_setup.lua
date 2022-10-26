@@ -1,4 +1,6 @@
 local on_attach = function(client, bufnr)
+    require("lsp-inlayhints").on_attach(client, bufnr)
+
     local keymap = vim.keymap.set
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')

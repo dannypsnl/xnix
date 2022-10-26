@@ -34,6 +34,7 @@ require('packer').startup(function(use)
         'neovim/nvim-lspconfig', -- language server configuration
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
+        'lvimuser/lsp-inlayhints.nvim', -- inlay hints in neovim
         'williamboman/nvim-lsp-installer', -- client installation
         'ojroques/nvim-lspfuzzy', -- fuzzy searcher for references
     }
@@ -41,6 +42,7 @@ require('packer').startup(function(use)
         'glepnir/lspsaga.nvim',
         branch = 'main',
         config = function()
+            require("lsp-inlayhints").setup()
             require('lspsaga').init_lsp_saga()
         end
     }
@@ -102,6 +104,10 @@ syntax enable
 colorscheme distilled
 "colorscheme dayfox
 set termguicolors
+]]
+
+cmd [[
+hi LspInlayHint guifg=#d8d8d8 guibg=#3a3a3a
 ]]
 
 -- Ignore up/low case and order! I'm typo king
