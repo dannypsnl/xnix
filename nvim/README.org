@@ -15,7 +15,7 @@
 
 ** [[file:lua/git_setup.lua]]
 
- + *<leader>g* open lazygit
+ + *<leader>g* open lazygit, remember that use `:LazyGitConfig` can configure it
  + *<leader>b* git blame
 
 ** [[file:lua/window_setup.lua]]
