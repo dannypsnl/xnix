@@ -106,6 +106,7 @@ colorscheme distilled
 set termguicolors
 ]]
 
+-- LSP theme
 cmd [[
 hi LspInlayHint guifg=#6194ba guibg=#24364b
 ]]
