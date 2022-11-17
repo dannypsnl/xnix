@@ -36,3 +36,6 @@
 [user]
 	email = "dannypsnl@gmail.com"
 	name = "Lîm Tsú-thuàn"
+
+[includeIf "gitdir:~/secondstate/"]
+	path = ~/secondstate/gitconfig.inc
