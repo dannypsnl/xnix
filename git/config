@@ -17,6 +17,7 @@
 
 [core]
 	editor = "nvim"
+	pager = "delta"
 
 [commit]
 	gpgsign = true
