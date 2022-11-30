@@ -56,6 +56,8 @@ require('packer').startup(function(use)
         'L3MON4D3/LuaSnip',
         'saadparwaiz1/cmp_luasnip',
     }
+    -- unicode supports for theorem prover programming
+    use 'arthurxavierx/vim-unicoder'
 end)
 
 local cmd = vim.cmd
@@ -95,14 +97,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
 ]]
 
--- Themes configuration
+-- themes configuration
 cmd [[
 syntax enable
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "colorscheme oldbook
-colorscheme distilled
-"colorscheme dayfox
+"colorscheme distilled
+colorscheme dayfox
 set termguicolors
 ]]
 
