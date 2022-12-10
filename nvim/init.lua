@@ -49,6 +49,12 @@ require('packer').startup(function(use)
     -- completion
     use {
         'hrsh7th/nvim-cmp',
+        requires = {
+            -- unicode supports for theorem prover programming
+            { 'kdheepak/cmp-latex-symbols' },
+        },
+    }
+    use {
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
@@ -56,8 +62,6 @@ require('packer').startup(function(use)
         'L3MON4D3/LuaSnip',
         'saadparwaiz1/cmp_luasnip',
     }
-    -- unicode supports for theorem prover programming
-    use 'arthurxavierx/vim-unicoder'
 end)
 
 local cmd = vim.cmd
