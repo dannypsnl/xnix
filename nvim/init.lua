@@ -71,7 +71,7 @@ local cmd = vim.cmd
 vim.g.mapleader = ' ' -- use space as <leader>
 -- common useful configuration
 vim.o.backspace = 'indent,eol,start'
-vim.o.tabstop = 4
+vim.o.tabstop = 2
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 cmd [[ retab ]]
