@@ -1,69 +1,69 @@
 require('packer').startup(function(use)
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
-    -- Themes
-    use {
-        'karoliskoncevicius/oldbook-vim',
-        'karoliskoncevicius/distilled-vim',
-        'altercation/vim-colors-solarized',
-        'EdenEast/nightfox.nvim',
-    }
-    -- Code time recording
-    use 'wakatime/vim-wakatime'
-    -- copilot is a AI coding helper
-    use 'github/copilot.vim'
-    -- Git
-    use {
-        'kdheepak/lazygit.nvim',
-        'tpope/vim-fugitive',
-        'airblade/vim-gitgutter', -- highlight changes
-    }
-    -- Tools
-    use 'vim-airline/vim-airline'
-    use 'preservim/nerdtree'
-    use 'junegunn/fzf'
-    use 'junegunn/fzf.vim'
-    use 'jiangmiao/auto-pairs'
-    use 'chrisbra/vim-commentary'
-    use 'voldikss/vim-floaterm'
-    -- REPL
-    use 'rhysd/reply.vim'
-    -- Language
-    use 'benknoble/vim-racket'
-    use 'benknoble/scribble.vim'
-    -- Language server
-    use {
-        'neovim/nvim-lspconfig', -- language server configuration
-        'williamboman/mason.nvim',
-        'williamboman/mason-lspconfig.nvim',
-        'williamboman/nvim-lsp-installer', -- client installation
-        'lvimuser/lsp-inlayhints.nvim', -- inlay hints in neovim
-        'ojroques/nvim-lspfuzzy', -- fuzzy searcher for references
-    }
-    use {
-        'glepnir/lspsaga.nvim',
-        branch = 'main',
-        config = function()
-            require("lsp-inlayhints").setup()
-            require('lspsaga').init_lsp_saga()
-        end
-    }
-    -- completion
-    use {
-        'hrsh7th/nvim-cmp',
-        requires = {
-            -- unicode supports for theorem prover programming
-            { 'kdheepak/cmp-latex-symbols' },
-        },
-    }
-    use {
-        'hrsh7th/cmp-nvim-lsp',
-        'hrsh7th/cmp-buffer',
-        'hrsh7th/cmp-path',
-        'hrsh7th/cmp-cmdline',
-        'L3MON4D3/LuaSnip',
-        'saadparwaiz1/cmp_luasnip',
-    }
+	-- Packer can manage itself
+	use 'wbthomason/packer.nvim'
+	-- Themes
+	use {
+		'karoliskoncevicius/oldbook-vim',
+		'karoliskoncevicius/distilled-vim',
+		'altercation/vim-colors-solarized',
+		'EdenEast/nightfox.nvim',
+	}
+	-- Code time recording
+	use 'wakatime/vim-wakatime'
+	-- copilot is a AI coding helper
+	use 'github/copilot.vim'
+	-- Git
+	use {
+		'kdheepak/lazygit.nvim',
+		'tpope/vim-fugitive',
+		'airblade/vim-gitgutter', -- highlight changes
+	}
+	-- Tools
+	use 'vim-airline/vim-airline'
+	use 'preservim/nerdtree'
+	use 'junegunn/fzf'
+	use 'junegunn/fzf.vim'
+	use 'jiangmiao/auto-pairs'
+	use 'chrisbra/vim-commentary'
+	use 'voldikss/vim-floaterm'
+	-- REPL
+	use 'rhysd/reply.vim'
+	-- Language
+	use 'benknoble/vim-racket'
+	use 'benknoble/scribble.vim'
+	-- Language server
+	use {
+		'neovim/nvim-lspconfig', -- language server configuration
+		'williamboman/mason.nvim',
+		'williamboman/mason-lspconfig.nvim',
+		'williamboman/nvim-lsp-installer', -- client installation
+		'lvimuser/lsp-inlayhints.nvim', -- inlay hints in neovim
+		'ojroques/nvim-lspfuzzy', -- fuzzy searcher for references
+	}
+	use {
+		'glepnir/lspsaga.nvim',
+		branch = 'main',
+		config = function()
+			require("lsp-inlayhints").setup()
+			require('lspsaga').init_lsp_saga()
+		end
+	}
+	-- completion
+	use {
+		'hrsh7th/nvim-cmp',
+		requires = {
+			-- unicode supports for theorem prover programming
+			{ 'kdheepak/cmp-latex-symbols' },
+		},
+	}
+	use {
+		'hrsh7th/cmp-nvim-lsp',
+		'hrsh7th/cmp-buffer',
+		'hrsh7th/cmp-path',
+		'hrsh7th/cmp-cmdline',
+		'L3MON4D3/LuaSnip',
+		'saadparwaiz1/cmp_luasnip',
+	}
 end)
 
 local cmd = vim.cmd
@@ -133,7 +133,7 @@ cab qW wq
 ]]
 
 vim.g.reply_repls = {
-    ["racket"] = { "racket" }
+	["racket"] = { "racket" }
 }
 
 require("git_setup")
