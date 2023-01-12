@@ -32,5 +32,5 @@ require('nvim-treesitter.configs').setup {
 
 require('orgmode').setup({
 	org_agenda_files = { '~/iCloud/org/*' },
-	org_default_notes_file = '~/iCloud/org/refile.org',
+	org_default_notes_file = '~/iCloud/org/inbox.org',
 })
