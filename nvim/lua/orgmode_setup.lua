@@ -31,6 +31,6 @@ require('nvim-treesitter.configs').setup {
 }
 
 require('orgmode').setup({
-	org_agenda_files = { '~/MEGAsync/org/*' },
-	org_default_notes_file = '~/MEGAsync/org/refile.org',
+	org_agenda_files = { '~/iCloud/org/*' },
+	org_default_notes_file = '~/iCloud/org/refile.org',
 })

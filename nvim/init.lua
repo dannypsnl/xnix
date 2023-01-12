@@ -10,8 +10,6 @@ require('packer').startup(function(use)
 	}
 	-- Code time recording
 	use 'wakatime/vim-wakatime'
-	-- copilot is a AI coding helper
-	use 'github/copilot.vim'
 	-- Git
 	use {
 		'kdheepak/lazygit.nvim',
