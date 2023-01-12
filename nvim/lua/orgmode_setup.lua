@@ -31,8 +31,8 @@ require('nvim-treesitter.configs').setup {
 }
 
 require('orgmode').setup({
-	org_agenda_files = { '~/iCloud/org/*' },
-	org_default_notes_file = '~/iCloud/org/inbox.org',
+	org_agenda_files = { '~/Documents/org/*' },
+	org_default_notes_file = '~/Documents/org/inbox.org',
 	win_split_mode = function(name)
 		local bufnr = vim.api.nvim_create_buf(false, true)
 		--- Setting buffer name is required
