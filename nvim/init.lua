@@ -18,6 +18,12 @@ require('packer').startup(function(use)
 		'tpope/vim-fugitive',
 		'airblade/vim-gitgutter', -- highlight changes
 	}
+	-- orgmode
+	use { 'nvim-treesitter/nvim-treesitter' }
+	use { 'nvim-orgmode/orgmode', config = function()
+		require('orgmode').setup {}
+	end
+	}
 	-- Tools
 	use 'vim-airline/vim-airline'
 	use 'preservim/nerdtree'
@@ -136,6 +142,7 @@ vim.g.reply_repls = {
 	["racket"] = { "racket" }
 }
 
+require("orgmode_setup")
 require("git_setup")
 require("window_setup")
 require("files_setup")
