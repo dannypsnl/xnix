@@ -21,11 +21,15 @@ require('packer').startup(function(use)
 		'nvim-treesitter/nvim-treesitter',
 	}
 	use {
-		'nvim-orgmode/orgmode',
 		'akinsho/org-bullets.nvim',
 		config = function()
-			require('orgmode').setup {}
 			require('org-bullets').setup()
+		end
+	}
+	use {
+		'nvim-orgmode/orgmode',
+		config = function()
+			require('orgmode').setup {}
 		end
 	}
 	-- Tools
