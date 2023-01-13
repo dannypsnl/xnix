@@ -33,6 +33,21 @@ require('nvim-treesitter.configs').setup {
 require('orgmode').setup({
 	org_agenda_files = { '~/org/*' },
 	org_default_notes_file = '~/org/inbox.org',
+	-- agenda config
+	org_capture_templates = {
+		t = { description = 'Task', template = '* TODO %?\n  %U' },
+		e = {
+			description = 'Exercise',
+			template = '* TODO exercise\n  %U SCHEDULED: %t\n** TODO 伏地挺身 * 30\n** TODO 核心抬腳 * 60\n** TODO 柔軟操\n** TODO 背部伸展 * 20\n** TODO 深蹲 * 20',
+			target = '~/org/inbox.org'
+		},
+		l = {
+			description = 'Suomi',
+			template = '* TODO duolingo\n  SCHEDULED: %t',
+			target = '~/org/suomi.org'
+		},
+	},
+	-- window config
 	win_split_mode = function(name)
 		local bufnr = vim.api.nvim_create_buf(false, true)
 		--- Setting buffer name is required
