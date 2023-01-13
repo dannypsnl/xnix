@@ -40,7 +40,26 @@ require('orgmode').setup({
 
 	-- agenda config
 	org_capture_templates = {
-		t = { description = 'Task', template = '* TODO %?\n  %U' },
+		t = {
+			description = 'Task',
+			template = [[
+* TODO %?
+  %U]]
+		},
+		v = {
+			description = 'Violet',
+			template = [[
+* TODO [#A] %?
+  %U]],
+			target = '~/org/violet.org'
+		},
+		w = {
+			description = 'Work',
+			template = [[
+* TODO [#A] %?
+  %U SCHEDULED: %t]],
+			target = '~/org/secondstate.org'
+		},
 		e = {
 			description = 'Exercise',
 			template = [[
@@ -53,8 +72,8 @@ require('orgmode').setup({
 ** TODO 深蹲 * 20]],
 			target = '~/org/inbox.org'
 		},
-		l = {
-			description = 'Suomi',
+		f = {
+			description = 'Finnish/Suomi',
 			template = [[
 * TODO [#D] duolingo
   SCHEDULED: %t]],
