@@ -17,10 +17,16 @@ require('packer').startup(function(use)
 		'airblade/vim-gitgutter', -- highlight changes
 	}
 	-- orgmode
-	use { 'nvim-treesitter/nvim-treesitter' }
-	use { 'nvim-orgmode/orgmode', config = function()
-		require('orgmode').setup {}
-	end
+	use {
+		'nvim-treesitter/nvim-treesitter',
+	}
+	use {
+		'nvim-orgmode/orgmode',
+		'akinsho/org-bullets.nvim',
+		config = function()
+			require('orgmode').setup {}
+			require('org-bullets').setup()
+		end
 	}
 	-- Tools
 	use 'vim-airline/vim-airline'
