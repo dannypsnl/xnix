@@ -74,6 +74,10 @@ require('packer').startup(function(use)
 		'L3MON4D3/LuaSnip',
 		'saadparwaiz1/cmp_luasnip',
 	}
+	-- fun part
+	use {
+		'eandrju/cellular-automaton.nvim',
+	}
 end)
 
 local cmd = vim.cmd
