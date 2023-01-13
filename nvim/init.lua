@@ -55,7 +55,7 @@ require('packer').startup(function(use)
 		branch = 'main',
 		config = function()
 			require("lsp-inlayhints").setup()
-			require('lspsaga').init_lsp_saga()
+			require('lspsaga').setup({})
 		end
 	}
 	-- completion
