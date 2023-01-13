@@ -95,6 +95,10 @@ vim.o.completeopt = 'menu,menuone,noselect'
 
 vim.keymap.set('n', '<leader>t', '<cmd>FloatermToggle<cr>')
 
+-- no swap file
+cmd [[
+set noswapfile
+]]
 -- open from last editing point
 cmd [[
 if has("autocmd")
