@@ -40,16 +40,16 @@ require('orgmode').setup({
 		t = { description = 'Task', template = '* TODO %?\n  %U' },
 		e = {
 			description = 'Exercise',
-			template = '* TODO exercise\n  %U SCHEDULED: %t\n** TODO 伏地挺身 * 30\n** TODO 核心抬腳 * 60\n** TODO 柔軟操\n** TODO 背部伸展 * 20\n** TODO 深蹲 * 20',
+			template = '* TODO [#B] exercise\n  %U SCHEDULED: %t\n** TODO 伏地挺身 * 30\n** TODO 核心抬腳 * 60\n** TODO 柔軟操\n** TODO 背部伸展 * 20\n** TODO 深蹲 * 20',
 			target = '~/org/inbox.org'
 		},
 		l = {
 			description = 'Suomi',
-			template = '* TODO duolingo\n  SCHEDULED: %t',
+			template = '* TODO [#D] duolingo\n  SCHEDULED: %t',
 			target = '~/org/suomi.org'
 		},
 	},
-	-- window config
+	-- view config
 	win_split_mode = function(name)
 		local bufnr = vim.api.nvim_create_buf(false, true)
 		--- Setting buffer name is required
