@@ -43,8 +43,11 @@ require('packer').startup(function(use)
 	-- REPL
 	use 'rhysd/reply.vim'
 	-- Language
-	use 'benknoble/vim-racket'
-	use 'benknoble/scribble.vim'
+	use {
+		'benknoble/vim-racket',
+		'benknoble/scribble.vim',
+		'dannypsnl/violet.nvim',
+	}
 	-- Language server
 	use {
 		'neovim/nvim-lspconfig', -- language server configuration
