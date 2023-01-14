@@ -34,10 +34,6 @@ require('orgmode').setup({
 	org_agenda_files = { '~/org/*' },
 	org_default_notes_file = '~/org/inbox.org',
 
-	-- start on sunday
-	calendar_week_start_day = 0,
-	org_agenda_start_on_weekday = 0,
-
 	-- agenda config
 	org_capture_templates = {
 		t = {
