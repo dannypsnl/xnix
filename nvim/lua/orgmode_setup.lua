@@ -34,6 +34,9 @@ require('orgmode').setup({
 	org_agenda_files = { '~/org/*' },
 	org_default_notes_file = '~/org/inbox.org',
 
+	-- org view config
+	org_tags_column = 120,
+
 	-- agenda config
 	org_capture_templates = {
 		t = {
@@ -76,7 +79,7 @@ require('orgmode').setup({
 			target = '~/org/suomi.org'
 		},
 	},
-	-- view config
+	-- window config
 	win_split_mode = function(name)
 		local bufnr = vim.api.nvim_create_buf(false, true)
 		--- Setting buffer name is required
