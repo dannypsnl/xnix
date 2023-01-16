@@ -43,21 +43,37 @@ require('orgmode').setup({
 			description = 'Task',
 			template = [[
 * TODO %?
-  %U SCHEDULED: %t]],
+  %U SCHEDULED: %t
+]],
 			target = '~/org/inbox.org'
 		},
 		v = {
 			description = 'Violet',
 			template = [[
 * TODO [#A] %?
-  %U]],
+  %U
+]],
 			target = '~/org/violet.org'
 		},
 		w = {
 			description = 'Work',
 			template = [[
 * TODO [#A] %?
-  %U SCHEDULED: %t]],
+  %U SCHEDULED: %t
+]],
+			target = '~/org/secondstate.org'
+		},
+		m = {
+			description = 'Weekly Meeting',
+			template = [[
+* TODO [#A] meeting
+  %U SCHEDULED %t
+
+** record
+
+** TODO report
+  U SCHEDULED %t
+]],
 			target = '~/org/secondstate.org'
 		},
 		e = {
@@ -69,14 +85,16 @@ require('orgmode').setup({
 ** TODO 核心抬腳 * 60
 ** TODO 柔軟操
 ** TODO 背部伸展 * 20
-** TODO 深蹲 * 20]],
+** TODO 深蹲 * 20
+]],
 			target = '~/org/exercise.org'
 		},
 		f = {
 			description = 'Finnish/Suomi',
 			template = [[
 * TODO [#D] duolingo
-  %U SCHEDULED: %t]],
+  %U SCHEDULED: %t
+]],
 			target = '~/org/suomi.org'
 		},
 	},
