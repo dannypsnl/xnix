@@ -43,7 +43,8 @@ require('orgmode').setup({
 			description = 'Task',
 			template = [[
 * TODO %?
-  %U]]
+  %U SCHEDULED: %t]],
+			target = '~/org/inbox.org'
 		},
 		v = {
 			description = 'Violet',
@@ -69,13 +70,13 @@ require('orgmode').setup({
 ** TODO 柔軟操
 ** TODO 背部伸展 * 20
 ** TODO 深蹲 * 20]],
-			target = '~/org/inbox.org'
+			target = '~/org/exercise.org'
 		},
 		f = {
 			description = 'Finnish/Suomi',
 			template = [[
 * TODO [#D] duolingo
-  SCHEDULED: %t]],
+  %U SCHEDULED: %t]],
 			target = '~/org/suomi.org'
 		},
 	},
