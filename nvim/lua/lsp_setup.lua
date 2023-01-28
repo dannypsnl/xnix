@@ -65,12 +65,8 @@ local servers = {
 	'sumneko_lua',
 	'hls',
 	'zls',
+	'elixirls'
 }
-require('mason').setup()
-require('mason-lspconfig').setup({
-	ensure_installed = servers
-})
-
 function TableConcat(t1, t2)
 	for i = 1, #t2 do
 		t1[#t1 + 1] = t2[i]
@@ -78,6 +74,10 @@ function TableConcat(t1, t2)
 	return t1
 end
 
+require('mason').setup()
+require('mason-lspconfig').setup({
+	ensure_installed = servers
+})
 local all_servers = TableConcat({
 	'ccls',
 	'racket_langserver',
