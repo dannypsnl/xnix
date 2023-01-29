@@ -72,7 +72,7 @@ require('orgmode').setup({
 ** record
 
 ** TODO report
-  U SCHEDULED %t
+  %U SCHEDULED %t
 ]],
 			target = '~/org/secondstate.org'
 		},
