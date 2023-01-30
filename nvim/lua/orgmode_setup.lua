@@ -67,12 +67,12 @@ require('orgmode').setup({
 			description = 'Weekly Meeting',
 			template = [[
 * TODO [#A] meeting
-  %U SCHEDULED %t
+  %U SCHEDULED: %t
 
 ** record
 
 ** TODO report
-  %U SCHEDULED %t
+  SCHEDULED: %t
 ]],
 			target = '~/org/secondstate.org'
 		},

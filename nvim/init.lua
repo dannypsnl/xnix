@@ -135,7 +135,7 @@ syntax enable
 "colorscheme solarized
 "colorscheme oldbook
 "colorscheme distilled
-colorscheme nightfox
+colorscheme dayfox
 set termguicolors
 ]]
 
