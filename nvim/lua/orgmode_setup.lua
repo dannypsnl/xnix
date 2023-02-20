@@ -67,7 +67,7 @@ require('orgmode').setup({
 			description = 'Weekly Meeting',
 			template = [[
 * TODO [#A] meeting
-  %U SCHEDULED: %t
+  %U SCHEDULED: <%<%Y-%m-%d %a 16:00>>
 
 ** record
 
