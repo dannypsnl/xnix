@@ -62,7 +62,7 @@ local servers = {
 	'gopls',
 	'rust_analyzer',
 	'julials',
-	'sumneko_lua',
+	'lua_ls',
 	'hls',
 	'zls',
 	'elixirls'
