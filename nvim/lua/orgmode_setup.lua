@@ -33,10 +33,8 @@ require('nvim-treesitter.configs').setup {
 require('orgmode').setup({
 	org_agenda_files = { '~/org/*' },
 	org_default_notes_file = '~/org/inbox.org',
-
 	-- org view config
 	org_tags_column = 120,
-
 	-- agenda config
 	org_capture_templates = {
 		t = {
@@ -96,6 +94,14 @@ require('orgmode').setup({
   %U SCHEDULED: %t
 ]],
 			target = '~/org/suomi.org'
+		},
+		u = {
+			description = 'University',
+			template = [[
+* TODO [#B] %?
+  %U SCHEDULED: %t
+]],
+			target = '~/org/univ.org'
 		},
 	},
 	-- window config
