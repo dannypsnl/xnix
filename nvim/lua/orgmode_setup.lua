@@ -87,6 +87,14 @@ require('orgmode').setup({
 ]],
 			target = '~/org/exercise.org'
 		},
+		j = {
+			description = 'Japanese',
+			template = [[
+* TODO [#D] duolingo
+  %U SCHEDULED: %t
+]],
+			target = '~/org/japanese.org'
+		},
 		f = {
 			description = 'Finnish/Suomi',
 			template = [[
