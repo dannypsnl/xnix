@@ -50,6 +50,7 @@
 
 [diff]
 	colorMoved = default
+	external = "difft"
 
 [delta "interactive"]
 	keep-plus-minus-markers = false
