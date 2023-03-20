@@ -79,7 +79,7 @@ require('orgmode').setup({
 			template = [[
 * TODO [#B] exercise
   %U SCHEDULED: %t
-** TODO 伏地挺身 * 30
+** TODO 伏地挺身 * 40
 ** TODO 核心抬腳 * 60
 ** TODO 柔軟操
 ** TODO 背部伸展 * 20
