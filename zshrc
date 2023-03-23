@@ -28,7 +28,8 @@ unsetopt EXTENDED_HISTORY
 
 export PATH=/opt/homebrew/bin:$PATH
 
-source "$HOME/.cargo/env"
+[ -f "${HOME}/.cargo/env" ] && source "${HOME}/.cargo/env" # cargo-env
+[ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env" # ghcup-env
 eval "$(direnv hook zsh)"
 
 if [[ `uname` == "Darwin" ]]; then
