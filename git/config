@@ -17,7 +17,6 @@
 
 [core]
 	editor = "nvim"
-	pager = "delta"
 
 [commit]
 	gpgsign = true
@@ -38,31 +37,14 @@
 	email = "dannypsnl@gmail.com"
 	name = "Lîm Tsú-thuàn"
 
-[interactive]
-	diffFilter = delta --color-only --features=interactive
-
-[delta]
-	features = decorations
-	navigate = true
-
 [merge]
 	conflictstyle = diff3
 
+[pager]
+	difftool = true
 [diff]
 	colorMoved = default
 	external = "difft"
-
-[delta "interactive"]
-	keep-plus-minus-markers = false
-
-[delta "decorations"]
-	commit-decoration-style = blue ol
-	commit-style = raw
-	file-style = omit
-	hunk-header-decoration-style = blue box
-	hunk-header-file-style = blue bold
-	hunk-header-line-number-style = "#3d85c6"
-	hunk-header-style = file line-number syntax
 
 [includeIf "gitdir:~/secondstate/"]
 	path = ~/secondstate/gitconfig.inc
