@@ -26,10 +26,12 @@ unsetopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
+export PATH=/opt/homebrew/bin:$PATH
+
+source "$HOME/.cargo/env"
 eval "$(direnv hook zsh)"
 
 if [[ `uname` == "Darwin" ]]; then
-    source $HOME/.macos-extra
 else
     alias pbcopy='xclip -selection clipboard'
     alias pbpaste='xclip -selection clipboard -o'
