@@ -32,6 +32,7 @@ export PATH=/opt/homebrew/bin:$PATH
 [ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env" # ghcup-env
 [[ ! -r "${HOME}/.opam/opam-init/init.zsh" ]] || source "${HOME}/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null # opam setup
 eval "$(direnv hook zsh)"
+export PATH=${HOME}/.local/bin:$PATH
 
 if [[ `uname` == "Darwin" ]]; then
 else
