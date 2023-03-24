@@ -27,6 +27,7 @@ setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
 . $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 export PATH=/opt/homebrew/bin:$PATH
 
 [ -f "${HOME}/.cargo/env" ] && source "${HOME}/.cargo/env" # cargo-env
