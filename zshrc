@@ -26,6 +26,7 @@ unsetopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
+. $HOME/.asdf/asdf.sh
 export PATH=/opt/homebrew/bin:$PATH
 
 [ -f "${HOME}/.cargo/env" ] && source "${HOME}/.cargo/env" # cargo-env
