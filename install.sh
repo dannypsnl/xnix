@@ -5,6 +5,8 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 # install brew
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install neovim emacs direnv opam
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # install ghcup
