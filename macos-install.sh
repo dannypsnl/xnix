@@ -1,7 +1,5 @@
 brew install \
   agda \
-  git-delta \
-  the_silver_searcher \
   wget \
   curl \
   unzip \
