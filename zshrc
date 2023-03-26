@@ -51,3 +51,4 @@ alias ls='ls -GFh'
 alias vi='nvim'
 alias vim='nvim'
 alias diff="kitty +kitten diff"
+alias ssh="kitty +kitten ssh"
