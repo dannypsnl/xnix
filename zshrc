@@ -50,3 +50,4 @@ alias lm='ll | more'
 alias ls='ls -GFh'
 alias vi='nvim'
 alias vim='nvim'
+alias diff="kitty +kitten diff"
