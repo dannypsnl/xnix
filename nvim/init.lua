@@ -136,18 +136,16 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
 -- themes configuration
 cmd [[
 syntax enable
+set termguicolors
+
 "colorscheme oldbook
 "colorscheme distilled
 "colorscheme dayfox
 
-colorscheme aquarium
-
-let g:aqua_bold = 1
-let g:aqua_transparency = 1
 let g:aquarium_style="light"
 let g:airline_theme="base16_aquarium_light"
 
-set termguicolors
+colorscheme aquarium
 ]]
 
 -- LSP theme
