@@ -5,8 +5,8 @@ require('packer').startup(function(use)
 	use {
 		'karoliskoncevicius/oldbook-vim',
 		'karoliskoncevicius/distilled-vim',
-		'altercation/vim-colors-solarized',
 		'EdenEast/nightfox.nvim',
+		'frenzyexists/aquarium-vim',
 	}
 	-- Code time recording
 	use 'wakatime/vim-wakatime'
@@ -136,11 +136,17 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
 -- themes configuration
 cmd [[
 syntax enable
-"let g:solarized_termcolors=256
-"colorscheme solarized
 "colorscheme oldbook
 "colorscheme distilled
-colorscheme dayfox
+"colorscheme dayfox
+
+colorscheme aquarium
+
+let g:aqua_bold = 1
+let g:aqua_transparency = 1
+let g:aquarium_style="light"
+let g:airline_theme="base16_aquarium_light"
+
 set termguicolors
 ]]
 
