@@ -99,7 +99,7 @@ vim.g.mapleader = ' ' -- use space as <leader>
 vim.o.backspace = 'indent,eol,start'
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
-vim.o.expandtab = false
+vim.o.expandtab = true
 cmd [[ retab ]]
 vim.o.undofile = true
 vim.o.cursorline = true
