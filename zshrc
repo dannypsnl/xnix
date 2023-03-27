@@ -29,15 +29,32 @@ unsetopt EXTENDED_HISTORY
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 export PATH=/opt/homebrew/bin:$PATH
+export HOMEBREW_NO_ANALYTICS=1
+
 
 [ -f "${HOME}/.cargo/env" ] && source "${HOME}/.cargo/env" # cargo-env
 [ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env" # ghcup-env
-[[ ! -r "${HOME}/.opam/opam-init/init.zsh" ]] || source "${HOME}/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null # opam setup
+# opam setup
+[ -f "${HOME}/.opam/opam-init/init.zsh" ] && source "${HOME}/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
+[ -f "${HOME}/.opam/opam-init/init.zsh" ] && eval $(opam env)
 [[ -s "$HOME/.xmake/profile" ]] && source "$HOME/.xmake/profile" # xmake setup
 eval "$(direnv hook zsh)"
 
+# PATH
+export PATH=/Applications/Racket\ v8.8/bin/:$PATH
+export PATH="/opt/homebrew/opt/riscv-gnu-toolchain/bin:$PATH"
+export PATH=${HOME}/.cabal/bin:$PATH
 export PATH=${HOME}/.local/bin:$PATH
 export PATH=/Applications/Racket\ v8.8/bin:$PATH
+
+# LLVM
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_INCLUDE_PATH="${JAVA_HOME}/include"
 
 if [[ `uname` == "Darwin" ]]; then
 else
