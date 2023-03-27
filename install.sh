@@ -13,6 +13,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 # install rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# install xmake
+curl -fsSL https://xmake.io/shget.text | bash
 
 # config
 mkdir -p ${HOME}/.config
