@@ -2,10 +2,16 @@
 
 ** entry: [[file:init.lua]]
 
-  configure theme and shortcut
-
   + *<leader>* key is *<space>*
   + *<leader>t* open terminal
+
+** [[file:lua/theme.lua]]
+
+   Theme configuration
+
+** [[file:lua/cmp_setup.lua]]
+
+   completion & buffer
 
 ** [[file:lua/files_setup.lua]]
 
@@ -20,12 +26,12 @@
 
 ** [[file:lua/window_setup.lua]]
 
- + *<leader>ws* split window
- + *<leader>wv* split window vertically
- + *<leader>w* + *up/down/right/left* navigation in windows
+   + *<leader>ws* split window
+   + *<leader>wv* split window vertically
+   + *<leader>w* + *up/down/right/left* navigation in windows
 
 ** [[file:lua/lsp_setup.lua]]
 
-lsp and completion
+   language server protocol
 
- + *<leader>ld* go to definition
+   + *<leader>ld* go to definition

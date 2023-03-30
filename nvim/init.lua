@@ -12,7 +12,8 @@ require('packer').startup(function(use)
   use {
     'kdheepak/lazygit.nvim',
     'tpope/vim-fugitive',
-    'airblade/vim-gitgutter', -- highlight changes
+    -- highlight changes
+    'airblade/vim-gitgutter',
   }
   -- orgmode
   use {
@@ -31,12 +32,19 @@ require('packer').startup(function(use)
     end
   }
   -- Tools
-  use 'vim-airline/vim-airline'
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
-  use 'jiangmiao/auto-pairs'
-  use 'chrisbra/vim-commentary'
-  use 'voldikss/vim-floaterm'
+  use {
+    -- fuzzy file finder
+    'junegunn/fzf',
+    'junegunn/fzf.vim',
+    -- fuzzy text finder
+    'duane9/nvim-rg',
+    -- status line
+    'vim-airline/vim-airline',
+    'jiangmiao/auto-pairs',
+    'chrisbra/vim-commentary',
+    -- terminal in floating window
+    'voldikss/vim-floaterm',
+  }
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {

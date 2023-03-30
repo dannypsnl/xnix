@@ -4,7 +4,7 @@ keymap('n', '<leader>f', '<cmd>NvimTreeToggle<cr>')
 -- searching file in project
 keymap('n', '<leader>.', '<cmd>GFiles<cr>')
 -- searching text in project
-keymap('n', '<leader>a', '<cmd>Ag<cr>')
+keymap('n', '<leader>a', '<cmd>Rg<cr>')
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
