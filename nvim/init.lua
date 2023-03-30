@@ -5,7 +5,11 @@ require('packer').startup(function(use)
   use {
     'karoliskoncevicius/oldbook-vim',
     'karoliskoncevicius/distilled-vim',
-    'rose-pine/neovim',
+    'savq/melange-nvim',
+  }
+  use {
+    'mcchrish/zenbones.nvim',
+    requires = 'rktjmp/lush.nvim'
   }
   -- Code time recording
   use 'wakatime/vim-wakatime'
