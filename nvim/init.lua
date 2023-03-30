@@ -1,95 +1,95 @@
 require('packer').startup(function(use)
-	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
-	-- Themes
-	use {
-		'karoliskoncevicius/oldbook-vim',
-		'karoliskoncevicius/distilled-vim',
-		'EdenEast/nightfox.nvim',
-		'frenzyexists/aquarium-vim',
-	}
-	-- Code time recording
-	use 'wakatime/vim-wakatime'
-	-- Git
-	use {
-		'kdheepak/lazygit.nvim',
-		'tpope/vim-fugitive',
-		'airblade/vim-gitgutter', -- highlight changes
-	}
-	-- orgmode
-	use {
-		'nvim-treesitter/nvim-treesitter',
-	}
-	use {
-		'akinsho/org-bullets.nvim',
-		config = function()
-			require('org-bullets').setup()
-		end
-	}
-	use {
-		'nvim-orgmode/orgmode',
-		config = function()
-			require('orgmode').setup {}
-		end
-	}
-	-- Tools
-	use 'vim-airline/vim-airline'
-	use 'junegunn/fzf'
-	use 'junegunn/fzf.vim'
-	use 'jiangmiao/auto-pairs'
-	use 'chrisbra/vim-commentary'
-	use 'voldikss/vim-floaterm'
-	use {
-		'nvim-tree/nvim-tree.lua',
-		requires = {
-			'nvim-tree/nvim-web-devicons',
-		},
-	}
-	-- REPL
-	use 'rhysd/reply.vim'
-	-- Language
-	use {
-		'benknoble/vim-racket',
-		'benknoble/scribble.vim',
-		'dannypsnl/violet.nvim',
-	}
-	-- Language server
-	use {
-		'neovim/nvim-lspconfig', -- language server configuration
-		'williamboman/mason.nvim',
-		'williamboman/mason-lspconfig.nvim',
-		'williamboman/nvim-lsp-installer', -- client installation
-		'lvimuser/lsp-inlayhints.nvim',  -- inlay hints in neovim
-		'ojroques/nvim-lspfuzzy',        -- fuzzy searcher for references
-	}
-	use {
-		'glepnir/lspsaga.nvim',
-		branch = 'main',
-		config = function()
-			require("lsp-inlayhints").setup()
-			require('lspsaga').setup({})
-		end
-	}
-	-- completion
-	use {
-		'hrsh7th/nvim-cmp',
-		requires = {
-			-- unicode supports for theorem prover programming
-			{ 'kdheepak/cmp-latex-symbols' },
-		},
-	}
-	use {
-		'hrsh7th/cmp-nvim-lsp',
-		'hrsh7th/cmp-buffer',
-		'hrsh7th/cmp-path',
-		'hrsh7th/cmp-cmdline',
-		'L3MON4D3/LuaSnip',
-		'saadparwaiz1/cmp_luasnip',
-	}
-	-- fun part
-	use {
-		'eandrju/cellular-automaton.nvim',
-	}
+  -- Packer can manage itself
+  use 'wbthomason/packer.nvim'
+  -- Themes
+  use {
+    'karoliskoncevicius/oldbook-vim',
+    'karoliskoncevicius/distilled-vim',
+    'EdenEast/nightfox.nvim',
+    'frenzyexists/aquarium-vim',
+  }
+  -- Code time recording
+  use 'wakatime/vim-wakatime'
+  -- Git
+  use {
+    'kdheepak/lazygit.nvim',
+    'tpope/vim-fugitive',
+    'airblade/vim-gitgutter', -- highlight changes
+  }
+  -- orgmode
+  use {
+    'nvim-treesitter/nvim-treesitter',
+  }
+  use {
+    'akinsho/org-bullets.nvim',
+    config = function()
+      require('org-bullets').setup()
+    end
+  }
+  use {
+    'nvim-orgmode/orgmode',
+    config = function()
+      require('orgmode').setup {}
+    end
+  }
+  -- Tools
+  use 'vim-airline/vim-airline'
+  use 'junegunn/fzf'
+  use 'junegunn/fzf.vim'
+  use 'jiangmiao/auto-pairs'
+  use 'chrisbra/vim-commentary'
+  use 'voldikss/vim-floaterm'
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+    },
+  }
+  -- REPL
+  use 'rhysd/reply.vim'
+  -- Language
+  use {
+    'benknoble/vim-racket',
+    'benknoble/scribble.vim',
+    'dannypsnl/violet.nvim',
+  }
+  -- Language server
+  use {
+    'neovim/nvim-lspconfig', -- language server configuration
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'williamboman/nvim-lsp-installer', -- client installation
+    'lvimuser/lsp-inlayhints.nvim', -- inlay hints in neovim
+    'ojroques/nvim-lspfuzzy', -- fuzzy searcher for references
+  }
+  use {
+    'glepnir/lspsaga.nvim',
+    branch = 'main',
+    config = function()
+      require("lsp-inlayhints").setup()
+      require('lspsaga').setup({})
+    end
+  }
+  -- completion
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      -- unicode supports for theorem prover programming
+      { 'kdheepak/cmp-latex-symbols' },
+    },
+  }
+  use {
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+  }
+  -- fun part
+  use {
+    'eandrju/cellular-automaton.nvim',
+  }
 end)
 
 local cmd = vim.cmd
@@ -105,12 +105,12 @@ vim.o.undofile = true
 vim.o.cursorline = true
 vim.o.whichwrap = vim.o.whichwrap .. '<,>,[,]'
 vim.o.hlsearch = true -- highlight search
-vim.o.backup = false  -- no backup file
-vim.o.number = true   -- show line number
+vim.o.backup = false -- no backup file
+vim.o.number = true -- show line number
 vim.o.list = false
 vim.o.listchars = 'tab:→ ,trail:•'
 vim.o.list = true
-vim.o.mouse = 'a'         -- allow mouse action
+vim.o.mouse = 'a' -- allow mouse action
 vim.o.virtualedit = 'all' -- allow virtual editing
 -- completion setup
 vim.o.completeopt = 'menu,menuone,noselect'
@@ -167,7 +167,7 @@ cab qW wq
 ]]
 
 vim.g.reply_repls = {
-	["racket"] = { "racket" }
+  ["racket"] = { "racket" }
 }
 
 require("orgmode_setup")
