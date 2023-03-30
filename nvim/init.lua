@@ -5,8 +5,7 @@ require('packer').startup(function(use)
   use {
     'karoliskoncevicius/oldbook-vim',
     'karoliskoncevicius/distilled-vim',
-    'EdenEast/nightfox.nvim',
-    'frenzyexists/aquarium-vim',
+    'rose-pine/neovim',
   }
   -- Code time recording
   use 'wakatime/vim-wakatime'
@@ -133,22 +132,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
 ]]
 
--- themes configuration
-cmd [[
-syntax enable
-set termguicolors
-
-"colorscheme oldbook
-"colorscheme distilled
-"colorscheme dayfox
-
-let g:aquarium_style="light"
-let g:airline_theme="base16_aquarium_light"
-
-colorscheme aquarium
-]]
-
--- LSP theme
+-- control LSP inlay hint color
 cmd [[
 hi LspInlayHint guifg=#6194ba guibg=#24364b
 ]]
@@ -170,6 +154,7 @@ vim.g.reply_repls = {
   ["racket"] = { "racket" }
 }
 
+require("theme")
 require("orgmode_setup")
 require("git_setup")
 require("window_setup")
