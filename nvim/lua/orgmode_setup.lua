@@ -74,10 +74,10 @@ require('orgmode').setup({
       template = [[
 * TODO [#B] exercise
   %U SCHEDULED: %t
-** TODO 伏地挺身 * 40
-** TODO 核心抬腳 * 60
-** TODO 柔軟操
-** TODO 背部伸展 * 20
+** TODO 伏地挺身 * 20 * 2
+** TODO 核心抬腳 * 30 * 3
+** TODO 柔軟操 * 10 min
+** TODO 背部伸展 * 30
 ** TODO 深蹲 * 20
 ]],
       target = '~/org/exercise.org'
