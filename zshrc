@@ -41,11 +41,14 @@ export HOMEBREW_NO_ANALYTICS=1
 eval "$(direnv hook zsh)"
 
 # PATH
-export PATH=/Applications/Racket\ v8.8/bin/:$PATH
-export PATH="/opt/homebrew/opt/riscv-gnu-toolchain/bin:$PATH"
+export PATH=/opt/homebrew/opt/dotnet@6/bin:$PATH
 export PATH=${HOME}/.cabal/bin:$PATH
 export PATH=${HOME}/.local/bin:$PATH
+export PATH=${HOME}/.elan/bin:$PATH
 export PATH=/Applications/Racket\ v8.8/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+
+export DOTNET_ROOT=/opt/homebrew/opt/dotnet@6/libexec
 
 # LLVM
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
