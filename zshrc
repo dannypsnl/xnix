@@ -21,6 +21,8 @@ SAVEHIST="100000"
 HISTFILE="$HOME/.zsh_history"
 mkdir -p "$(dirname "$HISTFILE")"
 
+fpath+=~/.zfunc
+
 setopt HIST_FCNTL_LOCK
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
@@ -47,7 +49,7 @@ export PATH=/opt/homebrew/opt/dotnet@6/bin:$PATH
 export PATH=${HOME}/.cabal/bin:$PATH
 export PATH=${HOME}/.local/bin:$PATH
 export PATH=${HOME}/.elan/bin:$PATH
-export PATH=/Applications/Racket\ v8.8/bin:$PATH
+export PATH=/Applications/Racket\ v8.9/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
 export DOTNET_ROOT=/opt/homebrew/opt/dotnet@6/libexec
