@@ -38,6 +38,7 @@ export HOMEBREW_NO_ANALYTICS=1
 
 [ -f "${HOME}/.cargo/env" ] && source "${HOME}/.cargo/env" # cargo-env
 [ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env" # ghcup-env
+[ -f "${HOME}/.elan/env" ] &&source $HOME/.elan/env        # elan-env
 # opam setup
 [ -f "${HOME}/.opam/opam-init/init.zsh" ] && source "${HOME}/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
 [ -f "${HOME}/.opam/opam-init/init.zsh" ] && eval $(opam env)
