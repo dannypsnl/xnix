@@ -49,7 +49,7 @@ require('orgmode').setup({
       description = 'Violet',
       template = [[
 * TODO [#A] %?
-  %U
+  %U SCHEDULED: %t
 ]],
       target = '~/org/violet.org'
     },
