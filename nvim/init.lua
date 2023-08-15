@@ -12,8 +12,6 @@ require('packer').startup(function(use)
   use {
     'kdheepak/lazygit.nvim',
     'tpope/vim-fugitive',
-    -- highlight changes
-    'airblade/vim-gitgutter',
   }
   -- orgmode
   use {
@@ -64,8 +62,8 @@ require('packer').startup(function(use)
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'williamboman/nvim-lsp-installer', -- client installation
-    'lvimuser/lsp-inlayhints.nvim', -- inlay hints in neovim
-    'ojroques/nvim-lspfuzzy', -- fuzzy searcher for references
+    'lvimuser/lsp-inlayhints.nvim',    -- inlay hints in neovim
+    'ojroques/nvim-lspfuzzy',          -- fuzzy searcher for references
   }
   use {
     'glepnir/lspsaga.nvim',
@@ -110,12 +108,12 @@ vim.o.undofile = true
 vim.o.cursorline = true
 vim.o.whichwrap = vim.o.whichwrap .. '<,>,[,]'
 vim.o.hlsearch = true -- highlight search
-vim.o.backup = false -- no backup file
-vim.o.number = true -- show line number
+vim.o.backup = false  -- no backup file
+vim.o.number = true   -- show line number
 vim.o.list = false
 vim.o.listchars = 'tab:→ ,trail:•'
 vim.o.list = true
-vim.o.mouse = 'a' -- allow mouse action
+vim.o.mouse = 'a'         -- allow mouse action
 vim.o.virtualedit = 'all' -- allow virtual editing
 -- completion setup
 vim.o.completeopt = 'menu,menuone,noselect'
