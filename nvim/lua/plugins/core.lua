@@ -24,7 +24,7 @@ return {
   },
 
   -- disable trouble
-  { "folke/trouble.nvim", enabled = false },
+  { "folke/trouble.nvim",      enabled = false },
 
   -- add symbols-outline
   {
@@ -87,9 +87,10 @@ return {
       ensure_installed = {
         "bash",
         "ocaml",
-        "html",
         "javascript",
+        "html",
         "lua",
+        "org",
         "markdown",
         "markdown_inline",
         "python",
