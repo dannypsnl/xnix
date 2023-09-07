@@ -26,6 +26,14 @@ return {
   -- disable trouble
   { "folke/trouble.nvim",      enabled = false },
 
+  {
+    "andrewferrier/wrapping.nvim",
+    config = function()
+      require("wrapping").setup()
+      require("wrapping").soft_wrap_mode()
+    end
+  },
+
   -- add symbols-outline
   {
     "simrat39/symbols-outline.nvim",

@@ -40,5 +40,5 @@ require("lazy").setup({
         "zipPlugin",
       },
     },
-  },
+  }, 
 })
