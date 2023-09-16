@@ -57,7 +57,7 @@ return {
           j = {
             description = 'Japanese',
             template = [[
-* TODO [#D] duolingo
+* TODO [#D] Duolingo
   %U SCHEDULED: %t
 ]],
             target = '~/org/japanese.org'
@@ -65,7 +65,7 @@ return {
           f = {
             description = 'Finnish/Suomi',
             template = [[
-* TODO [#D] duolingo
+* TODO [#D] Duolingo
   %U SCHEDULED: %t
 ]],
             target = '~/org/suomi.org'
