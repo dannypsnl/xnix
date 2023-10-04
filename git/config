@@ -17,6 +17,7 @@
 
 [core]
 	editor = "nvim"
+	quotePath = false
 
 [commit]
 	gpgsign = true
