@@ -53,8 +53,7 @@ export PATH=${HOME}/.local/bin:$PATH
 export PATH=${HOME}/.elan/bin:$PATH
 export PATH=/Applications/Racket\ v8.10/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-
-export DOTNET_ROOT=/opt/homebrew/opt/dotnet@6/libexec
+export PATH="$WASMTIME_HOME/bin:$PATH"
 
 # LLVM
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
@@ -64,6 +63,8 @@ export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_INCLUDE_PATH="${JAVA_HOME}/include"
+
+export WASMTIME_HOME="$HOME/.wasmtime"
 
 if [[ `uname` == "Darwin" ]]; then
 else
@@ -85,6 +86,4 @@ alias ssh="kitty +kitten ssh"
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
-export WASMTIME_HOME="$HOME/.wasmtime"
-
-export PATH="$WASMTIME_HOME/bin:$PATH"
+PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
