@@ -73,6 +73,7 @@ else
 fi
 
 # Aliases
+alias h='hg'
 alias la='ll -a'
 alias lam='la | more'
 alias ll='ls -l'
